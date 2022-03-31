@@ -1,0 +1,126 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #505255;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #36008D;
+}
+
+h3{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    color: #36008D;
+    text-align: left;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 150px;
+    padding-left: 20px;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 35px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-right: 10px;
+    font-size: 20px;
+    border-right: 2px #00C9B8 solid;
+}
+
+.menu-top a:hover{
+    color: #00C9B8;
+}
+
+.buttonDiv{
+    flex-basis: 7%;
+    text-align: right;
+}
+
+.buttonDiv2{
+    flex-basis: 8%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.buttonDiv3{
+    flex-basis: 83%;
+    text-align: right;
+}
+
+.button-search{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #E2E0E5 ;
+    font-size: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    width: 150px;
+}
+
+.button-carrito{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #F9E45B ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.button-perfil{
+    border: 2px solid #36008D;
+    color: #F9E45B;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.banner{
+    background-image: url("img/banner-home-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 10%;
+    padding-bottom: 15%; 
+    margin-top: 50px;
+}

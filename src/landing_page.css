@@ -1,0 +1,156 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #505255;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #505255;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 150px;
+    padding-left: 20px;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 35px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-right: 10px;
+    font-size: 20px;
+    border-right: 2px #00C9B8 solid;
+}
+
+.menu-top a:hover{
+    color: #00C9B8;
+}
+
+.background-color{
+    background-color: #00C9B8;
+    color: white;
+    padding-left: 60px;
+    margin-top: 15px;
+}
+
+.libreria{
+    flex-basis: 33%;
+    padding-top: 45px;
+    font-size: 30px;
+}
+
+.libreria-2{
+    flex-basis: 33%;
+    padding-top: 60px;
+}
+
+.phone{
+    flex-basis: 33%;
+    text-align: right;
+}
+
+.img-phone{
+    width: 210px;
+    margin-right: -9px;
+}
+
+.description{
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.caracteristicas{
+    color: #36008D;
+    text-align: center;
+    font-size: 30px;
+}
+
+.simbolos{
+    flex-basis: 33.33%;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+}
+.simbolos img {
+    width: 200px;
+}
+
+.simbolos:hover {
+    transform: scale(1.1);
+}
+
+.linea{
+    border-top: 3px lightgray solid;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.ventajas{
+    flex-basis: 60%;
+    padding-left: 50px;
+    margin-top: 60px;
+}
+
+.ventajas img{
+    width: 30px;
+}
+
+.titulo-ventajas{
+    flex-basis: 40%;
+    color: #36008D;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 150px;
+}
+
+.backgound-footer{
+    background-color: #E2E0E5;
+    background-position: bottom;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.button{
+    border: 3px solid #36008D;
+    color: #36008D;
+    border-radius: 10px;
+    background: #F9E45B ;
+    padding: 10px;
+    font-family: 'Bebas Neue', cursive;
+}
