@@ -121,7 +121,7 @@ h3{
     border-radius: 8px;
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 50px;
+    margin-top: 100px;
     padding-bottom: 20px;
 }
 
@@ -168,4 +168,30 @@ h4{
     margin-left: 10%;
     margin-top: 80px;
     color: #36008D;
+}
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.derechos{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #1A181B;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px;
 }

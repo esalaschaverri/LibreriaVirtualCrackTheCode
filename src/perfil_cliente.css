@@ -17,12 +17,13 @@ h2 {
 }
 
 h3{
-    font-family: 'Bebas Neue';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    color: #36008D;
-    text-align: left;
-    font-size: 40px;
-    margin-left: 40px;
+    color: white;
+}
+
+h4{
+    font-family: 'Roboto', sans-serif;
 }
 
 .contenedor{
@@ -49,7 +50,7 @@ h3{
 .menu-top a {
     color: #36008D;
     text-decoration: none;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', cursive;
     padding-right: 10px;
     font-size: 20px;
     border-right: 2px #1CCAD8 solid;
@@ -85,7 +86,7 @@ h3{
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', cursive;
     width: 150px;
 }
 
@@ -112,71 +113,55 @@ h3{
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.crear-cuenta{
+    text-align: center;
+    border: 3px #36008D solid;
+    border-radius: 8px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.crear-cuenta img{
+    width: 170px;
+}
+
+.texto{
+    margin: 2px;
+    font-size: 20px;
+    color: #36008D;
+}
+
+.text-morado{
+    color: #36008D;
+    text-align: center;
+}
+
+.texto-negro{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.texto-negro h4 {
+    margin: 10px;
+}
+
+.buttons-Form {
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #F0E100 ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-family: 'Bebas Neue';
-}
-
-.banner{
-    background-image: url("img/banner-home-3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 10%;
-    padding-bottom: 10%; 
-    margin-top: 50px;
-}
-
-.libros-descuentos{
-    flex-basis: 50%;
-    text-align: center;
-    color: #36008D;
-    margin-top: 50px;
-}
-
-.libros-descuentos img{
-    width: 120px;
-}
-
-.libros-descuentos:hover {
-    transform: scale(1.1);
-}
-
-.mapa{
-    height: 300px;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
-.social{
-    text-align: center;
-    color: #36008D;
-}
-
-.social img{
-    width: 120px;
-    padding: 20px;
-}
-
-.linea{
-    border-bottom: 2px #36008D solid;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.socios{
-    text-align: center;
-    margin-top: 50px;
-    color: #36008D;
-}
-
-.banner-2{
-    background-image: url("img/banner-home-5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 15%;
-    padding-bottom: 15%; 
-    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 .footer{
@@ -184,6 +169,7 @@ h3{
     padding-top: 15px;
     padding-bottom: 5px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .footer h4{
