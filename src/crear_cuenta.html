@@ -43,88 +43,58 @@
 
     <!-- Crear cuenta -->
 
-    <div class="contenedor crear-cuenta">
-        <div class="flex-completo text-morado">
-            <h1>INFORMACIÓN PERSONAL</h1>
-        </div>
+        <form class="crear-cuenta">
 
-        <div class="flex-completo">
+            <h1 class="">INFORMACIÓN PERSONAL</h1>
+
             <input type="text" placeholder="NOMBRE" class="inputs" required> <br><br/>
-        </div>
-        
-        <div class="flex-completo">
+            
             <input type="text" placeholder="APELLIDOS" class="inputs" required> <br><br/>
-        </div>
 
-        <div class="flex-medio">
-            <p class="text-morado">GENERO</p>
-        </div>
-
-        <div class="flex-selector">
-            <select class="select">
+            <label class="text-morado" for="genero">GENERO</label><br>
+            <select class="select" id="genero" required>
                 <option></option>
                 <option>FEMENINO</option>
                 <option>MASCULINO</option>
             </select><br><br/>
-        </div>
 
-        <div class="flex-medio">
-            <input type="text" placeholder="CEDULA" class="cedula" required> <br><br/>
-        </div>
+            
+            <input type="text" placeholder="NÚMERO DE CÉDULA" class="cedula" required> <br><br/>
 
-        <div class="flex-selector">
-            <select class="select">
+            <label class="text-morado" for="cedula">TIPO DE CÉDULA</label> <br>
+            <select class="select" required>
                 <option></option>
                 <option>NACIONAL</option>
                 <option>EXTRANJERO</option>
             </select><br><br/>
-        </div>
 
-        <div class="flex-completo">
             <p class="text-morado">DIRECCIÓN</p>
-        </div>
 
-        <div class="flex-tercio">
-            <input type="text" placeholder="PROVINCIA" class="direccion" required> <br><br/>
-        </div>
+            <input type="text" placeholder="PROVINCIA" class="direccion" required> 
 
-        <div class="flex-tercio">
-            <input type="text" placeholder="CANTÓN" class="direccion" required> <br><br/>
-        </div>
+            <input type="text" placeholder="CANTÓN" class="direccion" required>
 
-        <div class="flex-tercio">
             <input type="text" placeholder="DISTRITO" class="direccion" required> <br><br/>
-        </div>
 
-        <div class="flex-completo">
-            <input type="text" placeholder="DIRECCIÓN EXACTA" class="inputs" required> <br><br/>
-        </div>
+            <input type="text" placeholder="DIRECCION EXACTA" class="inputs" required> <br><br/>
 
-        <div class="flex-completo">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62879.678742639735!2d-84.14845053891138!3d9.93562836740514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2sSan%20Jos%C3%A9%20Province%2C%20San%20Jos%C3%A9!5e0!3m2!1sen!2scr!4v1648105767699!5m2!1sen!2scr" width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                
             <p>SELECCIONAR PUNTO EXACTO EN EL MAPA</p>
-        </div>
 
-        <div class="flex-completo">
             <button class="button-foto">+</button>
+            
             <p>AGREGAR FOTO DE PERFIL</p>
-        </div>
 
-        <div class="flex-completo text-morado">
-            <h1>INFORMACIÓN DE INCIO DE SESIÓN</h1>
-        </div>
+            <h1 class="">INFORMACIÓN DE INCIO DE SESIÓN</h1>
 
-        <div class="flex-completo">
             <input type="text" placeholder="CORREO ELECTRÓNICO" class="inputs" required> <br><br/>
-        </div>
 
-        <div class="flex-completo">
             <input type="text" placeholder="CONTRASEÑA" class="inputs" required> <br><br/>
-        </div>
 
-        <div class="flex-completo">
             <button class="button-carrito">CREAR CUENTA</button>
-        </div>
+            
+        </form>
 
     </div>
 
