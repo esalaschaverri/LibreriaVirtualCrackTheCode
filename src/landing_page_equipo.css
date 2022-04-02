@@ -48,11 +48,11 @@ h3{
     font-family: 'Bebas Neue', cursive;
     padding-right: 10px;
     font-size: 20px;
-    border-right: 2px #00C9B8 solid;
+    border-right: 2px #1CCAD8 solid;
 }
 
 .menu-top a:hover{
-    color: #00C9B8;
+    color: #1CCAD8;
 }
 
 .nombre{
@@ -90,7 +90,7 @@ h3{
 }
 
 .vision{
-    background-color: #00C9B8;
+    background-color: #1CCAD8;
     padding-top: 5px;    
     padding-bottom: 5px;  
     color: white;  
@@ -109,7 +109,7 @@ h3{
 }
 
 .valores{
-    color: #F9E45B;
+    color: #F0E100;
     text-align: center;
     font-size: 35px;
 }
@@ -152,7 +152,7 @@ h3{
     border: 3px solid #36008D;
     color: #36008D;
     border-radius: 10px;
-    background: #F9E45B ;
+    background: #F0E100 ;
     padding: 10px;
     font-family: 'Bebas Neue', cursive;
 }
