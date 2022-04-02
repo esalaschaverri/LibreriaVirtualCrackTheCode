@@ -9,12 +9,12 @@ p {
 }
 
 h1 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     color: #36008D;
 }
 
 h2 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     color: #36008D;
 }
 
@@ -48,7 +48,7 @@ h3{
 .menu-top a {
     color: #36008D;
     text-decoration: none;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     padding-right: 10px;
     font-size: 20px;
     border-right: 2px #1CCAD8 solid;
@@ -57,6 +57,7 @@ h3{
 .menu-top a:hover{
     color: #1CCAD8;
 }
+
 
 .buttonDiv{
     flex-basis: 7%;
@@ -84,7 +85,7 @@ h3{
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     width: 150px;
 }
 
@@ -98,7 +99,7 @@ h3{
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .button-perfil{
@@ -111,10 +112,10 @@ h3{
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', cursive;
 }
 
-.tarjeta-cliente-frecuente{
+.iniciar-sesion{
     text-align: center;
     border: 3px #36008D solid;
     border-radius: 8px;
@@ -145,10 +146,19 @@ h3{
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue', sans-serif;
-    margin-top: 10px;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 20px;
 }
 
+
+h4{
+    text-align: center;
+    color: #36008D;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
 
 .logos-social{
     width: 30px;
@@ -158,15 +168,4 @@ h3{
     margin-left: 10%;
     margin-top: 80px;
     color: #36008D;
-}
-
-.mensaje-cliente-frecuente{
-    text-align: center;
-    color: #1A181B;
-    font-size: medium;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    margin-bottom: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
 }

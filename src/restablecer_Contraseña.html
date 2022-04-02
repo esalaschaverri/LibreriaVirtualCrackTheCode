@@ -1,17 +1,21 @@
 <html>
     <head>
-        <title>Cliente Frecuente</title>
-        <link rel="stylesheet" type="text/css" href="formulario_cliente_frecuente.css">
+        <title>Restablecer Contraseña</title>
+        <link rel="stylesheet" type="text/css" href="restablecer_Contraseña.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
     </head>
+
     <body>
-        <!-- Logo y Menú -->
+
+        <!-- Logo y Menu -->
+
         <div class="contenedor">
             <div class="logo-menu" >
                 <img class="logo" src="img/logo.png" />
             </div>
+
             <div class="menu-top">
                 <a href="">SOBRE NOSOTROS</a>
                 <a href="">LIBROS</a>
@@ -22,8 +26,11 @@
                 <a href="">CONTACTO</a>
             </div>
         </div>
-        <!-- Búsqueda, Carrito y Perfil -->
+
+        <!-- Busqueda, Perfil y Carrito -->
+
         <div class="contenedor">
+
             <div class="buttonDiv3">
                 <input class="button-search" type="text" placeholder="BUSCAR LIBRO O AUTOR">
             </div>
@@ -34,18 +41,22 @@
                 <button class="button-carrito">MI CARRITO</button>
             </div>
         </div>
-        <!-- Tarjeta de Cliente Frecuente -->
-            <form class="tarjeta-cliente-frecuente">
-                <h1>TARJETA DE CLIENTE FRECUENTE</h1>
-                <p class="mensaje-cliente-frecuente">Llena con tus datos el siguiente formulario para solicitar tu tarjeta de cliente frecuente.</p>
-                <input class="inputs" type="text"  required placeholder="NOMBRE"><br>
-                <input class="inputs" type="text"  required placeholder="APELLIDOS"><br>
-                <input class="inputs" type="email"  required placeholder="CORREO ELECTRÓNICO"><br>
-                <p class="mensaje-cliente-frecuente">¿Has llenado el formulario anteriormente? Ingresa a tu correo electrónico para más información en como proceder.</p>
-                <button class="button-sesion">ENVIAR</button> <br>
-        </form>
 
-        <!-- Redes Sociales -->
+        <!-- Iniciar Sesion -->
+
+        <div class="iniciar-sesion">
+            <h1>¿OLVIDASTE TU CONTRASEÑA?</h1>
+            <p>Escribe tu correo electrónico. Recibirás un enlace <br>para restablecer tu contraseña.</p>
+
+            <form>
+                <input class="inputs" type="email" placeholder="CORREO ELECTRONICO" required><br>
+                
+                <button class="button-sesion">RESTABLECER</button> <br>
+            </form>
+        </div>
+
+        <!-- Social media -->
+
         <div class="social">
             <p>Síguenos 
                 <img class="logos-social" src="img/facebook.png"/> 
