@@ -8,11 +8,11 @@ p {
 }
 
 h1 {
-    font-family: 'Bebas Neue', cursive;}
+    font-family: 'Bebas Neue', sans-serif;}
 
 h2 {
-    font-family: 'Bebas Neue', cursive;
-    color: #505255;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #1A181B;
 }
 
 h3{
@@ -45,7 +45,7 @@ h3{
 .menu-top a {
     color: #36008D;
     text-decoration: none;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', sans-serif;
     padding-right: 10px;
     font-size: 20px;
     border-right: 2px #1CCAD8 solid;
@@ -83,10 +83,11 @@ h3{
 }
 
 .mision-flex2{
-    flex-basis: 80%;
+    flex-basis: 70%;
     text-align: left;
     padding-left: 15px;
     padding-top: 50px;
+    margin-right: 10%;
 }
 
 .vision{
@@ -102,10 +103,11 @@ h3{
 }
 
 .vision-flex2{
-    flex-basis: 80%;
+    flex-basis: 70%;
     text-align: left;
     padding-left: 15px;
     padding-top: 50px;
+    margin-right: 10%;
 }
 
 .valores{
@@ -115,7 +117,7 @@ h3{
 }
 
 .valores-texto{
-    text-align: center;
+    text-align: left;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -154,5 +156,5 @@ h3{
     border-radius: 10px;
     background: #F0E100 ;
     padding: 10px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', sans-serif;
 }
