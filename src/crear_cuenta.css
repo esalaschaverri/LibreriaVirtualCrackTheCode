@@ -51,11 +51,11 @@ h3{
     font-family: 'Bebas Neue', cursive;
     padding-right: 10px;
     font-size: 20px;
-    border-right: 2px #00C9B8 solid;
+    border-right: 2px #1CCAD8 solid;
 }
 
 .menu-top a:hover{
-    color: #00C9B8;
+    color: #1CCAD8;
 }
 
 .buttonDiv{
@@ -92,7 +92,7 @@ h3{
     border: 2px solid #36008D;
     color: #36008D;
     border-radius: 5px;
-    background: #F9E45B ;
+    background: #F0E100 ;
     font-size: 15px;
     padding-right: 10px;
     padding-left: 10px;
@@ -103,7 +103,7 @@ h3{
 
 .button-perfil{
     border: 2px solid #36008D;
-    color: #F9E45B;
+    color: #F0E100;
     border-radius: 5px;
     background: #36008D ;
     font-size: 15px;
@@ -174,7 +174,7 @@ h3{
     border: 2px solid #36008D;
     color: #36008D;
     border-radius: 80px;
-    background: #F9E45B ;
+    background: #F0E100 ;
     font-size: 15px;
     padding-right: 27px;
     padding-left: 27px;

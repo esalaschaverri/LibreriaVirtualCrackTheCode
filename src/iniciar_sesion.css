@@ -9,7 +9,9 @@ p {
 }
 
 h1 {
-    font-family: 'Bebas Neue', cursive;}
+    font-family: 'Bebas Neue', cursive;
+    color: #36008D;
+}
 
 h2 {
     font-family: 'Bebas Neue', cursive;
@@ -127,10 +129,12 @@ h3{
 .inputs{
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 25%;
-    padding-right: 25%;
+    width: 75%;
     background-color: #E2E0E5;
     border: 0px;
+    text-align: center;
+    color: #36008D;
+    margin-top: 10px;
 }
 
 .button-sesion{
