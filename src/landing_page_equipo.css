@@ -158,3 +158,12 @@ h3{
     padding: 10px;
     font-family: 'Bebas Neue', sans-serif;
 }
+
+.button:hover {
+    border: 3px solid #F0E100;
+    color: #F0E100;
+    border-radius: 10px;
+    background: #36008D ;
+    padding: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+}
