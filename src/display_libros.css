@@ -1,0 +1,157 @@
+div{
+    box-sizing: border-box;
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    color: #505255;
+    text-align: center;
+}
+h2{
+    font-family: 'Bebas Neue', cursive;
+    color:black;
+    text-align: center;
+}
+blockquote{
+    font-family: 'Bebas Neue', cursive;
+    color:black;
+    text-align: center;
+}
+.logo-menu{
+    flex-basis: 20%;
+}
+.logo{
+    width: 150px;
+    padding-left: 20px;
+}
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 35px;
+    padding-right: 35px;
+    text-align: right;
+}
+.menu-top a{
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-right: 10px;
+    font-size: 20px;
+    border-right: 2px #00C9B8 solid;
+}
+.menu-top a:hover{
+    color: #00C9B8;
+}
+.buttonDiv3{
+    flex-basis: 83%;
+    text-align: right;
+    margin-bottom: 30px;
+}
+.buttonDiv{
+    flex-basis: 7%;
+    text-align: right;
+}
+.buttonDiv2{
+    flex-basis: 8%;
+    text-align: right;
+    padding-right: 15px;
+}
+.button-search{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #E2E0E5;
+    font-size: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    width: 150px;
+}
+.button-perfil{
+    border: 2px solid #36008D;
+    color: #F9E45B;
+    border-radius: 5px;
+    background: #36008D;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+}
+.button-carrito{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #F9E45B;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+}
+.muestra{
+    flex-basis: 25%;
+    text-align: center;
+}
+.agregar{
+    border: 3px solid #36008D;
+    color: #F9E45B;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 10px;
+}
+.muestra p:hover{
+    color:lightgray
+}
+.muestra h2:hover{
+    color:lightgray
+}
+.logos-social{
+    width: 30px;
+}
+
+.social{
+    margin-left: 10%;
+    margin-top: 80px;
+    color: #36008D;
+}
+.flecha1{
+    flex-basis: 50%;
+    border: 3px solid #36008D;
+    color: #F9E45B;
+    border-radius: 5px;
+    background: #36008D;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 600px;
+}
+.flecha2{
+    flex-basis: 50%;
+    border: 3px solid #36008D;
+    color: #F9E45B;
+    border-radius: 5px;
+    background: #36008D;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+} 
