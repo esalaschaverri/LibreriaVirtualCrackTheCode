@@ -8,15 +8,14 @@ div{
 p{
     font-family: 'Roboto', sans-serif;
     color: #505255;
-    text-align: center;
 }
 h2{
-    font-family: 'Bebas Neue', cursive;
-    color:black;
-    text-align: center;
+    font-family: 'Bebas Neue';
+    color: #36008D;
 }
+
 blockquote{
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue';
     color:black;
     text-align: center;
 }
@@ -36,13 +35,13 @@ blockquote{
 .menu-top a{
     color: #36008D;
     text-decoration: none;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue';
     padding-right: 10px;
     font-size: 20px;
-    border-right: 2px #00C9B8 solid;
+    border-right: 2px #1CCAD8 solid;
 }
 .menu-top a:hover{
-    color: #00C9B8;
+    color: #1CCAD8;
 }
 .buttonDiv3{
     flex-basis: 83%;
@@ -73,7 +72,7 @@ blockquote{
 }
 .button-perfil{
     border: 2px solid #36008D;
-    color: #F9E45B;
+    color: #F0E100;
     border-radius: 5px;
     background: #36008D;
     font-size: 15px;
@@ -87,7 +86,7 @@ blockquote{
     border: 2px solid #36008D;
     color: #36008D;
     border-radius: 5px;
-    background: #F9E45B;
+    background: #F0E100;
     font-size: 15px;
     padding-right: 10px;
     padding-left: 10px;
@@ -95,13 +94,41 @@ blockquote{
     padding-bottom: 5px;
     font-family: 'Bebas Neue', cursive;
 }
+
+.categorias{
+    text-align: center;
+    border: 3px solid #36008D;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    color: #36008D;
+}
+
+.categorias a{
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-right: 10px;
+    font-size: 20px;
+    border-right: 2px #1A181B solid;
+    padding-left: 20px;
+}
+
+.categorias a:hover{
+    color: #1CCAD8;
+}
+
 .muestra{
     flex-basis: 25%;
     text-align: center;
 }
 .agregar{
     border: 3px solid #36008D;
-    color: #F9E45B;
+    color: #F0E100;
     border-radius: 5px;
     background: #36008D ;
     font-size: 15px;
@@ -113,11 +140,12 @@ blockquote{
     margin-bottom: 10px;
 }
 .muestra p:hover{
-    color:lightgray
+    color: #1CCAD8;
 }
 .muestra h2:hover{
-    color:lightgray
+    color: #1CCAD8;
 }
+
 .logos-social{
     width: 30px;
 }
@@ -127,10 +155,11 @@ blockquote{
     margin-top: 80px;
     color: #36008D;
 }
+
 .flecha1{
     flex-basis: 50%;
     border: 3px solid #36008D;
-    color: #F9E45B;
+    color: #F0E100;
     border-radius: 5px;
     background: #36008D;
     padding-right: 10px;
@@ -144,7 +173,7 @@ blockquote{
 .flecha2{
     flex-basis: 50%;
     border: 3px solid #36008D;
-    color: #F9E45B;
+    color: #F0E100;
     border-radius: 5px;
     background: #36008D;
     padding-right: 10px;
@@ -155,3 +184,29 @@ blockquote{
     margin-left: 60px;
     margin-bottom: 20px;
 } 
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.derechos{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #1A181B;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px;
+}

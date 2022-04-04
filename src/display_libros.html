@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>Libros</title>
         <link rel="stylesheet" type="text/css" href="display_libros.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7,33 +8,53 @@
         <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        
+        <!-- Logo y Menú -->
         <div class="contenedor">
-            <div class="logo-menu">
-                <img class="logo"src="logo.jpg"/>
+            <div class="logo-menu" >
+                <a href="index.html"><img class="logo" src="img/logo.png"/></a>
             </div>
+
             <div class="menu-top">
-                <a href="#">SOBRE NOSOTROS</a>
-                <a href="#">LIBROS</a>
-                <a href="#">SOCIOS COMERCIALES</a>
-                <a href="#">CLIENTE FRECUENTE</a>
-                <a href="#">INICIAR SECIÓN</a>
-                <a href="#">PREGUNTAS FRECUENTES</a>
-                <a href="#">CONTACTO</a>
+                <a href="">SOBRE NOSOTROS</a>
+                <a href="libros.html">LIBROS</a>
+                <a href="">SOCIOS COMERCIALES</a>
+                <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+                <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+                <a href="">PREGUNTAS FRECUENTES</a>
+                <a href="contacto.html">CONTACTO</a>
             </div>
         </div>
-        <!-- carrito-->
+        
+        <!-- Búsqueda, Carrito y Perfil -->
         <div class="contenedor">
             <div class="buttonDiv3">
                 <input class="button-search" type="text" placeholder="BUSCAR LIBRO O AUTOR">
             </div>
             <div class="buttonDiv">
-                <button class="button-perfil">MI PERFIL</button>
+                <button class="button-perfil" onclick="document.location='perfil_cliente.html'">MI PERFIL</button>
             </div>
             <div class="buttonDiv2">
                 <button class="button-carrito">MI CARRITO</button>
             </div>
         </div>
+        
         <!-- display libros -->
+
+        <div class="categorias">
+            <h2>CATEGORÍAS</h2>
+            <a href="">Arte</a>
+            <a href="">Ciencia</a>
+            <a href="">Diseño</a>
+            <a href="">Fantasía</a>
+            <a href="">Filosofía</a>
+            <a href="">Gastronomía</a>
+            <a href="">Niños</a>
+            <a href="">Novelas</a>
+            <a href="">Salud y Ejercicio</a>
+            <a href="">Viajes</a>
+        </div>
+        
         <div class="contenedor">
             <div class="muestra">
                 <img src="imagen_prueba.png" />
@@ -72,43 +93,7 @@
                 <button class="agregar">AÑADIR AL CARRITO</button>
             </div>
             <div class="muestra">
-                <img src="imagen_prueba.png"/>
-                <h2>NOMBRE</h2>
-                <p>AUTOR</p>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-            <div class="muestra">
-                <img src="imagen_prueba.png"/>
-                <h2>NOMBRE</h2>
-                <p>AUTOR</p>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-            <div class="muestra">
-                <img src="imagen_prueba.png"/>
-                <h2>NOMBRE</h2>
-                <p>AUTOR</p>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-            <div class="muestra">
-                <img src="imagen_prueba.png"/>
-                <h2>NOMBRE</h2>
-                <p>AUTOR</p>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-            <div class="muestra">
-                <img src="imagen_prueba.png"/>
+                <img src="imagen_prueba.png" />
                 <h2>NOMBRE</h2>
                 <p>AUTOR</p>
                 <blockquote>
@@ -144,10 +129,13 @@
                 <button class="agregar">AÑADIR AL CARRITO</button>
             </div>
         </div>
+
         <div>
             <button class="flecha1"><i class="fa-solid fa-arrow-left"></i></button>
             <button class="flecha2"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
+
+        <!-- Redes Sociales -->
         <div class="social">
             <p>Síguenos 
                 <img class="logos-social" src="img/facebook.png"/> 
@@ -155,5 +143,14 @@
                 <img class="logos-social" src="img/twitter.png"/> 
             </p>
         </div>
+
+        <!-- Footer -->
+
+        <div class="footer">
+            <h4>LIBRERIA@HOTMAIL.COM</h4>
+            <h4>+506 7777-8888</h4>
+            <p class="derechos">DERECHOS RESERVADOS</p>
+        </div>
+
     </body>
 </html>
