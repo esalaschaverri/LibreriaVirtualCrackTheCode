@@ -1,0 +1,224 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #505255;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logoMenu{
+    flex-basis: 30%;
+}
+
+.logo{
+        width: 150px;
+        padding-left: 20px;
+        padding-top: 10px;
+        cursor: pointer;
+}
+
+.menu{
+    flex-basis: 70%;
+    padding-top: 35px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+
+.menu a{
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-right: 10px;
+    font-size: 20px;
+    border-right: 2px #00C9B8 solid;
+}
+
+.menu a:hover{
+    color: #00C9B8;
+}
+
+.buttonDiv{
+    flex-basis: 7%;
+    text-align: right;
+    padding-bottom: 35px;
+}
+
+.buttonDiv2{
+    flex-basis: 8%;
+    text-align: right;
+    padding-right: 15px;
+    padding-bottom: 35px;
+}
+
+.buttonDiv3{
+    flex-basis: 83%;
+    text-align: right;
+    padding-bottom: 35px;
+}
+
+.button-search{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #E2E0E5 ;
+    font-size: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    width: 150px;
+}
+
+.button-carrito{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #F0E100 ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+}
+
+.button-perfil{
+    border: 2px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+}
+
+.banner{
+    background-image: url("img/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.mision{
+    background-color: #36008D;
+    padding-top: 5px;    
+    padding-bottom: 5px;  
+    color: white;  
+}
+.mision-flex{
+    flex-basis: 20%;
+    text-align: right;
+    font-size: 35px;
+}
+
+.mision-flex2{
+    flex-basis: 80%;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+
+.vision{
+    background-color: #00C9B8;
+    padding-top: 5px;    
+    padding-bottom: 5px;  
+    color: white;  
+}
+.vision-flex{
+    flex-basis: 20%;
+    text-align: right;
+    font-size: 35px;
+}
+
+.vision-flex2{
+    flex-basis: 80%;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+
+.sobreNosotros{
+    text-align: center;
+    font-size: 40px;
+}
+
+.historia{
+    flex-basis: 60%;
+    padding-left: 35px;
+    text-align: justify;
+   
+}
+
+.imagen{
+    flex-basis: 40%;
+    padding-right: 35px;
+    text-align: right;
+}
+
+.libreria{
+    width: 95%;
+    padding-top: 18px;
+}
+
+.logos-social{
+    width: 30px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 35px;
+    padding-left: 35px;
+    color: #36008D;
+}
+
+
+
+.footer{
+        background-color: #F2F2F2;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    
+    .footer h4{
+        font-family: 'Roboto';
+        font-weight: 700;
+        color: #36008D;
+        text-align: center;
+        font-size: 14px;
+        margin: 2px;
+    }

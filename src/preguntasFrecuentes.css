@@ -1,0 +1,187 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #505255;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logoMenu{
+    flex-basis: 30%;
+}
+
+.logo{
+        width: 150px;
+        padding-left: 20px;
+        padding-top: 10px;
+        cursor: pointer;
+}
+
+.menu{
+    flex-basis: 70%;
+    padding-top: 35px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+
+.menu a{
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-right: 10px;
+    font-size: 20px;
+    border-right: 2px #00C9B8 solid;
+}
+
+.menu a:hover{
+    color: #00C9B8;
+}
+
+.buttonDiv{
+    flex-basis: 7%;
+    text-align: right;
+    
+}
+
+.buttonDiv2{
+    flex-basis: 8%;
+    text-align: right;
+    padding-right: 15px;
+   
+}
+
+.buttonDiv3{
+    flex-basis: 83%;
+    text-align: right;
+    
+}
+
+.button-search{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #E2E0E5 ;
+    font-size: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    width: 150px;
+}
+
+.button-carrito{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #F0E100 ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+}
+
+.button-perfil{
+    border: 2px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+}
+
+.pPregunta{
+    background-color: #00C9B8;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.respuesta{
+    text-align: justify;
+}
+
+.sPregunta{
+    background-color: #E2E0E5;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.logos-social{
+    width: 30px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 35px;
+    padding-left: 35px;
+    color: #36008D;
+    padding-bottom: 20px;
+}
+
+
+.footer{
+    background-image: url("img/footerPoliticas.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.foot{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.foot h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
