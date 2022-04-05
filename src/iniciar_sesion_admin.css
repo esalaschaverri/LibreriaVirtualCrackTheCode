@@ -9,20 +9,19 @@ p {
 }
 
 h1 {
-    font-family: 'Bebas Neue';}
+    font-family: 'Bebas Neue', cursive;
+    color: #36008D;
+}
 
 h2 {
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', cursive;
     color: #36008D;
 }
 
 h3{
-    font-family: 'Bebas Neue';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    color: #36008D;
-    text-align: left;
-    font-size: 40px;
-    margin-left: 40px;
+    color: white;
 }
 
 .contenedor{
@@ -49,7 +48,7 @@ h3{
 .menu-top a {
     color: #36008D;
     text-decoration: none;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', cursive;
     padding-right: 10px;
     font-size: 20px;
     border-right: 2px #1CCAD8 solid;
@@ -58,6 +57,7 @@ h3{
 .menu-top a:hover{
     color: #1CCAD8;
 }
+
 
 .buttonDiv{
     flex-basis: 7%;
@@ -85,7 +85,7 @@ h3{
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', cursive;
     width: 150px;
 }
 
@@ -99,7 +99,7 @@ h3{
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', cursive;
 }
 
 .button-perfil{
@@ -112,75 +112,88 @@ h3{
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', cursive;
 }
 
-.button-carrito:hover, .button-perfil:hover {
-    transform: scale(1.1);
-}
-
-.banner{
-    background-image: url("img/banner-home-3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 10%;
-    padding-bottom: 6%; 
+.iniciar-sesion{
+    text-align: center;
+    border: 3px #36008D solid;
+    border-radius: 8px;
+    margin-left: 30%;
+    margin-right: 30%;
     margin-top: 50px;
+    padding-bottom: 20px;
 }
 
-.libros-descuentos{
-    flex-basis: 50%;
+.inputs{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 75%;
+    background-color: #E2E0E5;
+    border: 0px;
     text-align: center;
     color: #36008D;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
-.libros-descuentos img{
-    width: 120px;
+.button-sesion{
+    border: 3px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 10px;
 }
 
-.libros-descuentos:hover {
-    transform: scale(1.1);
+.align-left{
+    text-align: left;
+    padding-left: 10%;
 }
 
-.mapa{
-    height: 300px;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 50px;
+.align-right{
+    text-align: right;
+    font-size: small;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.iniciar-sesion a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #36008D;
+    text-align: right;
+}
+
+
+.iniciar-sesion a:hover{
+    color: #1CCAD8;
+}
+
+h4{
+    text-align: center;
+    color: #36008D;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.logos-social{
+    width: 30px;
 }
 
 .social{
-    text-align: center;
+    margin-left: 10%;
+    margin-top: 80px;
     color: #36008D;
-}
-
-.social img{
-    width: 120px;
-    padding: 20px;
-}
-
-.linea{
-    border-bottom: 2px #36008D solid;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.socios{
-    text-align: center;
-    margin-top: 50px;
-    color: #36008D;
-}
-
-.banner-2{
-    background-image: url("img/banner-home-5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 15%;
-    padding-bottom: 15%; 
-    margin-top: 50px;
 }
 
 .footer{
@@ -188,6 +201,7 @@ h3{
     padding-top: 15px;
     padding-bottom: 5px;
     text-align: center;
+    margin-top: 30px;
 }
 
 .footer h4{
@@ -206,12 +220,4 @@ h3{
     text-align: center;
     font-size: 10px;
     margin: 15px;
-}
-
-.footer a{
-    text-decoration: none;
-}
-
-.footer a:hover{
-    color: #1CCAD8;
 }
