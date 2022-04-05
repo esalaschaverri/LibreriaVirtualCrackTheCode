@@ -36,14 +36,14 @@
             </div>
         </div>
         <!-- Tarjeta de Cliente Frecuente -->
-            <form class="tarjeta-cliente-frecuente">
+            <form onsubmit="return validar()" class="tarjeta-cliente-frecuente">
                 <h1>TARJETA DE CLIENTE FRECUENTE</h1>
                 <p class="mensaje-cliente-frecuente">Llena con tus datos el siguiente formulario para solicitar tu tarjeta de cliente frecuente.</p>
-                <input class="inputs" type="text"  required placeholder="NOMBRE"><br>
-                <input class="inputs" type="text"  required placeholder="APELLIDOS"><br>
-                <input class="inputs" type="email"  required placeholder="CORREO ELECTRÓNICO"><br>
+                <input class="inputs" id="nombre" type="text" placeholder="NOMBRE"><br>
+                <input class="inputs" id="apellidos" type="text" placeholder="APELLIDOS"><br>
+                <input class="inputs" id="email" type="email" placeholder="CORREO ELECTRÓNICO"><br>
                 <p class="mensaje-cliente-frecuente">¿Has llenado el formulario anteriormente? Ingresa a tu correo electrónico para más información en como proceder.</p>
-                <button class="button-sesion">ENVIAR</button> <br>
+                <input class="button-sesion" type="submit" value="Enviar"> <br>
         </form>
 
         <!-- Redes Sociales -->
@@ -62,5 +62,21 @@
             <h4>+506 7777-8888</h4>
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>
+        <script>
+            function validar() {
+                if(document.getElementById("nombre").value == "") {
+                    document.getElementById("nombre").classList.add("valid");
+                    return false
+                }
+                if(document.getElementById("apellidos").value == "") {
+                    document.getElementById("apellidos").classList.add("valid");
+                    return false
+                }
+                if(document.getElementById("email").value == "") {
+                    document.getElementById("email").classList.add("valid");
+                    return false
+                }
+            }
+        </script>
     </body>
 </html>
