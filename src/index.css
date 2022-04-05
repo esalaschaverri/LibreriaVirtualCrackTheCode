@@ -215,3 +215,7 @@ h3{
 .footer a:hover{
     color: #1CCAD8;
 }
+
+.validar{
+    border: 2px solid #F0E100;
+}

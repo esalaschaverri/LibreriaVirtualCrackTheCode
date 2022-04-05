@@ -48,10 +48,9 @@
             <h1>INICIAR SESIÓN ADMIN</h1>
             <p>Exclusivo para administrar el website</p>
 
-            <form action="perfil_admin.html">
-                <input class="inputs" type="text" placeholder="USUARIO" required><br>
-                <input class="inputs" type="password" name="clave" placeholder="CONTRASEÑA"><br><br/>
-                <a class="align-right" href="restablecer_Contraseña.html">¿Olvidaste tu contraseña?</a> <br>
+            <form action="perfil_admin.html" onsubmit="return validar()">
+                <input class="inputs" type="text" placeholder="USUARIO" id="usuario"><br>
+                <input class="inputs" id="password" type="password" name="clave" placeholder="CONTRASEÑA"><br><br/>
                 <button class="button-sesion">INGRESAR</button> <br>
             </form>
         </div>
@@ -72,5 +71,19 @@
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>
 
+        <script>
+            function validar() {
+                if(document.getElementById("usuario").value == "") {
+                    document.getElementById("usuario").classList.add("valid");
+                    alert("Debe ingresar el usuario");
+                    return false;
+                }
+                if(document.getElementById("password").value == ""){
+                    document.getElementById("password").classList.add("valid");
+                    alert("Debe ingresar la contraseña");
+                    return false;
+                }
+            }
+        </script>
     </body>
 </html>
