@@ -7,10 +7,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body onload='document.form1.text1.focus()'>
 
         <!-- Logo y Menu -->
-
         <div class="contenedor">
             <div class="logo-menu" >
                 <a href="index.html"><img class="logo" src="img/logo.png"/></a>
@@ -18,7 +17,7 @@
 
             <div class="menu-top">
                 <a href="">SOBRE NOSOTROS</a>
-                <a href="libros.html">LIBROS</a>
+                <a href="display_libros.html">LIBROS</a>
                 <a href="">SOCIOS COMERCIALES</a>
                 <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
                 <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
@@ -48,14 +47,14 @@
             <h1>INICIAR SESIÓN</h1>
             <p>Si ya tienes cuenta, por favor inicia sesión.</p>
 
-            <form>
-                <input class="inputs" type="email" placeholder="CORREO ELECTRONICO" required><br>
-                <input class="inputs" type="password" name="clave" placeholder="CONTRASEÑA"><br><br/>
+            <form action="perfil_cliente.html" onsubmit= "return validar()"> 
+                <input class="inputs" id="text" type="text" placeholder="CORREO ELECTRONICO" ><br>
+                <input class="inputs" id="password" type="password" name="clave" placeholder="CONTRASEÑA"><br><br/>
                 <a class="align-right" href="restablecer_Contraseña.html">¿Olvidaste tu contraseña?</a> <br>
                 <button class="button-sesion">INICIAR SESIÓN</button> <br>
             </form>
             <h4>¿No tienes cuenta?</h4>
-            <button class="button-perfil" onclick="document.location='crear_cuenta.html'">CREAR CUENTA</button>
+            <button class="button-perfil" onclick="document.location='crear_cuenta.html'" >CREAR CUENTA</button>
         </div>
 
         <!-- Social media -->
@@ -74,5 +73,31 @@
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>
 
+        <script>
+            function validar() {
+
+                var mail = document.getElementById("text").value;
+
+                var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+            
+                if(document.getElementById("text").value == "") {
+                    document.getElementById("text").classList.add("valid");
+                    return false;
+                }
+                if(document.getElementById("password").value == ""){
+                    document.getElementById("password").classList.add("valid");
+                    return false;
+                }
+
+                if(regx.test(mail)){
+                    return true
+                }
+                else{
+                    alert("incorrect email")
+                    return false;
+                }
+            }
+
+        </script>
     </body>
 </html>
