@@ -125,6 +125,7 @@ blockquote{
 .muestra{
     flex-basis: 25%;
     text-align: center;
+    margin-top: 30px;
 }
 
 .agregar{
@@ -145,6 +146,10 @@ blockquote{
 }
 .muestra h2:hover{
     color: #1CCAD8;
+}
+
+.muestra img{
+    width: 150px;
 }
 
 .logos-social{
