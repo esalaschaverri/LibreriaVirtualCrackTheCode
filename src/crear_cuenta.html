@@ -43,26 +43,26 @@
 
     <!-- Crear cuenta -->
 
-        <form class="crear-cuenta">
+        <form class="crear-cuenta" action="perfil_cliente.html" onsubmit= "return validar(); validarCedula()">
 
             <h1 class="">INFORMACIÓN PERSONAL</h1>
 
-            <input type="text" placeholder="NOMBRE" class="inputs" required> <br><br/>
+            <input type="text" id="nombre" placeholder="NOMBRE" class="inputs"> <br><br/>
             
-            <input type="text" placeholder="APELLIDOS" class="inputs" required> <br><br/>
+            <input type="text" id="apellidos" placeholder="APELLIDOS" class="inputs"> <br><br/>
 
             <label class="text-morado" for="genero">GENERO</label><br>
-            <select class="select" id="genero" required>
+            <select class="select" id="genero">
                 <option></option>
                 <option>FEMENINO</option>
                 <option>MASCULINO</option>
             </select><br><br/>
 
             
-            <input type="text" placeholder="NÚMERO DE CÉDULA" class="cedula" required> <br><br/>
+            <input type="text" placeholder="NÚMERO DE CÉDULA" class="cedula" id="cedula"> <br><br/>
 
-            <label class="text-morado" for="cedula">TIPO DE CÉDULA</label> <br>
-            <select class="select" required>
+            <label class="text-morado" for="tipoCedula">TIPO DE CÉDULA</label> <br>
+            <select class="select" id="tipoCedula">
                 <option></option>
                 <option>NACIONAL</option>
                 <option>EXTRANJERO</option>
@@ -70,13 +70,13 @@
 
             <p class="text-morado">DIRECCIÓN</p>
 
-            <input type="text" placeholder="PROVINCIA" class="direccion" required> 
+            <input type="text" id="provincia" placeholder="PROVINCIA" class="direccion"> 
 
-            <input type="text" placeholder="CANTÓN" class="direccion" required>
+            <input type="text" id="canton" placeholder="CANTÓN" class="direccion" >
 
-            <input type="text" placeholder="DISTRITO" class="direccion" required> <br><br/>
+            <input type="text" id="distrito" placeholder="DISTRITO" class="direccion" > <br><br/>
 
-            <input type="text" placeholder="DIRECCION EXACTA" class="inputs" required> <br><br/>
+            <input type="text" id="direccion" placeholder="DIRECCION EXACTA" class="inputs"> <br><br/>
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62879.678742639735!2d-84.14845053891138!3d9.93562836740514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2sSan%20Jos%C3%A9%20Province%2C%20San%20Jos%C3%A9!5e0!3m2!1sen!2scr!4v1648105767699!5m2!1sen!2scr" width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 
@@ -88,9 +88,9 @@
 
             <h1 class="">INFORMACIÓN DE INCIO DE SESIÓN</h1>
 
-            <input type="text" placeholder="CORREO ELECTRÓNICO" class="inputs" required> <br><br/>
+            <input type="text" placeholder="CORREO ELECTRÓNICO" class="inputs" id="email"> <br><br/>
 
-            <input type="text" placeholder="CONTRASEÑA" class="inputs" required> <br><br/>
+            <input type="text" placeholder="CONTRASEÑA" class="inputs" id="password"> <br><br/>
 
             <button class="button-carrito">CREAR CUENTA</button>
             
@@ -105,6 +105,8 @@
         <h4>+506 7777-8888</h4>
         <p class="derechos">DERECHOS RESERVADOS</p>
     </div>
+
+    <script src="crear_cuenta.js"></script>
 
 </body>
 </html>
