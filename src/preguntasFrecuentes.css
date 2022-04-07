@@ -56,11 +56,11 @@ a{
     font-family: 'Bebas Neue', cursive;
     padding-right: 10px;
     font-size: 20px;
-    border-right: 2px #00C9B8 solid;
+    border-right: 2px #1CCAD8 solid;
 }
 
 .menu a:hover{
-    color: #00C9B8;
+    color: #1CCAD8;
 }
 
 .buttonDiv{
@@ -134,7 +134,7 @@ a{
 }
 
 .pPregunta{
-    background-color: #00C9B8;
+    background-color: #1CCAD8;
     text-align: center;
     padding-bottom: 25px;
     padding-top: 25px;
