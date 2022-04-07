@@ -84,11 +84,11 @@
     <div class="iniciar-sesion">
         <h2>LLENA EL FORMULARIO</h2>
         <p>Para mas consultas</p>
-        <form>
-            <input class="inputs" type="email" placeholder="NOMBRE Y APELLIDO" required><br>
-            <input class="inputs" type="email" placeholder="CORREO ELECTRONICO" required><br><br/>
+        <form onsubmit= "return validar()">
+            <input class="inputs" id="nombre" type="text" placeholder="NOMBRE Y APELLIDO"><br>
+            <input class="inputs" id="email" type="text" placeholder="CORREO ELECTRONICO" ><br><br/>
             <h4>MENSAJE:</h4>
-            <textarea class="inputs"></textarea><br><br/>
+            <textarea class="inputs" id="mensaje"></textarea><br><br/>
             <button class="button-sesion">ENVIAR</button> <br>
         </form>
     </div>
@@ -100,6 +100,8 @@
         <h4>+506 7777-8888</h4>
         <p class="derechos">DERECHOS RESERVADOS</p>
     </div>
+
+    <script src="contacto.js"></script>
 
 </body>
 </html>

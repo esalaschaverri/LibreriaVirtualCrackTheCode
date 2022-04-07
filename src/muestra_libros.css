@@ -11,7 +11,7 @@ div{
 }
 
 .logo{
-    width: 150px;
+    width: 180px;
     padding-left: 20px;
 }
 
@@ -91,6 +91,10 @@ div{
     font-family: 'Bebas Neue', cursive;
 }
 
+.button-carrito:hover, .button-perfil:hover {
+    transform: scale(1.1);
+}
+
 .imagen-libro{
     flex-basis: 30%;    
     text-align: right;
@@ -107,6 +111,14 @@ div{
     text-align: left;
     margin-bottom: 30px;
     padding-left: 30px;
+}
+
+.info a{
+    text-decoration: none;
+}
+
+.info a:hover{
+    color: #1CCAD8;
 }
 
 h2{
@@ -138,6 +150,10 @@ h2{
     padding-bottom: 5px;
     font-family: 'Bebas Neue', cursive;
     margin-top: 10px;
+}
+
+.button:hover {
+    transform: scale(1.1);
 }
 
 .clasificacion{

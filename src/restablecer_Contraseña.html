@@ -48,8 +48,8 @@
             <h1>¿OLVIDASTE TU CONTRASEÑA?</h1>
             <p>Escribe tu correo electrónico. Recibirás un enlace <br>para restablecer tu contraseña.</p>
 
-            <form>
-                <input class="inputs" type="email" placeholder="CORREO ELECTRONICO" required><br>
+            <form onsubmit= "return validar()">
+                <input class="inputs" type="text" id="email" placeholder="CORREO ELECTRONICO" ><br>
                 
                 <button class="button-sesion">RESTABLECER</button> <br>
             </form>
@@ -70,6 +70,8 @@
             <h4>+506 7777-8888</h4>
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>
+
+        <script src="restablecer_Contrasena.js"></script>
 
     </body>
 </html>

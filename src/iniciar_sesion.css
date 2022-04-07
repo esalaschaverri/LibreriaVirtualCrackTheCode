@@ -34,7 +34,7 @@ h3{
 }
 
 .logo{
-    width: 150px;
+    width: 180px;
     padding-left: 20px;
 }
 
@@ -113,6 +113,10 @@ h3{
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: 'Bebas Neue', cursive;
+}
+
+.button-carrito:hover, .button-perfil:hover {
+    transform: scale(1.1);
 }
 
 .iniciar-sesion{

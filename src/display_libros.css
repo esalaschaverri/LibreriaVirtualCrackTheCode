@@ -23,7 +23,7 @@ blockquote{
     flex-basis: 20%;
 }
 .logo{
-    width: 150px;
+    width: 180px;
     padding-left: 20px;
 }
 .menu-top{
@@ -95,6 +95,10 @@ blockquote{
     font-family: 'Bebas Neue', cursive;
 }
 
+.button-carrito:hover, .button-perfil:hover {
+    transform: scale(1.1);
+}
+
 .categorias{
     text-align: center;
     border: 3px solid #36008D;
@@ -146,6 +150,9 @@ blockquote{
 }
 .muestra h2:hover{
     color: #1CCAD8;
+}
+.muestra a{
+    text-decoration: none;
 }
 
 .muestra img{

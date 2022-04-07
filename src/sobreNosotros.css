@@ -36,7 +36,7 @@ a{
 }
 
 .logo{
-        width: 150px;
+        width: 180px;
         padding-left: 20px;
         padding-top: 10px;
         cursor: pointer;
@@ -122,6 +122,10 @@ a{
     padding-bottom: 5px;
     font-family: 'Bebas Neue', cursive;
     cursor: pointer;
+}
+
+.button-carrito:hover, .button-perfil:hover {
+    transform: scale(1.1);
 }
 
 .banner{

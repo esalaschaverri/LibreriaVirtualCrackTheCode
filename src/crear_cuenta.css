@@ -34,7 +34,7 @@ h3{
 }
 
 .logo{
-    width: 150px;
+    width: 180px;
     padding-left: 20px;
 }
 
@@ -114,6 +114,10 @@ h3{
     font-family: 'Bebas Neue', sans-serif;
 }
 
+.button-carrito:hover, .button-perfil:hover {
+    transform: scale(1.1);
+}
+
 .crear-cuenta{
     text-align: center;
     border: 3px #36008D solid;
@@ -183,6 +187,23 @@ h3{
     padding-bottom: 0px;
     font-family: 'Bebas Neue', cursive;
     font-size: 70px;
+}
+
+.button-crear{
+    border: 2px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.button-crear:hover {
+    transform: scale(1.1);
 }
 
 .footer{
