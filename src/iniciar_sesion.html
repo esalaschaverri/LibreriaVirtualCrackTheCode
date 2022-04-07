@@ -73,31 +73,7 @@
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>
 
-        <script>
-            function validar() {
+        <script src="iniciar_sesion.js"></script>
 
-                var mail = document.getElementById("text").value;
-
-                var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
-            
-                if(document.getElementById("text").value == "") {
-                    document.getElementById("text").classList.add("valid");
-                    return false;
-                }
-                if(document.getElementById("password").value == ""){
-                    document.getElementById("password").classList.add("valid");
-                    return false;
-                }
-
-                if(regx.test(mail)){
-                    return true
-                }
-                else{
-                    alert("incorrect email")
-                    return false;
-                }
-            }
-
-        </script>
     </body>
 </html>
