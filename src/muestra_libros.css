@@ -94,6 +94,11 @@ div{
 .imagen-libro{
     flex-basis: 30%;    
     text-align: right;
+    padding-top: 20px;
+}
+
+.imagen-libro img{
+    width: 250px;
 }
 
 
@@ -101,7 +106,7 @@ div{
     flex-basis: 70%;
     text-align: left;
     margin-bottom: 30px;
-    padding-left: 10px;
+    padding-left: 30px;
 }
 
 h2{

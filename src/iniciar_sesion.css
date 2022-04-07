@@ -221,3 +221,8 @@ h4{
     font-size: 10px;
     margin: 15px;
 }
+
+.valid{
+    border: 2px solid #36008D;
+    background-color: #F0E100;
+}
