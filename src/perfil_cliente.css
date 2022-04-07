@@ -36,22 +36,23 @@ h4{
 }
 
 .logo{
-    width: 180px;
-    padding-left: 20px;
+    width: 75%;
+    padding-left: 5%;
+    padding-top: 3%;
 }
 
 .menu-top{
     flex-basis: 80%;
-    padding-top: 35px;
-    padding-right: 35px;
+    padding-top: 3%;
+    padding-right: 3%;
     text-align: right;
 }
 
 .menu-top a {
     color: #36008D;
     text-decoration: none;
-    font-family: 'Bebas Neue', cursive;
-    padding-right: 10px;
+    font-family: 'Bebas Neue';
+    padding-right: 1%;
     font-size: 20px;
     border-right: 2px #1CCAD8 solid;
 }
@@ -86,8 +87,8 @@ h4{
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue', cursive;
-    width: 150px;
+    font-family: 'Bebas Neue';
+    width: 15%;
 }
 
 .button-carrito{
@@ -96,8 +97,7 @@ h4{
     border-radius: 5px;
     background: #F0E100 ;
     font-size: 15px;
-    padding-right: 10px;
-    padding-left: 10px;
+    width: 90%;
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: 'Bebas Neue';
@@ -109,11 +109,10 @@ h4{
     border-radius: 5px;
     background: #36008D ;
     font-size: 15px;
-    padding-right: 10px;
-    padding-left: 10px;
+    width: 90%;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue';
 }
 
 .button-carrito:hover, .button-perfil:hover {
@@ -156,9 +155,9 @@ h4{
 
 .buttons-Form {
     border: 2px solid #36008D;
-    color: #36008D;
+    color: #F0E100;
     border-radius: 5px;
-    background: #F0E100 ;
+    background: #36008D ;
     font-size: 15px;
     padding-right: 10px;
     padding-left: 10px;
@@ -166,6 +165,10 @@ h4{
     padding-bottom: 5px;
     font-family: 'Bebas Neue';
     margin-bottom: 10px;
+}
+
+.buttons-Form:hover{
+    transform: scale(1.1);
 }
 
 .footer{
