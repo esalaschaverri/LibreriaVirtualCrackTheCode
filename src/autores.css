@@ -23,18 +23,23 @@ div{
     text-align: right;
 }
 
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
 .menu-top a {
     color: #36008D;
     text-decoration: none;
     font-family: 'Bebas Neue';
-    padding-right: 1%;
+    padding-left: 1%;
     font-size: 20px;
-    border-right: 2px #1CCAD8 solid;
 }
 
 .menu-top a:hover{
     color: #1CCAD8;
 }
+
 
 .buttonDiv{
     flex-basis: 7%;

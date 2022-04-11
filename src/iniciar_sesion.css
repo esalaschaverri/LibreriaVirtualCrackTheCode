@@ -46,13 +46,17 @@ h3{
     text-align: right;
 }
 
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
 .menu-top a {
     color: #36008D;
     text-decoration: none;
     font-family: 'Bebas Neue';
-    padding-right: 1%;
+    padding-left: 1%;
     font-size: 20px;
-    border-right: 2px #1CCAD8 solid;
 }
 
 .menu-top a:hover{
@@ -60,18 +64,7 @@ h3{
 }
 
 .buttonDiv{
-    flex-basis: 7%;
-    text-align: right;
-}
-
-.buttonDiv2{
-    flex-basis: 8%;
-    text-align: right;
-    padding-right: 15px;
-}
-
-.buttonDiv3{
-    flex-basis: 83%;
+    flex-basis: 90%;
     text-align: right;
 }
 
@@ -83,10 +76,36 @@ h3{
     font-size: 15px;
     padding-right: 5px;
     padding-left: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-family: 'Bebas Neue';
     width: 15%;
+}
+
+.button{
+    flex-basis: 8.5%;
+    text-align: left;
+    color: #36008D;
+    margin-left: 0.5%;
+}
+
+.button2{
+    background-color: #36008D;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+    color: #F0E100;
+}
+
+.button3{
+    background-color: #F0E100;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+}
+
+.button2:hover, .button3:hover {
+    transform: scale(1.1);
 }
 
 .button-carrito{

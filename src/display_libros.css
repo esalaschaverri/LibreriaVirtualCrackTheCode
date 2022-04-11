@@ -8,20 +8,29 @@ div{
 p{
     font-family: 'Roboto', sans-serif;
     color: #505255;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
+
 h2{
     font-family: 'Bebas Neue';
     color: #36008D;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 blockquote{
     font-family: 'Bebas Neue';
     color:black;
     text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
+
 .logo-menu{
     flex-basis: 20%;
 }
+
 .logo{
     width: 75%;
     padding-left: 5%;
@@ -35,13 +44,17 @@ blockquote{
     text-align: right;
 }
 
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
 .menu-top a {
     color: #36008D;
     text-decoration: none;
     font-family: 'Bebas Neue';
-    padding-right: 1%;
+    padding-left: 1%;
     font-size: 20px;
-    border-right: 2px #1CCAD8 solid;
 }
 
 .menu-top a:hover{
@@ -49,18 +62,7 @@ blockquote{
 }
 
 .buttonDiv{
-    flex-basis: 7%;
-    text-align: right;
-}
-
-.buttonDiv2{
-    flex-basis: 8%;
-    text-align: right;
-    padding-right: 15px;
-}
-
-.buttonDiv3{
-    flex-basis: 83%;
+    flex-basis: 90%;
     text-align: right;
 }
 
@@ -72,37 +74,35 @@ blockquote{
     font-size: 15px;
     padding-right: 5px;
     padding-left: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-family: 'Bebas Neue';
     width: 15%;
 }
 
-.button-carrito{
-    border: 2px solid #36008D;
+.button{
+    flex-basis: 8.5%;
+    text-align: left;
     color: #36008D;
-    border-radius: 5px;
-    background: #F0E100 ;
-    font-size: 15px;
-    width: 90%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Bebas Neue';
+    margin-left: 0.5%;
 }
 
-.button-perfil{
+.button2{
+    background-color: #36008D;
+    padding: 10px;
     border: 2px solid #36008D;
+    border-radius: 7px;
     color: #F0E100;
-    border-radius: 5px;
-    background: #36008D ;
-    font-size: 15px;
-    width: 90%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Bebas Neue';
 }
 
-.button-carrito:hover, .button-perfil:hover {
+.button3{
+    background-color: #F0E100;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+}
+
+.button2:hover, .button3:hover {
     transform: scale(1.1);
 }
 
@@ -115,7 +115,7 @@ blockquote{
     margin-right: 10%;
     margin-left: 10%;
     padding-bottom: 20px;
-    padding-top: 0px;
+    padding-top: 20px;
     color: #36008D;
 }
 
@@ -134,7 +134,7 @@ blockquote{
 }
 
 .muestra{
-    flex-basis: 25%;
+    flex-basis: 20%;
     text-align: center;
     margin-top: 30px;
 }
