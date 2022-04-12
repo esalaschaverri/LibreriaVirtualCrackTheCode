@@ -196,6 +196,17 @@ h3{
     transform: scale(1.1);
 }
 
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}
+
 .footer{
     background-color: #F2F2F2;
     padding-top: 15px;
