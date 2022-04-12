@@ -133,20 +133,7 @@ a{
     padding-top: 25px;
 }
 
-.logos-social{
-    width: 30px;
-    cursor: pointer;
-}
-
-.social{
-    padding-top: 35px;
-    padding-left: 35px;
-    color: #36008D;
-    padding-bottom: 20px;
-}
-
-
-.footer{
+.imagen-final{
     background-image: url("img/footerPoliticas.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -155,14 +142,26 @@ a{
     padding-bottom: 10%;
 }
 
-.foot{
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}
+
+.footer{
     background-color: #F2F2F2;
     padding-top: 15px;
     padding-bottom: 5px;
     text-align: center;
+    margin-top: 30px;
 }
 
-.foot h4{
+.footer h4{
     font-family: 'Roboto';
     font-weight: 700;
     color: #36008D;

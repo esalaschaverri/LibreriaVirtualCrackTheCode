@@ -208,12 +208,13 @@ h4{
 }
 
 .logos-social{
-    width: 30px;
+    width: 35px;
+    cursor: pointer;
 }
 
 .social{
-    margin-left: 10%;
-    margin-top: 80px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     color: #36008D;
 }
 
