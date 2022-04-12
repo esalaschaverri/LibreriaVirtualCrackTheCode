@@ -189,17 +189,16 @@ label:hover,label:hover ~ label {
  color: #1CCAD8; /* cambian de color todas las*/
                 /*etiquetas  <label> precedidas ( ~ )*/
 }
+
 .logos-social{
-    width: 30px;
+    width: 35px;
+    cursor: pointer;
 }
 
 .social{
-    margin-left: 10%;
-    margin-top: 60px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     color: #36008D;
-    margin-left: 40px;
-    margin-right: 50px;
-    text-align: left;
 }
 
 .footer{
