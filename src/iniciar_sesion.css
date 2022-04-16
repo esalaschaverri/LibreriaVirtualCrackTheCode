@@ -167,18 +167,12 @@ h3{
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'Bebas Neue', cursive;
-    margin-top: 10px;
+    font-family: 'Bebas Neue';
 }
 
 .align-left{
     text-align: left;
     padding-left: 10%;
-}
-
-.align-right{
-    text-align: right;
-    font-size: small;
 }
 
 .align-center{
@@ -204,6 +198,7 @@ h4{
     font-size: medium;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    margin-top: 0;
     margin-bottom: 5px;
 }
 
