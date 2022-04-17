@@ -1,0 +1,129 @@
+
+<html>
+    <head>
+        <title>Pedidos Pendientes</title>
+        <link rel="stylesheet" type="text/css" href="pedidosPendientes.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body onload='document.form1.text1.focus()'>
+
+        <!-- Logo y Menu -->
+        <div class="contenedor">
+            <div class="logo-menu" >
+                <a href="index.html"><img class="logo" src="logo.png"/></a> <!--img/logo.png-->
+            </div>
+
+            <div class="menu-top">
+                <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+                <a href="display_libros.html">LIBROS</a>
+                <a href="">SOCIOS COMERCIALES</a>
+                <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+                <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+                <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+                <a href="contacto.html">CONTACTO</a>
+            </div>
+        </div>
+
+        <!-- Busqueda, Perfil y Carrito -->
+
+        <div class="contenedor">
+
+            <div class="buttonDiv">
+                <input class="button-search" type="text" placeholder="BUSCAR LIBRO O AUTOR">
+            </div>
+            <div class="button">
+                <a href="perfil_cliente.html"><i class="fa-solid fa-user button2"></i></a>
+                <i class="fa-solid fa-cart-shopping button3"></i>
+            </div>
+        </div>
+
+        <!-- Iniciar Sesion -->
+
+        <div class="iniciar-sesion">
+            <h1>PEDIDOS PENDIENTES<h1>
+            <p>Seleccione el pedido que desea aprobar</p>
+
+            <center>
+            <table>
+            <table border="solid">
+                <tr class="tabla">
+                    <td>Código ISBN</td>
+                    <td>Nombre</td>
+                    <td>Cantidad</td>
+                    <td>Propietario</td>
+                </tr>
+
+                <tr>
+                    <td>978-3-16-14-84</td>
+                    <td>Ana Frank</td>
+                    <td>5</td>
+                    <td>Fabiola Bustamante</td>
+                </tr>
+
+                <tr>
+                    <td>978-3-16-14-84</td>
+                    <td>El encanto</td>
+                    <td>1</td>
+                    <td>Carmen Cascante</td>
+                </tr>
+
+                <tr>
+                    <td>978-3-16-14-84</td>
+                    <td>La Sombra</td>
+                    <td>3</td>
+                    <td>Javier López</td>
+                </tr>
+
+                <td>978-3-16-14-84</td>
+                <td>The King</td>
+                <td>12</td>
+                <td>Seidy Pérez</td>
+            </tr>
+
+            <td>978-3-16-14-84</td>
+            <td>Harry Potter</td>
+            <td>4</td>
+            <td>Ingrid Carmona</td>
+        </tr>
+
+        <td>978-3-16-14-84</td>
+        <td>Cocorí</td>
+        <td>22</td>
+        <td>Julio Chavarría</td>
+    </tr>
+
+            </table> </table> </center>
+            <button class="button-sesion" onclick="document.location='crear_cuenta.html" >CONFIRMAR</button>
+
+            
+           <!--<form action="perfil_cliente.html" onsubmit= "return validar()"> 
+                <input class="inputs" id="text" type="text" placeholder="CORREO ELECTRÓNICO" ><br>
+                <input class="inputs" id="password" type="password" name="clave" placeholder="CONTRASEÑA"><br><br/>
+                <a class="align-right" href="restablecer_Contraseña.html">¿Olvidó su contraseña?</a> <br>
+                <button class="button-sesion">INICIAR SESIÓN</button> <br>
+            </form>
+            <h4>¿No tiene cuenta?</h4>
+            <button class="button-sesion" onclick="document.location='crear_cuenta.html'" >CREAR CUENTA</button>--> 
+        </div>
+
+        <!-- Social media -->
+
+        <div class="footer">
+            <div class="social">
+                <img class="logos-social" src="img/facebook.png"/> 
+                <img class="logos-social"src="img/instagram.png"/> 
+                <img class="logos-social" src="img/twitter.png"/> 
+            </div>
+            <h4>LIBRERIA@HOTMAIL.COM</h4>
+            <h4>+506 7777-8888</h4>
+            <p class="derechos">DERECHOS RESERVADOS</p>
+        </div>
+
+        <script src="iniciar_sesion.js"></script>
+
+    </body>
+</html>
