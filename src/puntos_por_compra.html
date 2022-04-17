@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>  
-    <title>Solicitudes de cliente frecuente</title>
-    <link rel="stylesheet" type="text/css" href="solicitud_cliente_frecuente.css"/>
+    <title>Puntos por compra</title>
+    <link rel="stylesheet" type="text/css" href="puntos_por_compra.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
@@ -28,13 +28,9 @@
     </div>
 
     <div class="flex-completo text-morado">
-        <h1>SOLICITUDES DE CLIENTE FRECUENTE</h1>
+        <h1>PUNTOS POR COMPRA</h1>
     </div>
 
-    <div class="flex-completo texto-negro">
-        <h4>Seleccione el cliente que desee aprobar o rechazar la solicitud de cliente frecuente</h4>
-        
-    </div>
 
     <!-- Mi perfil -->
 
@@ -45,30 +41,26 @@
             <table>
             <table border="solid" class="tabla">
                 <tr class="tabla texto-negro">
-                    <th>CÉDULA</th>
-                    <th>NOMBRE</th>
-                    <th>APELLIDOS</th>
-                    <th>COMPRAS<br>REALIZADAS</th>
+                    <th>MONTO DE COMPRA</th>
+                    <th>PUNTOS</th>
+                    <th></th>
                   </tr>
                 
                   <tr>
-                    <td><input type="checkbox" id="foo1" /><label for="foo1">111111111</label></td>
-                    <td>DIANA</td>
-                    <td>CASTRO</td>
-                    <td>7</td>
+                    <td>10000</td>
+                    <td>10</td>
+                    <td><button class="buttons-Form">EDITAR</button></td>
                     
                   </tr>
                   <tr>
-                    <td><input type="checkbox" id="foo1" /><label for="foo1">222222222</label></td>
-                    <td>NIKOLE</td>
-                    <td>GRAU</td>
-                    <td>2</td>
+                    <td>20000</td>
+                    <td>20</td>
+                    <td><button class="buttons-Form">EDITAR</button></td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox" id="foo1" /><label for="foo1">333333333</label></td>
-                    <td>JUAN</td>
-                    <td>PEREZ</td>
-                    <td>9</td>
+                    <td>50000</td>
+                    <td>50</td>
+                    <td><button class="buttons-Form">EDITAR</button></td>
                   </tr>
 
               
@@ -76,14 +68,58 @@
         </div>
 
         <div>
-            <button class="buttons-Form">ACEPTAR</button>
-  
-            <button class="buttons-Form">RECHAZAR</button>
+            <button class="buttons-Form">AGREGAR NUEVO MONTO</button>
         </div>
 
 
     </div>
 
+
+    <div class="crear-cuenta">
+
+        <div class="flex-completo text-morado">
+            <h1>NUEVO MONTO</h1>
+            <input class="inputs" id="text" type="text" placeholder="MONTO DE COMPRA" ><br>
+            <input class="inputs" id="text" type="text" placeholder="PUNTOS" ><br>
+        </div>
+
+        <div>
+            <button class="buttons-Form">AGREGAR</button>
+        </div>
+
+
+    </div>
+
+
+    <div class="flex-completo text-morado">
+        <h1>VALOR DE CADA PUNTO</h1>
+    </div>
+
+    <div class="crear-cuenta">
+
+        <div class="flex-completo text-morado">
+          <center>
+            <table>
+            <table border="solid" class="tabla">
+                <tr class="tabla texto-negro">
+                    <th>PUNTOS</th>
+                    <th>VALOR EN COLONES</th>
+                    <th></th>
+                  </tr>
+                
+                  <tr>
+                    <td>1</td>
+                    <td>50</td>
+                    <td><button class="buttons-Form">EDITAR</button></td>
+                    
+                  </tr>
+
+              
+                </table> </table> </center>
+        </div>
+
+
+    </div>
 
     <div class="footer">
         <div class="social">
