@@ -40,15 +40,18 @@
             </div>
         </div>
 
+
+        
         <div class="iniciar-sesion">
             <h1>REPORTE VENTAS POR FECHAS<h1>
             <p>Seleccione la fecha de pedido</p>
-            <form>
-                Día	<input type="text" name="D" required>
-                Mes	<input type="text" name="m" required>
-                Año	<input type="text" name="y" required>
-                <input class="button-sesion" type="submit" value="Cargar">
-                </form>
+            
+              Fecha actual  <input type="date" name="fecha"></br>
+                Rango del pedido: <input type="date" name="cumpleanios" step="1" min="2020-01-01" max="2022-12-31" value="2020-01-01">
+                <input type="date" name="cumpleanios" step="1" min="2010-01-01" max="2013-12-31" value="<?php echo date("Y-m-d");?></br>
+                <input class="button-sesion" type="submit" value="Generar Reporte">
+
+
         </div>
 
     
