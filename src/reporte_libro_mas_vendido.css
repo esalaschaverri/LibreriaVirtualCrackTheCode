@@ -1,0 +1,161 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1A181B;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: #36008D;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Bebas Neue';
+    color: #36008D;
+}
+
+h3{
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    color: #36008D;
+    text-align: left;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 75%;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 3%;
+    padding-right: 3%;
+    text-align: right;
+}
+
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-top a:hover{
+    color: #1CCAD8;
+}
+
+/* ----- */
+
+.genero-mas-vendido{
+    text-align: center;
+    border: 3px #36008D solid;
+    border-radius: 8px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.tabla-genero-mas-vendido{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+tr td{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.tr-estilo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1A181B;
+}
+
+.tr-genero-mas-vendido{
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    padding-left: 1%;
+    font-size: 20px;
+    background-color:#F0E100;
+}
+
+/* ----- */
+
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.derechos{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #1A181B;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px;
+}
+
+.button-sesion{
+    border: 3px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 10px;
+}
