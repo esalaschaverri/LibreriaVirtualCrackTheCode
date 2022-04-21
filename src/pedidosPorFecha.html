@@ -41,17 +41,41 @@
         </div>
 
 
-        
-        <div class="iniciar-sesion">
-            <h1>REPORTE VENTAS POR FECHAS<h1>
-            <p>Seleccione la fecha de pedido</p>
-            
-                Desde: <input type="date" name="cumpleanios" step="1" min="2020-01-01" max="2022-12-31" value="2022-01-01"></br>
-               Hasta <input type="date" name="cumpleanios" step="1" min="2022-01-01" max="2022-12-31" value="<?php echo date("Y-m-d");?></br>
-                <input class="button-sesion" type="submit" value="Generar Reporte">
+      <center>
+      <!--- Rango de Fechas -->
+      <div class="genero-mas-vendido">
+        <h1>REPORTE DEL GÉNERO MÁS VENDIDO</h1>
+        <p>Selecciona el mes y año para generar un reporte.</p>
+        <h2> SELECCIONA LA FECHA: 
+        <select name="meses" id="meses">
+            <option value="-- Mes --">-- Mes --</option>
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+            <option value="Mayo">Mayo</option>
+            <option value="Junio">Junio</option>
+            <option value="Julio">Julio</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Septiembre">Septiembre</option>
+            <option value="Octubre">Octubre</option>
+            <option value="Noviembre">Noviembre</option>
+            <option value="Diciembre">Diciembre</option>
+        </select>
+        <select name="anio" id="anio">
+            <option value="-- Año --">-- Año --</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select>
+        </h2>
+        <input class="button-sesion" type="submit" value="Generar Reporte">
+    </div>
 
-
-        </div>
+    </div></center>  
 
     
         
