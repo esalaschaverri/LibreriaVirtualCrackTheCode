@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>Catálogo Autores</title>
+        <link rel="stylesheet" type="text/css" href="catalogo_autores.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body onload='document.form1.text1.focus()'>
+
+        <!-- Logo y Menu -->
+        <div class="contenedor">
+            <div class="logo-menu" >
+                <a href="index.html"><img class="logo" src="img/logo.png"/></a>
+            </div>
+
+            <div class="menu-top">
+                <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+                <a href="display_libros.html">LIBROS</a>
+                <a href="">SOCIOS COMERCIALES</a>
+                <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+                <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+                <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+                <a href="contacto.html">CONTACTO</a>
+            </div>
+        </div>
+
+        <!-- Busqueda, Perfil y Carrito -->
+
+        <div class="button">
+            <a class="button2" href="perfil_admin.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <!-- Título -->
+        <div class="titulo">
+            <h1>CATÁLOGO DE AUTORES</h1>
+        </div>
+
+        <!-- Libros agregados -->
+        <div class="libros contenedor">
+            <div class="secciones">
+                <h2>NOMBRE</h2>
+            </div>
+            <div class="secciones">
+                <h2>PAÍS</h2>
+            </div>
+            <div class="secciones">
+                <h2>FECHA NACIMIENTO</h2>
+            </div>
+            <div class="secciones">
+                <h2>GÉNERO</h2>
+            </div>
+            <div class="secciones">
+                <h2>LIBROS</h2>
+            </div>
+    
+            <!-- Contenido -->
+
+            <div class="secciones">
+                <p>TÍTULO</p>
+            </div>
+            <div class="secciones">
+                <p>AUTOR</p>
+            </div>
+            <div class="secciones">
+                <p>EDITORIAL</p>
+            </div>
+            <div class="secciones">
+                <p>GÉNERO</p>
+            </div>
+            <div class="secciones">
+                <p>PRECIO</p>
+            </div>
+            <div class="editar">
+                <button class="button-sesion">EDITAR</button>
+            </div>
+
+            <!-- Boton -->
+
+            <div class="agregar">
+                <button class="button-sesion">AGREGAR NUEVO LIBRO</button>
+            </div>
+        </div>
+
+        <div class="nuevo-libro">
+            <!-- Título -->
+            <div class="titulo2">
+                <h1>NUEVO AUTOR</h1>
+            </div>
+
+            <!--  -->
+
+            <form class="crear-cuenta" action="perfil_cliente.html" onsubmit= "">
+
+                <input type="text" id="nombre" placeholder="NOMBRE COMPLETO" class="inputs"> <br><br/>
+                
+                <input type="text" id="apellidos" placeholder="PAÍS DE NACIMIENTO" class="inputs"> <br><br/>
+                
+                <label class="text-morado" for="fecha-nac">FECHA DE NACIMIENTO</label><br>
+                <input type="date" id="fecha-nac" class="inputs"> <br><br/>
+
+                <label class="text-morado" for="fecha-def">FECHA DE DEFUNCIÓN</label><br>
+                <input type="date" id="fecha-def" class="inputs"> <br><br/>
+
+                <label class="text-morado" for="genero">GÉNERO</label><br>
+                <select class="select" id="genero">
+                    <option></option>
+                    <option>ARTE</option>
+                    <option>CIENCIA</option>
+                    <option>DISEÑO</option>
+                    <option>FANTASÍA</option>
+                    <option>FILOSOFÍA</option>
+                    <option>GASTRONOMÍA</option>
+                    <option>NIÑOS</option>
+                    <option>NOVELAS</option>
+                    <option>SALUD Y EJERCICIO</option>
+                    <option>VIAJES</option>
+                </select><br><br/>
+    
+                <label class="text-morado" for="premios">LIBROS</label><br>
+                <textarea class="text-areas" id="premios"></textarea> <br>
+                
+                <input type="text" placeholder="PREMIO NOBEL" class="inputs" id="cedula"> <br><br/>
+
+                <input type="text" placeholder="AÑO PREMIO NOBEL" class="inputs" id="cedula"> <br><br/>
+
+                <label class="text-morado" for="premios">RESEÑA</label><br>
+                <textarea class="text-areas" id="premios"></textarea> <br>
+
+                <button class="button-foto">+</button>
+                
+                <p>AGREGAR FOTO DE PERFIL</p>
+    
+                <button class="button-crear">AGREGAR LIBRO</button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="social">
+                <img class="logos-social" src="img/facebook.png"/> 
+                <img class="logos-social"src="img/instagram.png"/> 
+                <img class="logos-social" src="img/twitter.png"/> 
+            </div>
+            <h4>LIBRERIA@HOTMAIL.COM</h4>
+            <h4>+506 7777-8888</h4>
+            <p class="derechos">DERECHOS RESERVADOS</p>
+        </div>     
+    </body>
+</html>
