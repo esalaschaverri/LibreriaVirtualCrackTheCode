@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" type="text/css" href="CSS/crear_cuenta.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/655682710d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Logo y Menu -->
+    <div class="contenedor">
+        <div class="logo-menu" >
+            <a href="index.html"><img class="logo" src="img/logo.png"/></a>
+        </div>
+
+        <div class="menu-top">
+            <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+            <a href="display_libros.html">LIBROS</a>
+            <a href="socios_comerciales.html">SOCIOS COMERCIALES</a>
+            <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+            <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+            <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+            <a href="contacto.html">CONTACTO</a>
+        </div>
+    </div>
+
+    <!-- Busqueda, Perfil y Carrito -->
+
+    <div class="contenedor">
+
+        <div class="buttonDiv">
+            <input class="button-search" type="text" placeholder="BUSCAR LIBRO O AUTOR">
+        </div>
+        <div class="button">
+            <a href="perfil_cliente.html"><i class="fa-solid fa-user button2"></i></a>
+            <i class="fa-solid fa-cart-shopping button3"></i>
+        </div>
+    </div>
+
+    <!-- Crear cuenta -->
+
+        <form class="crear-cuenta" action="perfil_cliente.html" onsubmit= "return validar()">
+
+            <h1 class="">INFORMACIÓN PERSONAL</h1>
+
+            <input type="text" id="nombre" placeholder="NOMBRE" class="inputs"> <br><br/>
+            
+            <input type="text" id="apellidos" placeholder="APELLIDOS" class="inputs"> <br><br/>
+
+            <label class="text-morado" for="genero">GÉNERO</label><br>
+            <select class="select" id="genero">
+                <option></option>
+                <option>FEMENINO</option>
+                <option>MASCULINO</option>
+            </select><br><br/>
+
+            
+            <input type="text" placeholder="NÚMERO DE CÉDULA" class="cedula" id="cedula"> <br><br/>
+
+            <label class="text-morado" for="tipoCedula">TIPO DE CÉDULA</label> <br>
+            <select class="select" id="tipoCedula">
+                <option></option>
+                <option>NACIONAL</option>
+                <option>EXTRANJERO</option>
+            </select><br><br/>
+
+            <p class="text-morado">DIRECCIÓN</p>
+
+            <input type="text" id="provincia" placeholder="PROVINCIA" class="direccion"> 
+
+            <input type="text" id="canton" placeholder="CANTÓN" class="direccion" >
+
+            <input type="text" id="distrito" placeholder="DISTRITO" class="direccion" > <br><br/>
+
+            <input type="text" id="direccion" placeholder="DIRECCIÓN EXACTA" class="inputs"> <br><br/>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62879.678742639735!2d-84.14845053891138!3d9.93562836740514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2sSan%20Jos%C3%A9%20Province%2C%20San%20Jos%C3%A9!5e0!3m2!1sen!2scr!4v1648105767699!5m2!1sen!2scr" width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                
+            <p>SELECCIONAR PUNTO EXACTO EN EL MAPA</p>
+
+            <button class="button-foto">+</button>
+            
+            <p>AGREGAR FOTO DE PERFIL</p>
+
+            <h1 class="">INFORMACIÓN DE INCIO DE SESIÓN</h1>
+
+            <input type="text" placeholder="CORREO ELECTRÓNICO" class="inputs" id="email"> <br><br/>
+
+            <input type="text" placeholder="CONTRASEÑA" class="inputs" id="password"> <br><br/>
+
+            <button class="button-crear">CREAR CUENTA</button>
+            
+        </form>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="social">
+            <img class="logos-social" src="img/facebook.png"/> 
+            <img class="logos-social"src="img/instagram.png"/> 
+            <img class="logos-social" src="img/twitter.png"/> 
+        </div>
+        <h4>LIBRERIA@HOTMAIL.COM</h4>
+        <h4>+506 7777-8888</h4>
+        <p class="derechos">DERECHOS RESERVADOS</p>
+    </div>
+
+    <script src="crear_cuenta.js"></script>
+
+</body>
+</html>

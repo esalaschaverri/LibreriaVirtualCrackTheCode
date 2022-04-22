@@ -1,0 +1,196 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1A181B;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: #36008D;
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #36008D;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 75%;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 3%;
+    padding-right: 3%;
+    text-align: right;
+}
+
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-top a:hover{
+    color: #1CCAD8;
+}
+
+.buttonDiv{
+    flex-basis: 90%;
+    text-align: right;
+}
+
+.button-search{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #E2E0E5 ;
+    font-size: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Bebas Neue';
+    width: 15%;
+}
+
+.button{
+    flex-basis: 8.5%;
+    text-align: left;
+    color: #36008D;
+    margin-left: 0.5%;
+}
+
+.button2{
+    background-color: #36008D;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+    color: #F0E100;
+}
+
+.button3{
+    background-color: #F0E100;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+}
+
+.button2:hover, .button3:hover {
+    transform: scale(1.1);
+}
+
+.iniciar-sesion{
+    text-align: center;
+    border: 3px #36008D solid;
+    border-radius: 8px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+
+.inputs{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 75%;
+    background-color: #E2E0E5;
+    border: 0px;
+    text-align: center;
+    color: #36008D;
+    margin-top: 10px;
+}
+
+.button-sesion{
+    border: 3px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 20px;
+}
+
+
+h4{
+    text-align: center;
+    color: #36008D;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.derechos{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #1A181B;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px;
+}
+
+.valid{
+    border: 2px solid #36008D;
+    background-color: #F0E100;
+}

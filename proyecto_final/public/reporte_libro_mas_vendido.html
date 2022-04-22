@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>Reporte del Género Más Vendido</title>
+        <link rel="stylesheet" type="text/css" href="CSS/reporte_genero_mas_vendido.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/655682710d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Logo y Menu -->
+        <div class="contenedor">
+            <div class="logo-menu" >
+                <a href="index.html"><img class="logo" src="img/logo.png"/></a>
+            </div>
+
+            <div class="menu-top">
+                <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+                <a href="display_libros.html">LIBROS</a>
+                <a href="">SOCIOS COMERCIALES</a>
+                <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+                <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+                <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+                <a href="contacto.html">CONTACTO</a>
+            </div>
+        </div>
+
+        <!--- Rango de Fechas -->
+        <div class="genero-mas-vendido">
+            <h1>REPORTE DEL LIBRO MÁS VENDIDO</h1>
+            <p>Selecciona el mes y año para generar un reporte.</p>
+            <h2> SELECCIONA LA FECHA: 
+            <select name="meses" id="meses">
+                <option value="-- Mes --">-- Mes --</option>
+                <option value="Enero">Enero</option>
+                <option value="Febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+                <option value="Abril">Abril</option>
+                <option value="Mayo">Mayo</option>
+                <option value="Junio">Junio</option>
+                <option value="Julio">Julio</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Septiembre">Septiembre</option>
+                <option value="Octubre">Octubre</option>
+                <option value="Noviembre">Noviembre</option>
+                <option value="Diciembre">Diciembre</option>
+            </select>
+            <select name="anio" id="anio">
+                <option value="-- Año --">-- Año --</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+            </select>
+            </h2>
+            <input class="button-sesion" type="submit" value="Generar Reporte">
+        </div>
+
+        </div>
+
+        <!-- Reporte del Género Más Vendido -->
+        <div class="genero-mas-vendido">
+            <h1>REPORTE</h1>
+            <table class="tabla-genero-mas-vendido">
+                <tr class="tr-genero-mas-vendido">
+                    <td># DE PEDIDO</td>
+                    <td>FECHA</td>
+                    <td>ÍTEMS</td>
+                    <td>CANTIDAD</td>
+                </tr>
+                <tr class="tr-estilo">
+                    <td>1111111111</td>
+                    <td>01/01/2022</td>
+                    <td>HARRY POTTER</td>
+                    <td> 1 UNIDAD</td>
+                </tr>
+                <tr class="tr-estilo">
+                    <td>1111111111</td>
+                    <td>01/01/2022</td>
+                    <td>HARRY POTTER</td>
+                    <td> 1 UNIDAD</td>
+                </tr>
+                <tr class="tr-estilo">
+                    <td>1111111111</td>
+                    <td>01/01/2022</td>
+                    <td>HARRY POTTER</td>
+                    <td> 1 UNIDAD</td>
+                </tr>
+                <tr class="tr-estilo">
+                    <td>1111111111</td>
+                    <td>01/01/2022</td>
+                    <td>HARRY POTTER</td>
+                    <td> 1 UNIDAD</td>
+                </tr>
+                <tr class="tr-estilo">
+                    <td>1111111111</td>
+                    <td>01/01/2022</td>
+                    <td>HARRY POTTER</td>
+                    <td> 1 UNIDAD</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Social media -->
+
+        <div class="footer">
+            <div class="social">
+                <img class="logos-social" src="img/facebook.png"/> 
+                <img class="logos-social"src="img/instagram.png"/> 
+                <img class="logos-social" src="img/twitter.png"/> 
+            </div>
+            <h4>LIBRERIA@HOTMAIL.COM</h4>
+            <h4>+506 7777-8888</h4>
+            <p class="derechos">DERECHOS RESERVADOS</p>
+        </div>
+    </body>
+</html>

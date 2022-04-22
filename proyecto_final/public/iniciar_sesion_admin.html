@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Admin</title>
+        <link rel="stylesheet" type="text/css" href="CSS/iniciar_sesion_admin.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Logo y Menu -->
+        <div class="contenedor">
+            <div class="logo-menu" >
+                <a href="index.html"><img class="logo" src="img/logo.png"/></a>
+            </div>
+
+            <div class="menu-top">
+                <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+                <a href="display_libros.html">LIBROS</a>
+                <a href="socios_comerciales.html">SOCIOS COMERCIALES</a>
+                <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+                <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+                <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+                <a href="contacto.html">CONTACTO</a>
+            </div>
+        </div>
+
+        <!-- Iniciar Sesion -->
+
+        <div class="iniciar-sesion">
+            <h1>INICIAR SESIÓN ADMIN</h1>
+            <p>Exclusivo para administrar el website</p>
+
+            <form action="perfil_admin.html" onsubmit="return validar()">
+                <input class="inputs" type="text" placeholder="USUARIO" id="usuario"><br>
+                <input class="inputs" id="password" type="password" name="clave" placeholder="CONTRASEÑA"><br><br/>
+                <button class="button-sesion">INGRESAR</button> <br>
+            </form>
+        </div>
+
+        <!-- Social media -->
+
+        <div class="footer">
+            <div class="social">
+                <img class="logos-social" src="img/facebook.png"/> 
+                <img class="logos-social"src="img/instagram.png"/> 
+                <img class="logos-social" src="img/twitter.png"/> 
+            </div>
+            <h4>LIBRERIA@HOTMAIL.COM</h4>
+            <h4>+506 7777-8888</h4>
+            <p class="derechos">DERECHOS RESERVADOS</p>
+        </div>
+
+        <script src="iniciar_sesion_admin.js"></script>
+
+    </body>
+</html>

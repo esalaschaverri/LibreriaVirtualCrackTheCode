@@ -1,0 +1,254 @@
+div{
+    box-sizing: border-box;
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 75%;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 3%;
+    padding-right: 3%;
+    text-align: right;
+}
+
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-top a:hover{
+    color: #1CCAD8;
+}
+
+.buttonDiv{
+    flex-basis: 90%;
+    text-align: right;
+}
+
+.button-search{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #E2E0E5 ;
+    font-size: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Bebas Neue';
+    width: 15%;
+}
+
+.button1{
+    flex-basis: 8.5%;
+    text-align: left;
+    color: #36008D;
+    margin-left: 0.5%;
+}
+
+.button2{
+    background-color: #36008D;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+    color: #F0E100;
+}
+
+.button3{
+    background-color: #F0E100;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+}
+
+.button2:hover, .button3:hover {
+    transform: scale(1.1);
+}
+
+.button-carrito{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #F0E100 ;
+    font-size: 15px;
+    width: 90%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue';
+}
+
+.button-perfil{
+    border: 2px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    width: 90%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue';
+}
+
+.button-carrito:hover, .button-perfil:hover {
+    transform: scale(1.1);
+}
+
+.imagen-libro{
+    flex-basis: 30%;    
+    text-align: right;
+    padding-top: 20px;
+}
+
+.imagen-libro img{
+    width: 250px;
+}
+
+
+.info{
+    flex-basis: 70%;
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.info a{
+    text-decoration: none;
+}
+
+.info a:hover{
+    color: #1CCAD8;
+}
+
+h2{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    color: #36008D;
+}
+.texto{
+    font-family: 'Bebas Neue', cursive;
+}
+.texto1{
+    font-family: 'Bebas Neue', cursive;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+.texto2{
+    font-family: 'Bebas Neue', cursive;
+}
+.button{
+    border: 3px solid #36008D;
+    color: #F0E100;
+    border-radius: 5px;
+    background: #36008D ;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 10px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.clasificacion{
+    direction: rtl;/* left to right */
+    unicode-bidi: bidi-override;/* bidi de bidireccional */
+    margin-left: 0px;
+    margin-top: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+p {
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 0;
+}
+
+input[type = "radio"]:checked ~ label{
+    color:#1CCAD8;
+}
+#form {
+    width: 700px;
+    margin: 0 auto;
+}
+
+#form p {
+    text-align: left;
+}
+  
+#form label {
+    font-size: 70px;
+}
+  
+input[type="radio"] {
+    display: none;
+}
+  
+label {
+    color: grey;
+}
+  
+label:hover,label:hover ~ label {
+ color: #1CCAD8; /* cambian de color todas las*/
+                /*etiquetas  <label> precedidas ( ~ )*/
+}
+
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.derechos{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #1A181B;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px;
+}

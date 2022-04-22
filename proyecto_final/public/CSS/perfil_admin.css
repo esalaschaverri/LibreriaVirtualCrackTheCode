@@ -1,0 +1,138 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1A181B;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #36008D;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 180px;
+    padding-left: 20px;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 35px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-right: 10px;
+    font-size: 20px;
+    border-right: 2px #1CCAD8 solid;
+}
+
+.menu-top a:hover, .menu-catalogo a:hover{
+    color: #1CCAD8;
+}
+
+
+.background-amarillo{
+    background-color: #1CCAD8;
+    padding-top: 5px;    
+    padding-bottom: 5px;  
+    color: #1A181B; 
+    text-align: center;
+}
+
+.admin{
+    text-align: center;
+    color: #36008D;
+}
+
+.admin img{
+    width: 130px;
+}
+
+.titulos{
+    text-align: center;
+    color: #36008D;
+    margin-top: 40px;
+}
+
+.menu-catalogo a {
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-right: 10px;
+    font-size: 20px;
+    border-right: 2px #1A181B solid;
+}
+
+.menu-catalogo{
+    text-align: center;
+    color: #1A181B;
+    border: 2px #1A181B solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.derechos{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #1A181B;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px;
+}
+
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}
