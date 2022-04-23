@@ -83,6 +83,12 @@ h3{
     width: 15%;
 }
 
+.search{
+    background-color: white;
+    border: none;
+    color: #36008D;
+}
+
 .button{
     flex-basis: 8.5%;
     text-align: left;

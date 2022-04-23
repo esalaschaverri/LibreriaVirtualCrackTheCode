@@ -62,11 +62,11 @@
             <!-- Boton -->
 
             <div class="agregar">
-                <button class="button-sesion">AGREGAR NUEVO DESCUENTO</button>
+                <button onclick="muestra()" class="button-sesion">AGREGAR NUEVO DESCUENTO</button>
             </div>
         </div>
 
-        <div class="nuevo-libro">
+        <div id="nuevo-descuento" class=" oculto nuevo-libro">
             <!-- Título -->
             <div class="titulo2">
                 <h1>NUEVO DESCUENTO</h1>
@@ -107,5 +107,14 @@
             <h4>+506 7777-8888</h4>
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>     
+
+        <script>
+            function muestra() {
+              // Código ejecutado al hacer click sobre el botón
+              var textoOculto = document.getElementById("nuevo-descuento");
+              textoOculto.classList.remove("oculto");
+            }
+        </script>
+
     </body>
 </html>

@@ -62,11 +62,11 @@
             <!-- Boton -->
 
             <div class="agregar">
-                <button class="button-sesion">AGREGAR NUEVO PUNTO</button>
+                <button onclick="muestra()" class="button-sesion">AGREGAR NUEVO PUNTO</button>
             </div>
         </div>
 
-        <div class="nuevo-libro">
+        <div id="nuevo-punto" class="oculto nuevo-libro">
             <!-- Título -->
             <div class="titulo2">
                 <h1>NUEVO PUNTO DE RETIRO</h1>
@@ -94,6 +94,15 @@
             <h4>LIBRERIA@HOTMAIL.COM</h4>
             <h4>+506 7777-8888</h4>
             <p class="derechos">DERECHOS RESERVADOS</p>
-        </div>     
+        </div>    
+        
+        <script>
+            function muestra() {
+              // Código ejecutado al hacer click sobre el botón
+              var textoOculto = document.getElementById("nuevo-punto");
+              textoOculto.classList.remove("oculto");
+            }
+        </script>
+
     </body>
 </html>

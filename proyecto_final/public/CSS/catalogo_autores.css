@@ -122,6 +122,13 @@ h3{
     margin-top: 6px;
 }
 
+.oculto { 
+    display: none;
+  }
+  .visible { 
+    display: inline;
+  }
+
 .agregar{
     flex-basis: 100%;
     text-align: center;

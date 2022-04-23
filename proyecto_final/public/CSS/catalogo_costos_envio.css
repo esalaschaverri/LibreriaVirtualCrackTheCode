@@ -127,6 +127,14 @@ h3{
     text-align: center;
 }
 
+.oculto { 
+    display: none;
+  }
+
+  .visible { 
+    display: inline;
+  }
+
 .nuevo-libro{
     border: #36008D 3px solid;
     border-radius: 10px;

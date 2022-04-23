@@ -80,11 +80,11 @@
             <!-- Boton -->
 
             <div class="agregar">
-                <button class="button-sesion">AGREGAR NUEVO LIBRO</button>
+                <button onclick="muestra()" class="button-sesion">AGREGAR NUEVO AUTOR</button>
             </div>
         </div>
 
-        <div class="nuevo-libro">
+        <div id="nuevo-autor" class="oculto nuevo-libro">
             <!-- Título -->
             <div class="titulo2">
                 <h1>NUEVO AUTOR</h1>
@@ -92,7 +92,7 @@
 
             <!--  -->
 
-            <form class="crear-cuenta" action="perfil_cliente.html" onsubmit= "">
+            <form class="crear-cuenta" onsubmit= "">
 
                 <input type="text" id="nombre" placeholder="NOMBRE COMPLETO" class="inputs"> <br><br/>
                 
@@ -133,7 +133,7 @@
                 
                 <p>AGREGAR FOTO DE PERFIL</p>
     
-                <button class="button-crear">AGREGAR LIBRO</button>
+                <button class="button-crear">AGREGAR AUTOR</button>
             </form>
         </div>
 
@@ -148,5 +148,13 @@
             <h4>+506 7777-8888</h4>
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>     
+
+        <script>
+            function muestra() {
+              // Código ejecutado al hacer click sobre el botón
+              var textoOculto = document.getElementById("nuevo-autor");
+              textoOculto.classList.remove("oculto");
+            }
+          </script>
     </body>
 </html>

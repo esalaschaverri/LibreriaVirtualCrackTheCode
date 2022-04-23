@@ -44,17 +44,17 @@ h3{
     text-align: right;
 }
 
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
 .menu-top a {
     color: #36008D;
     text-decoration: none;
-    font-family: 'Bebas Neue', cursive;
-    padding-right: 10px;
+    font-family: 'Bebas Neue';
+    padding-left: 1%;
     font-size: 20px;
-    border-right: 2px #1CCAD8 solid;
-}
-
-.menu-top a:hover, .menu-catalogo a:hover{
-    color: #1CCAD8;
 }
 
 
@@ -64,6 +64,7 @@ h3{
     padding-bottom: 5px;  
     color: #1A181B; 
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .admin{
@@ -75,19 +76,27 @@ h3{
     width: 130px;
 }
 
+.titulo{
+    flex-basis: 56%;
+    margin-top: 30px;
+}
 .titulos{
     text-align: center;
     color: #36008D;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.menu-catalogo a {
-    color: #1A181B;
-    text-decoration: none;
-    font-family: 'Bebas Neue', cursive;
-    padding-right: 10px;
-    font-size: 20px;
-    border-right: 2px #1A181B solid;
+.icon{
+    flex-basis: 43%;
+    text-align: right;
+    margin-right: 1%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.icons{
+    color: #36008D;
 }
 
 .menu-catalogo{
@@ -98,6 +107,99 @@ h3{
     padding: 10px;
     margin-left: 18%;
     margin-right: 18%;
+}
+
+.menu-catalogo a {
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-catalogo a:nth-child(n+0):nth-child(-n+4){
+    border-right: 2px #1A181B solid;
+    padding-right: 1%;
+}
+
+.menu-catalogo a:hover{
+    color: #1CCAD8;
+}
+
+.menu-pedidos{
+    text-align: center;
+    color: #1A181B;
+    border: 2px #1A181B solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.menu-pedidos a {
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-pedidos a:hover{
+    color: #1CCAD8;
+}
+
+.menu-reportes{
+    text-align: center;
+    color: #1A181B;
+    border: 2px #1A181B solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.menu-reportes a {
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-reportes a:nth-child(n+0):nth-child(-n+3){
+    border-right: 2px #1A181B solid;
+    padding-right: 1%;
+}
+
+.menu-reportes a:hover{
+    color: #1CCAD8;
+}
+
+.menu-clientes{
+    text-align: center;
+    color: #1A181B;
+    border: 2px #1A181B solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.menu-clientes a {
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-clientes a:nth-child(n+0):nth-child(-n+1){
+    border-right: 2px #1A181B solid;
+    padding-right: 1%;
+}
+
+.menu-clientes a:hover{
+    color: #1CCAD8;
 }
 
 .footer{
