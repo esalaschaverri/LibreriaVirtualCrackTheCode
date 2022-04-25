@@ -14,8 +14,8 @@ router.get('/', function (req, res) {
 });
 
 router.post('/buscar', function (req, res) {
-  var _id = req.body._id;
-  Libro.findById(_id).exec()
+  var titulo = req.body.titulo;
+  Libro.find({titulo:titulo}).exec()
     .then(
       function (result) {
         res.json(result);

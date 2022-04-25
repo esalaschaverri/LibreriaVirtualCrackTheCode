@@ -7,7 +7,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+
+    <body onload="cargarTabla()">
         
         <!-- Logo y Menu -->
         <div class="contenedor">
@@ -54,113 +55,9 @@
             <a href="">Viajes</a>
         </div>
         
-        <div class="contenedor">
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-1.jpg"/></a>
-                <a href="muestra_libros.html"><h2>HARRY POTTER</h2></a>
-                <a href="autores.html"><p>J.K. ROWLING</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-2.jpg"/></a>
-                <a href="muestra_libros.html"><h2>INTO THIN AIR</h2></a>
-                <a href="autores.html"><p>JON KRAKAUER</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-3.jpg"/></a>
-                <a href="muestra_libros.html"><h2>INTO THE WILD</h2></a>
-                <a href="autores.html"><p>JON KRAKAUER</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-4.jpg"/></a>
-                <a href="muestra_libros.html"><h2>ATLAS OBSCURA</h2></a>
-                <a href="autores.html"><p>AUTORES</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-1.jpg"/></a>
-                <a href="muestra_libros.html"><h2>HARRY POTTER</h2></a>
-                <a href="autores.html"><p>J.K. ROWLING</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-2.jpg"/></a>
-                <a href="muestra_libros.html"><h2>INTO THIN AIR</h2></a>
-                <a href="autores.html"><p>JON KRAKAUER</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-3.jpg"/></a>
-                <a href="muestra_libros.html"><h2>INTO THE WILD</h2></a>
-                <a href="autores.html"><p>JON KRAKAUER</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-4.jpg"/></a>
-                <a href="muestra_libros.html"><h2>ATLAS OBSCURA</h2></a>
-                <a href="autores.html"><p>AUTORES</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-3.jpg"/></a>
-                <a href="muestra_libros.html"><h2>INTO THE WILD</h2></a>
-                <a href="autores.html"><p>JON KRAKAUER</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-
-            <div class="muestra">
-                <a href="muestra_libros.html"><img src="img/libro-4.jpg"/></a>
-                <a href="muestra_libros.html"><h2>ATLAS OBSCURA</h2></a>
-                <a href="autores.html"><p>AUTORES</p></a>
-                <blockquote>
-                    ₡ 0000
-                </blockquote>
-                <button class="agregar">AÑADIR AL CARRITO</button>
-            </div>
-            
+        <div id="librosMuestra" class="contenedor">
         </div>
 
-        <div>
-            <button class="flecha1"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="flecha2"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
 
         <!-- Footer -->
 
@@ -175,5 +72,26 @@
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>
 
+        <script>
+            function cargarTabla() {
+            fetch("http://localhost:5000/libros/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<div class='muestra'><div><a><img src="+json[cont].imagen+"/></a><a><h2>"+json[cont].titulo+"</h2></a><a><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button>AÑADIR AL CARRITO</button></div></div>";
+                            document.getElementById("librosMuestra").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+        </script>
+
     </body>
 </html>
+
+
