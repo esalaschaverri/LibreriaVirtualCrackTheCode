@@ -123,10 +123,13 @@ blockquote{
     color: #1A181B;
     text-decoration: none;
     font-family: 'Bebas Neue', cursive;
-    padding-right: 10px;
     font-size: 20px;
+    padding-left: 1%;
+}
+
+.categorias a:nth-child(n+0):nth-child(-n+9){
     border-right: 2px #1A181B solid;
-    padding-left: 20px;
+    padding-right: 1%;
 }
 
 .categorias a:hover{

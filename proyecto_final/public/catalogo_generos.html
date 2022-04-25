@@ -1,7 +1,7 @@
 <html>
     <head>
-        <title>Catálogo Retiros</title>
-        <link rel="stylesheet" type="text/css" href="CSS/catalogo_puntos_retiro.css"/>
+        <title>Catálogo Géneros</title>
+        <link rel="stylesheet" type="text/css" href="CSS/catalogo_generos.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
@@ -35,17 +35,17 @@
 
         <!-- Título -->
         <div class="titulo">
-            <h1>PUNTOS DE RETIRO</h1>
+            <h1>GÉNEROS</h1>
         </div>
 
-        <!-- Libros agregados -->
+        <!-- Generos agregados -->
         <div class="libros">
             <div>
-                <table class="center" id="puntosAgregados">
+                <table class="center" id="generosAgregados">
                     <tr>
                       <td class="tabla-titulos">ID</td>
-                      <td class="tabla-titulos">NOMBRE</td>
-                      <td class="tabla-titulos">DIRECCIÓN</td>
+                      <td class="tabla-titulos">GÉNERO</td>
+                      <td class="tabla-titulos">CÓDIGO</td>
                       <td class="tabla-titulos">EDITAR</td>
                     </tr>
                   </table>
@@ -54,49 +54,45 @@
             <!-- Boton -->
 
             <div class="agregar">
-                <button onclick="muestra()" class="button-sesion">AGREGAR NUEVO PUNTO</button>
+                <button onclick="muestra()" class="button-sesion">AGREGAR NUEVO GÉNERO</button>
             </div>
         </div>
 
-        <!-- NUEVO PUNTO -->
+        <!-- NUEVO GENERO -->
 
-        <div id="nuevo-punto" class="oculto nuevo-libro">
+        <div id="nuevo-genero" class=" oculto nuevo-libro">
             <!-- Título -->
             <div class="titulo2">
-                <h1>NUEVO PUNTO DE RETIRO</h1>
+                <h1>NUEVO GÉNERO</h1>
             </div>
-
-            <!-- FORM -->
 
             <form class="crear-cuenta">
 
-                <input type="text" id="nombre" placeholder="NOMBRE" class="inputs"> <br><br/>
+                <input type="text" id="nombre" placeholder="GÉNERO" class="inputs"> <br><br/>
                 
-                <input type="text" id="direccion" placeholder="DIRECCIÓN" class="inputs"> <br><br/>
+                <input type="text" id="codigo" placeholder="CÓDIGO" class="inputs"> <br><br/>
     
-                <button onclick="insertarRetiro()" class="button-crear">AGREGAR</button>
+                <button onclick="insertarGenero()" class="button-crear">AGREGAR GÉNERO</button>
             </form>
         </div>
 
-        <!-- EDITAR PUNTO -->
-        
-        <div id="editar-punto" class="oculto nuevo-libro">
+        <!-- EDITAR GENERO -->
+
+        <div id="editar-genero" class=" oculto nuevo-libro">
             <!-- Título -->
             <div class="titulo2">
-                <h1>EDITAR PUNTO DE RETIRO</h1>
+                <h1>EDITAR GÉNERO</h1>
             </div>
-
-            <!-- FORM -->
 
             <form class="crear-cuenta">
 
                 <input type="text" id="_id" placeholder="ID" class="inputs"> <br><br/>
 
-                <input type="text" id="nombre2" placeholder="NOMBRE" class="inputs"> <br><br/>
+                <input type="text" id="nombre2" placeholder="GÉNERO" class="inputs"> <br><br/>
                 
-                <input type="text" id="direccion2" placeholder="DIRECCIÓN" class="inputs"> <br><br/>
+                <input type="text" id="codigo2" placeholder="CÓDIGO" class="inputs"> <br><br/>
     
-                <button onclick="actualizarRetiro()" class="button-crear">ACTUALIZAR</button>
+                <button onclick="actualizarGenero()" class="button-crear">ACTUALIZAR GÉNERO</button>
             </form>
         </div>
 
@@ -110,23 +106,23 @@
             <h4>LIBRERIA@HOTMAIL.COM</h4>
             <h4>+506 7777-8888</h4>
             <p class="derechos">DERECHOS RESERVADOS</p>
-        </div>    
+        </div>   
         
         <script>
             function muestra() {
               // Código ejecutado al hacer click sobre el botón
-              var textoOculto = document.getElementById("nuevo-punto");
+              var textoOculto = document.getElementById("nuevo-genero");
               textoOculto.classList.remove("oculto");
             }
 
             function muestra2() {
               // Código ejecutado al hacer click sobre el botón
-              var textoOculto = document.getElementById("editar-punto");
+              var textoOculto = document.getElementById("editar-genero");
               textoOculto.classList.remove("oculto");
             }
 
             function cargarTabla() {
-            fetch("http://localhost:5000/retiros/")
+            fetch("http://localhost:5000/generos/")
                 .then(
                     function (response) {
                         return response.json();
@@ -135,20 +131,20 @@
                 .then(
                     function (json) {
                         for (var cont = 0; json.length > cont; cont++) {
-                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].nombre+"</td><td>"+json[cont].direccion+"</td><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
-                            document.getElementById("puntosAgregados").insertAdjacentHTML("beforeend", linea);
+                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].nombre+"</td><td>"+json[cont].codigo+"</td><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
+                            document.getElementById("generosAgregados").insertAdjacentHTML("beforeend", linea);
                         }
                     }
                 )
         }
 
-            function insertarRetiro() {
+            function insertarGenero() {
                 var datos = {
                 nombre: document.getElementById("nombre").value,
-                direccion: document.getElementById("direccion").value
+                codigo: document.getElementById("codigo").value
                 }
                 
-                fetch("http://localhost:5000/retiros/insertar", {
+                fetch("http://localhost:5000/generos/insertar", {
                 method: 'POST',
                 body: JSON.stringify(datos),
                 headers: {'Content-Type': 'application/json'}
@@ -160,14 +156,14 @@
                 )
             }
 
-            function actualizarRetiro() {
+            function actualizarGenero() {
             var datos = {
                 _id: document.getElementById("_id").value,
                 nombre: document.getElementById("nombre2").value,
-                direccion: document.getElementById("direccion2").value,
+                codigo: document.getElementById("codigo2").value,
             }
 
-            fetch("http://localhost:5000/retiros/actualizar", {
+            fetch("http://localhost:5000/generos/actualizar", {
                 method: 'POST',
                 body: JSON.stringify(datos),
                 headers: { 'Content-Type': 'application/json' }
@@ -178,7 +174,9 @@
                     }
                 )
         }
+
         </script>
 
     </body>
 </html>
+

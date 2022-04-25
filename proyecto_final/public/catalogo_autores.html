@@ -8,7 +8,7 @@
         <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
     </head>
 
-    <body onload='document.form1.text1.focus()'>
+    <body onload="cargarTabla()">
 
         <!-- Logo y Menu -->
         <div class="contenedor">
@@ -40,41 +40,18 @@
 
         <!-- Libros agregados -->
         <div class="libros contenedor">
-            <div class="secciones">
-                <h2>NOMBRE</h2>
-            </div>
-            <div class="secciones">
-                <h2>PAÍS</h2>
-            </div>
-            <div class="secciones">
-                <h2>FECHA NACIMIENTO</h2>
-            </div>
-            <div class="secciones">
-                <h2>GÉNERO</h2>
-            </div>
-            <div class="secciones">
-                <h2>LIBROS</h2>
-            </div>
-    
-            <!-- Contenido -->
-
-            <div class="secciones">
-                <p>TÍTULO</p>
-            </div>
-            <div class="secciones">
-                <p>AUTOR</p>
-            </div>
-            <div class="secciones">
-                <p>EDITORIAL</p>
-            </div>
-            <div class="secciones">
-                <p>GÉNERO</p>
-            </div>
-            <div class="secciones">
-                <p>PRECIO</p>
-            </div>
-            <div class="editar">
-                <button class="button-sesion">EDITAR</button>
+            <div>
+            <table class="" id="librosAgregados">
+                <tr>
+                  <td class="tabla-titulos">ID</td>
+                  <td class="tabla-titulos">NOMBRE</td>
+                  <td class="tabla-titulos">PAÍS</td>
+                  <td class="tabla-titulos">GÉNERO</td>
+                  <td class="tabla-titulos">LIBROS</td>
+                  <td class="tabla-titulos">PREMIOS</td>
+                  <td class="tabla-titulos">EDITAR</td>
+                </tr>
+              </table>
             </div>
 
             <!-- Boton -->
@@ -92,17 +69,17 @@
 
             <!--  -->
 
-            <form class="crear-cuenta" onsubmit= "">
+            <form class="crear-cuenta">
 
-                <input type="text" id="nombre" placeholder="NOMBRE COMPLETO" class="inputs"> <br><br/>
+                <input type="text" id="nombreCompleto" placeholder="NOMBRE COMPLETO" class="inputs"> <br><br/>
                 
-                <input type="text" id="apellidos" placeholder="PAÍS DE NACIMIENTO" class="inputs"> <br><br/>
+                <input type="text" id="paisNacimiento" placeholder="PAÍS DE NACIMIENTO" class="inputs"> <br><br/>
                 
-                <label class="text-morado" for="fecha-nac">FECHA DE NACIMIENTO</label><br>
-                <input type="date" id="fecha-nac" class="inputs"> <br><br/>
+                <label class="text-morado" for="fechaNacimiento">FECHA DE NACIMIENTO</label><br>
+                <input type="date" id="fechaNacimiento" class="inputs"> <br><br/>
 
-                <label class="text-morado" for="fecha-def">FECHA DE DEFUNCIÓN</label><br>
-                <input type="date" id="fecha-def" class="inputs"> <br><br/>
+                <label class="text-morado" for="fechaDefuncion">FECHA DE DEFUNCIÓN</label><br>
+                <input type="date" id="fechaDefuncion" class="inputs"> <br><br/>
 
                 <label class="text-morado" for="genero">GÉNERO</label><br>
                 <select class="select" id="genero">
@@ -119,21 +96,76 @@
                     <option>VIAJES</option>
                 </select><br><br/>
     
-                <label class="text-morado" for="premios">LIBROS</label><br>
-                <textarea class="text-areas" id="premios"></textarea> <br>
+                <label class="text-morado" for="librosPublicados">LIBROS</label><br>
+                <textarea class="text-areas" id="librosPublicados"></textarea> <br>
                 
-                <input type="text" placeholder="PREMIO NOBEL" class="inputs" id="cedula"> <br><br/>
+                <input type="text" placeholder="PREMIOS" class="inputs" id="premios"> <br><br/>
 
-                <input type="text" placeholder="AÑO PREMIO NOBEL" class="inputs" id="cedula"> <br><br/>
+                <input type="text" placeholder="AÑO PREMIO NOBEL" class="inputs" id="nobelFecha"> <br><br/>
 
-                <label class="text-morado" for="premios">RESEÑA</label><br>
-                <textarea class="text-areas" id="premios"></textarea> <br>
+                <p class="text-morado">AGREGAR FOTO DE AUTOR</p>
+                <input class="button-foto" type="file" placeholder="IMAGEN" id="imagen"> <br><br/>
 
-                <button class="button-foto">+</button>
+                <label class="text-morado" for="resena">RESEÑA</label><br>
+                <textarea class="text-areas" id="resena"></textarea> <br>
+                    
+                <button onclick="insertarAutor()" class="button-crear">AGREGAR AUTOR</button>
+            </form>
+        </div>
+
+        <!-- EDITAR AUTOR -->
+
+        <div id="editar-autor" class="oculto nuevo-libro">
+            <!-- Título -->
+            <div class="titulo2">
+                <h1>EDITAR AUTOR</h1>
+            </div>
+
+            <!--  -->
+
+            <form class="crear-cuenta">
+
+                <input type="text" id="_id" placeholder="ID" class="inputs"> <br><br/>
+
+                <input type="text" id="nombreCompleto2" placeholder="NOMBRE COMPLETO" class="inputs"> <br><br/>
                 
-                <p>AGREGAR FOTO DE PERFIL</p>
+                <input type="text" id="paisNacimiento2" placeholder="PAÍS DE NACIMIENTO" class="inputs"> <br><br/>
+                
+                <label class="text-morado" for="fechaNacimiento2">FECHA DE NACIMIENTO</label><br>
+                <input type="date" id="fechaNacimiento2" class="inputs"> <br><br/>
+
+                <label class="text-morado" for="fechaDefuncion2">FECHA DE DEFUNCIÓN</label><br>
+                <input type="date" id="fechaDefuncion2" class="inputs"> <br><br/>
+
+                <label class="text-morado" for="genero2">GÉNERO</label><br>
+                <select class="select" id="genero2">
+                    <option></option>
+                    <option>ARTE</option>
+                    <option>CIENCIA</option>
+                    <option>DISEÑO</option>
+                    <option>FANTASÍA</option>
+                    <option>FILOSOFÍA</option>
+                    <option>GASTRONOMÍA</option>
+                    <option>NIÑOS</option>
+                    <option>NOVELAS</option>
+                    <option>SALUD Y EJERCICIO</option>
+                    <option>VIAJES</option>
+                </select><br><br/>
     
-                <button class="button-crear">AGREGAR AUTOR</button>
+                <label class="text-morado" for="librosPublicados2">LIBROS</label><br>
+                <textarea class="text-areas" id="librosPublicados2"></textarea> <br>
+                
+                <input type="text" placeholder="PREMIOS" class="inputs" id="premios2"> <br><br/>
+
+                <input type="text" placeholder="AÑO PREMIO NOBEL" class="inputs" id="nobelFecha2"> <br><br/>
+
+                <p class="text-morado">AGREGAR FOTO DE AUTOR</p>
+                <input class="button-foto" type="file" placeholder="IMAGEN" id="imagen2"> <br><br/>
+
+                <label class="text-morado" for="resena2">RESEÑA</label><br>
+                <textarea class="text-areas" id="resena2"></textarea> <br>
+                    
+                <button onclick="actualizarAutor()" class="button-crear">ACTUALIZAR AUTOR</button>
             </form>
         </div>
 
@@ -155,6 +187,83 @@
               var textoOculto = document.getElementById("nuevo-autor");
               textoOculto.classList.remove("oculto");
             }
+
+            function muestra2() {
+            // Código ejecutado al hacer click sobre el botón
+            var textoOculto = document.getElementById("editar-autor");
+            textoOculto.classList.remove("oculto");
+            }
+
+            function cargarTabla() {
+            fetch("http://localhost:5000/autores/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].nombreCompleto+"</td><td>"+json[cont].paisNacimiento+"</td><td>"+json[cont].genero+"</td><td>"+json[cont].librosPublicados+"</td><td>"+json[cont].premios+"</td><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
+                            document.getElementById("librosAgregados").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+
+            function insertarAutor() {
+                var datos = {
+                nombreCompleto: document.getElementById("nombreCompleto").value,
+                paisNacimiento: document.getElementById("paisNacimiento").value,
+                fechaNacimiento: document.getElementById("fechaNacimiento").value,
+                fechaDefuncion: document.getElementById("fechaDefuncion").value,
+                genero: document.getElementById("genero").value,
+                librosPublicados: document.getElementById("librosPublicados").value,
+                premios: document.getElementById("premios").value,
+                nobelFecha: document.getElementById("nobelFecha").value,
+                imagen: document.getElementById("imagen").value,
+                resena: document.getElementById("resena").value
+                }
+                
+                fetch("http://localhost:5000/autores/insertar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: {'Content-Type': 'application/json'}
+                })
+                .then(
+                    function(response){
+                    return response.json();
+                    }
+                )
+            }
+
+            function actualizarAutor() {
+            var datos = {
+                _id: document.getElementById("_id").value,
+                nombreCompleto: document.getElementById("nombreCompleto2").value,
+                paisNacimiento: document.getElementById("paisNacimiento2").value,
+                fechaNacimiento: document.getElementById("fechaNacimiento2").value,
+                fechaDefuncion: document.getElementById("fechaDefuncion2").value,
+                genero: document.getElementById("genero2").value,
+                librosPublicados: document.getElementById("librosPublicados2").value,
+                premios: document.getElementById("premios2").value,
+                nobelFecha: document.getElementById("nobelFecha2").value,
+                imagen: document.getElementById("imagen2").value,
+                resena: document.getElementById("resena2").value
+            }
+
+            fetch("http://localhost:5000/autores/actualizar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+        }
+
           </script>
     </body>
 </html>

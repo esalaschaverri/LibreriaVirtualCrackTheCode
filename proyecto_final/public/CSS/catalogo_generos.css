@@ -93,12 +93,11 @@ h3{
     border: #36008D 3px solid;
     border-radius: 10px;
     margin-top: 3%;
-    margin-left: 12%;
-    margin-right: 12%;
-    padding-top: 30px;
-    padding-left: 4%;
-    padding-right: 4%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 5px;
     padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .tabla-titulos{
@@ -110,6 +109,11 @@ h3{
 table{
     border: #36008D 2px solid;
 }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 td {
     font-family: 'Roboto', sans-serif;
@@ -143,27 +147,29 @@ button{
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: 'Bebas Neue';
-    margin-top: 6px;
+    margin-top: 20px;
 }
 
 .agregar{
     flex-basis: 100%;
     text-align: center;
-    margin-top: 20px;
 }
 
 .oculto { 
     display: none;
-}
+  }
+
+  .visible { 
+    display: inline;
+  }
 
 .nuevo-libro{
     border: #36008D 3px solid;
     border-radius: 10px;
     margin-top: 3%;
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 30%;
+    margin-right: 30%;
     padding-top: 5px;
-    padding-left: 2%;
     padding-bottom: 5px;
 }
 
@@ -187,42 +193,11 @@ button{
     text-align: center;
 }
 
-.text-areas{
-    border: #36008D 2px solid;
-    width: 75%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
 
 .text-morado{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #36008D;
-}
-
-
-.select{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 75%;
-    background-color: #F2F2F2;
-    border: 0px;
-    color: #36008D;
-    text-align: center;
-    margin-top: 5px;
-}
-
-.button-foto{
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid #36008D;
-    color: #36008D;
-    border-radius: 30px;
-    background: #F2F2F2 ;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
 }
 
 .button-crear{

@@ -1,157 +1,264 @@
 <html>
-    <head>
-        <title>Catálogo Libros</title>
-        <link rel="stylesheet" type="text/css" href="CSS/catalogo_libros.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
-    </head>
 
-    <body onload='document.form1.text1.focus()'>
+<head>
+    <title>Catálogo Libros</title>
+    <link rel="stylesheet" type="text/css" href="CSS/catalogo_libros.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
+</head>
 
-        <!-- Logo y Menu -->
-        <div class="contenedor">
-            <div class="logo-menu" >
-                <a href="index.html"><img class="logo" src="img/logo.png"/></a>
-            </div>
+<body onload="cargarTabla()">
 
-            <div class="menu-top">
-                <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
-                <a href="display_libros.html">LIBROS</a>
-                <a href="socios_comerciales.html">SOCIOS COMERCIALES</a>
-                <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
-                <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
-                <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
-                <a href="contacto.html">CONTACTO</a>
-            </div>
+    <!-- Logo y Menu -->
+    <div class="contenedor">
+        <div class="logo-menu">
+            <a href="index.html"><img class="logo" src="img/logo.png" /></a>
         </div>
 
-        <!-- Busqueda, Perfil y Carrito -->
-
-        <div class="button">
-            <a class="button2" href="perfil_admin.html"><i class="fa-solid fa-user"></i></a>
+        <div class="menu-top">
+            <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+            <a href="display_libros.html">LIBROS</a>
+            <a href="socios_comerciales.html">SOCIOS COMERCIALES</a>
+            <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+            <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+            <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+            <a href="contacto.html">CONTACTO</a>
         </div>
+    </div>
 
+    <!-- Busqueda, Perfil y Carrito -->
+
+    <div class="button">
+        <a class="button2" href="perfil_admin.html"><i class="fa-solid fa-user"></i></a>
+    </div>
+
+    <!-- Título -->
+    <div class="titulo">
+        <h1>CATÁLOGO DE LIBROS</h1>
+    </div>
+
+    <!-- Libros agregados -->
+    <div class="libros ">
+
+        <table class="" id="librosAgregados">
+            <tr>
+              <td class="tabla-titulos">ID</td>
+              <td class="tabla-titulos">TÍTULO</td>
+              <td class="tabla-titulos">AUTOR</td>
+              <td class="tabla-titulos">EDITORIAL</td>
+              <td class="tabla-titulos">GÉNERO</td>
+              <td class="tabla-titulos">PRECIO</td>
+              <td class="tabla-titulos">EDITAR</td>
+            </tr>
+          </table>
+
+        <!-- Boton -->
+
+        <div class="agregar">
+            <button onclick="muestra()" class="button-sesion">AGREGAR NUEVO LIBRO</button>
+        </div>
+    </div>
+
+    <div id="nuevo-libro" class=" oculto nuevo-libro">
         <!-- Título -->
-        <div class="titulo">
-            <h1>CATÁLOGO DE LIBROS</h1>
+        <div class="titulo2">
+            <h1>NUEVO LIBRO</h1>
         </div>
 
-        <!-- Libros agregados -->
-        <div class="libros contenedor">
-            <div class="secciones">
-                <h2>TÍTULO</h2>
-            </div>
-            <div class="secciones">
-                <h2>AUTOR</h2>
-            </div>
-            <div class="secciones">
-                <h2>EDITORIAL</h2>
-            </div>
-            <div class="secciones">
-                <h2>GÉNERO</h2>
-            </div>
-            <div class="secciones">
-                <h2>PRECIO</h2>
-            </div>
-    
-            <!-- Contenido -->
+        <!--  -->
 
-            <div class="secciones">
-                <p>TÍTULO</p>
-            </div>
-            <div class="secciones">
-                <p>AUTOR</p>
-            </div>
-            <div class="secciones">
-                <p>EDITORIAL</p>
-            </div>
-            <div class="secciones">
-                <p>GÉNERO</p>
-            </div>
-            <div class="secciones">
-                <p>PRECIO</p>
-            </div>
-            <div class="editar">
-                <button class="button-sesion">EDITAR</button>
-            </div>
+        <form class="crear-cuenta">
 
-            <!-- Boton -->
+            <input type="text" id="titulo" placeholder="TÍTULO" class="inputs"> <br><br />
 
-            <div class="agregar">
-                <button onclick="muestra()" class="button-sesion">AGREGAR NUEVO LIBRO</button>
-            </div>
+            <input type="text" id="autor" placeholder="AUTOR" class="inputs"> <br><br />
+
+            <input type="text" id="editorial" placeholder="EDITORIAL" class="inputs"> <br><br />
+
+            <label class="text-morado" for="genero">GÉNERO</label><br>
+            <select class="select" id="genero">
+                <option></option>
+                <option>ARTE</option>
+                <option>BIOGRAFÍA</option>
+                <option>CIENCIA</option>
+                <option>DISEÑO</option>
+                <option>FANTASÍA</option>
+                <option>FILOSOFÍA</option>
+                <option>GASTRONOMÍA</option>
+                <option>NIÑOS</option>
+                <option>NOVELAS</option>
+                <option>SALUD Y EJERCICIO</option>
+                <option>VIAJES</option>
+            </select><br><br />
+
+            <label class="text-morado" for="premios">PREMIOS</label><br>
+            <textarea class="text-areas" id="premios"></textarea> <br>
+
+            <input type="text" placeholder="ISBN" class="inputs" id="identificacion"> <br><br />
+
+            <input type="text" placeholder="PRECIO" class="inputs" id="precio"> <br><br />
+
+            <label class="text-morado" for="premios">SINOPSIS</label><br>
+            <textarea class="text-areas" id="sinopsis"></textarea> <br>
+
+            <p class="text-morado">AGREGAR FOTO DE PERFIL</p>
+            <input class="button-foto" type="file" placeholder="IMAGEN" id="imagen"> <br><br />
+
+            <button onclick="insertarLibro()" class="button-crear">AGREGAR LIBRO</button>
+        </form>
+    </div>
+
+    <!-- EDITAR LIBRO -->
+
+    <div id="editar-libro" class=" oculto nuevo-libro">
+        <!-- Título -->
+        <div class="titulo2">
+            <h1>EDITAR LIBRO</h1>
         </div>
 
-        <div id="nuevo-libro" class=" oculto nuevo-libro">
-            <!-- Título -->
-            <div class="titulo2">
-                <h1>NUEVO LIBRO</h1>
-            </div>
+        <!-- Form -->
 
-            <!--  -->
+        <form class="crear-cuenta">
 
-            <form class="crear-cuenta" action="perfil_cliente.html" onsubmit= "">
+            <input type="text" id="_id" placeholder="ID" class="inputs"> <br><br/>
 
-                <input type="text" id="nombre" placeholder="TÍTULO" class="inputs"> <br><br/>
-                
-                <input type="text" id="apellidos" placeholder="AUTOR" class="inputs"> <br><br/>
-                
-                <input type="text" id="apellidos" placeholder="EDITORIAL" class="inputs"> <br><br/>
+            <input type="text" id="titulo2" placeholder="TÍTULO" class="inputs"> <br><br />
 
-                <label class="text-morado" for="genero">GÉNERO</label><br>
-                <select class="select" id="genero">
-                    <option></option>
-                    <option>ARTE</option>
-                    <option>CIENCIA</option>
-                    <option>DISEÑO</option>
-                    <option>FANTASÍA</option>
-                    <option>FILOSOFÍA</option>
-                    <option>GASTRONOMÍA</option>
-                    <option>NIÑOS</option>
-                    <option>NOVELAS</option>
-                    <option>SALUD Y EJERCICIO</option>
-                    <option>VIAJES</option>
-                </select><br><br/>
-    
-                <label class="text-morado" for="premios">PREMIOS</label><br>
-                <textarea class="text-areas" id="premios"></textarea> <br>
-                
-                <input type="text" placeholder="ISBN" class="inputs" id="cedula"> <br><br/>
+            <input type="text" id="autor2" placeholder="AUTOR" class="inputs"> <br><br />
 
-                <input type="text" placeholder="PRECIO" class="inputs" id="cedula"> <br><br/>
+            <input type="text" id="editorial2" placeholder="EDITORIAL" class="inputs"> <br><br />
 
-                <label class="text-morado" for="premios">SINOPSIS</label><br>
-                <textarea class="text-areas" id="premios"></textarea> <br>
+            <label class="text-morado" for="genero">GÉNERO</label><br>
+            <select class="select" id="genero2">
+                <option></option>
+                <option>ARTE</option>
+                <option>BIOGRAFÍA</option>
+                <option>CIENCIA</option>
+                <option>DISEÑO</option>
+                <option>FANTASÍA</option>
+                <option>FILOSOFÍA</option>
+                <option>GASTRONOMÍA</option>
+                <option>NIÑOS</option>
+                <option>NOVELAS</option>
+                <option>SALUD Y EJERCICIO</option>
+                <option>VIAJES</option>
+            </select><br><br />
 
-                <button class="button-foto">+</button>
-                
-                <p>AGREGAR FOTO DE PERFIL</p>
-    
-                <button class="button-crear">AGREGAR LIBRO</button>
-            </form>
+            <label class="text-morado" for="premios">PREMIOS</label><br>
+            <textarea class="text-areas" id="premios2"></textarea> <br>
+
+            <input type="text" placeholder="ISBN" class="inputs" id="identificacion2"> <br><br />
+
+            <input type="text" placeholder="PRECIO" class="inputs" id="precio2"> <br><br />
+
+            <label class="text-morado" for="premios">SINOPSIS</label><br>
+            <textarea class="text-areas" id="sinopsis2"></textarea> <br>
+
+            <p class="text-morado">AGREGAR FOTO DE PERFIL</p>
+            <input class="button-foto" type="file" placeholder="IMAGEN" id="imagen2"> <br><br />
+
+            <button onclick="actualizarLibro()" class="button-crear">ACTUALIZAR LIBRO</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="social">
+            <img class="logos-social" src="img/facebook.png" />
+            <img class="logos-social" src="img/instagram.png" />
+            <img class="logos-social" src="img/twitter.png" />
         </div>
+        <h4>LIBRERIA@HOTMAIL.COM</h4>
+        <h4>+506 7777-8888</h4>
+        <p class="derechos">DERECHOS RESERVADOS</p>
+    </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="social">
-                <img class="logos-social" src="img/facebook.png"/> 
-                <img class="logos-social"src="img/instagram.png"/> 
-                <img class="logos-social" src="img/twitter.png"/> 
-            </div>
-            <h4>LIBRERIA@HOTMAIL.COM</h4>
-            <h4>+506 7777-8888</h4>
-            <p class="derechos">DERECHOS RESERVADOS</p>
-        </div> 
-        
-        <script>
-            function muestra() {
-              // Código ejecutado al hacer click sobre el botón
-              var textoOculto = document.getElementById("nuevo-libro");
-              textoOculto.classList.remove("oculto");
+    <script>
+        function muestra() {
+            // Código ejecutado al hacer click sobre el botón
+            var textoOculto = document.getElementById("nuevo-libro");
+            textoOculto.classList.remove("oculto");
+        }
+
+        function muestra2() {
+            // Código ejecutado al hacer click sobre el botón
+            var textoOculto = document.getElementById("editar-libro");
+            textoOculto.classList.remove("oculto");
+        }
+
+        function cargarTabla() {
+            fetch("http://localhost:5000/libros/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].titulo+"</td><td>"+json[cont].autor+"</td><td>"+json[cont].editorial+"</td><td>"+json[cont].genero+"</td><td>"+json[cont].precio+"</td><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
+                            document.getElementById("librosAgregados").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+
+        function insertarLibro() {
+            var datos = {
+                titulo: document.getElementById("titulo").value,
+                autor: document.getElementById("autor").value,
+                editorial: document.getElementById("editorial").value,
+                genero: document.getElementById("genero").value,
+                premios: document.getElementById("premios").value,
+                identificacion: document.getElementById("identificacion").value,
+                precio: document.getElementById("precio").value,
+                sinopsis: document.getElementById("sinopsis").value,
+                imagen: document.getElementById("imagen").value
             }
-        </script>
 
-    </body>
+            fetch("http://localhost:5000/libros/insertar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+        }
+
+        function actualizarLibro() {
+            var datos = {
+                _id: document.getElementById("_id").value,
+                titulo: document.getElementById("titulo2").value,
+                autor: document.getElementById("autor2").value,
+                editorial: document.getElementById("editorial2").value,
+                genero: document.getElementById("genero2").value,
+                premios: document.getElementById("premios2").value,
+                identificacion: document.getElementById("identificacion2").value,
+                precio: document.getElementById("precio2").value,
+                sinopsis: document.getElementById("sinopsis2").value,
+                imagen: document.getElementById("imagen2").value
+            }
+
+            fetch("http://localhost:5000/libros/actualizar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+        }
+    </script>
+
+</body>
+
 </html>

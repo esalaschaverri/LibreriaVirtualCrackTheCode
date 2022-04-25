@@ -34,8 +34,8 @@
 
         <div class="buttonDiv">
             <form onsubmit="">
-                <input class="button-search" type="search" placeholder="BUSCAR LIBRO O AUTOR">
-                <button class="search"> <i class="fa-solid fa-magnifying-glass fa-xl"></i> </button>
+                <input id="titulo" class="button-search" type="search" placeholder="BUSCAR LIBRO O AUTOR">
+                <button onclick="buscarLibro()" class="search"> <i class="fa-solid fa-magnifying-glass fa-xl"></i> </button>
             </form>
         </div>
         <div class="button">
@@ -99,6 +99,25 @@
         <p class="derechos">DERECHOS RESERVADOS</p>
         <a class="derechos" href="iniciar_sesion_admin.html">INGRESO ADMIN</a>
     </div>
+
+    <script>
+        function buscarLibro() {
+            var datos = {
+                titulo: document.getElementById("titulo").value
+            }
+
+            fetch("http://localhost:5000/libros/buscar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+        }
+    </script>
 
 </body>
 

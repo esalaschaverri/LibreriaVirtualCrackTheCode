@@ -2,10 +2,10 @@ var express =require("express");
 var router=express.Router();
 var mongoose = require("mongoose");
 
-var Genero = require("../schemas/genero.js");
+var Descuento = require("../schemas/descuento.js");
 
 router.get('/', function(req, res) {
-    Genero.find().exec()
+    Descuento.find().exec()
       .then(
         function(result) {
           res.json(result);
@@ -13,15 +13,14 @@ router.get('/', function(req, res) {
       );
   });
 
-
   router.post('/insertar', function (req, res) {
-    var generoNuevo = new Genero({
+    var descuentoNuevo = new Descuento({
       _id: new mongoose.Types.ObjectId(),
-      nombre: req.body.nombre,
-      codigo: req.body.codigo,
+      nombreDescuento: req.body.nombreDescuento,
+      porcentaje: req.body.porcentaje,
     });
   
-    generoNuevo.save()
+    descuentoNuevo.save()
       .then(
         function (result) {
           res.json(result);
@@ -31,10 +30,10 @@ router.get('/', function(req, res) {
 
   router.post('/actualizar', function(req, res) {
     var _id = req.body._id;
-    var nombre = req.body.nombre;
-    var codigo = req.body.codigo;
+    var nombreDescuento = req.body.nombreDescuento;
+    var porcentaje = req.body.porcentaje;
     // findOneAndUpdate - Filtro - Valores - Opciones - Función anónima
-    Genero.findOneAndUpdate({_id: _id}, {$set:{nombre:nombre, codigo:codigo}}, {useFindAndModify: false, new: true}, function (err, doc) {
+    Descuento.findOneAndUpdate({_id: _id}, {$set:{nombreDescuento:nombreDescuento, porcentaje:porcentaje}}, {useFindAndModify: false, new: true}, function (err, doc) {
       res.json(doc);
     });
   });

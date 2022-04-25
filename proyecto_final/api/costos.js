@@ -2,10 +2,10 @@ var express =require("express");
 var router=express.Router();
 var mongoose = require("mongoose");
 
-var Genero = require("../schemas/genero.js");
+var Costo = require("../schemas/costo.js");
 
 router.get('/', function(req, res) {
-    Genero.find().exec()
+    Costo.find().exec()
       .then(
         function(result) {
           res.json(result);
@@ -13,15 +13,14 @@ router.get('/', function(req, res) {
       );
   });
 
-
   router.post('/insertar', function (req, res) {
-    var generoNuevo = new Genero({
+    var costoNuevo = new Costo({
       _id: new mongoose.Types.ObjectId(),
-      nombre: req.body.nombre,
-      codigo: req.body.codigo,
+      canton: req.body.canton,
+      costo: req.body.costo,
     });
   
-    generoNuevo.save()
+    costoNuevo.save()
       .then(
         function (result) {
           res.json(result);
@@ -31,10 +30,10 @@ router.get('/', function(req, res) {
 
   router.post('/actualizar', function(req, res) {
     var _id = req.body._id;
-    var nombre = req.body.nombre;
-    var codigo = req.body.codigo;
+    var canton = req.body.canton;
+    var costo = req.body.costo;
     // findOneAndUpdate - Filtro - Valores - Opciones - Función anónima
-    Genero.findOneAndUpdate({_id: _id}, {$set:{nombre:nombre, codigo:codigo}}, {useFindAndModify: false, new: true}, function (err, doc) {
+    Costo.findOneAndUpdate({_id: _id}, {$set:{canton:canton, costo:costo}}, {useFindAndModify: false, new: true}, function (err, doc) {
       res.json(doc);
     });
   });

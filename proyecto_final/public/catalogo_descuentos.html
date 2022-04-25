@@ -8,7 +8,7 @@
         <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
     </head>
 
-    <body onload='document.form1.text1.focus()'>
+    <body onload="cargarTabla()">
 
         <!-- Logo y Menu -->
         <div class="contenedor">
@@ -38,25 +38,17 @@
             <h1>DESCUENTOS Y PROMOCIONES</h1>
         </div>
 
-        <!-- Libros agregados -->
-        <div class="libros contenedor">
-            <div class="secciones">
-                <h2>NOMBRE</h2>
-            </div>
-            <div class="secciones">
-                <h2>PORCENTAJE</h2>
-            </div>
-    
-            <!-- Contenido -->
-
-            <div class="secciones">
-                <p>NOMBRE</p>
-            </div>
-            <div class="secciones">
-                <p>DIRECCIÓN</p>
-            </div>
-            <div class="editar">
-                <button class="button-sesion">EDITAR</button>
+        <!-- Descuentos agregados -->
+        <div class="libros">
+            <div>
+                <table class="center" id="descuentosAgregados">
+                    <tr>
+                      <td class="tabla-titulos">ID</td>
+                      <td class="tabla-titulos">DESCUENTO</td>
+                      <td class="tabla-titulos">PORCENTAJE</td>
+                      <td class="tabla-titulos">EDITAR</td>
+                    </tr>
+                  </table>
             </div>
 
             <!-- Boton -->
@@ -65,6 +57,8 @@
                 <button onclick="muestra()" class="button-sesion">AGREGAR NUEVO DESCUENTO</button>
             </div>
         </div>
+
+        <!-- NUEVO DESCUENTO -->
 
         <div id="nuevo-descuento" class=" oculto nuevo-libro">
             <!-- Título -->
@@ -114,6 +108,24 @@
               var textoOculto = document.getElementById("nuevo-descuento");
               textoOculto.classList.remove("oculto");
             }
+
+            function cargarTabla() {
+            fetch("http://localhost:5000/descuentos/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].nombreDescuento+"</td><td>"+json[cont].porcentaje+"</td><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
+                            document.getElementById("descuentosAgregados").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+
         </script>
 
     </body>

@@ -8,7 +8,7 @@
         <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
     </head>
 
-    <body onload='document.form1.text1.focus()'>
+    <body onload="cargarTabla()">
 
         <!-- Logo y Menu -->
         <div class="contenedor">
@@ -39,24 +39,16 @@
         </div>
 
         <!-- Libros agregados -->
-        <div class="libros contenedor">
-            <div class="secciones">
-                <h2>CANTÓN</h2>
-            </div>
-            <div class="secciones">
-                <h2>COSTO DE ENVÍO</h2>
-            </div>
-    
-            <!-- Contenido -->
-
-            <div class="secciones">
-                <p>CANTÓN</p>
-            </div>
-            <div class="secciones">
-                <p>COSTO</p>
-            </div>
-            <div class="editar">
-                <button class="button-sesion">EDITAR</button>
+        <div class="libros">
+            <div>
+                <table class="center" id="costosAgregados">
+                    <tr>
+                      <td class="tabla-titulos">ID</td>
+                      <td class="tabla-titulos">CANTÓN</td>
+                      <td class="tabla-titulos">COSTO</td>
+                      <td class="tabla-titulos">EDITAR</td>
+                    </tr>
+                  </table>
             </div>
 
             <!-- Boton -->
@@ -66,21 +58,45 @@
             </div>
         </div>
 
+        <!-- NUEVO COSTO -->
+
         <div id="nuevo-costo" class=" oculto nuevo-libro">
             <!-- Título -->
             <div class="titulo2">
                 <h1>NUEVO CANTÓN</h1>
             </div>
 
-            <!--  -->
+            <!--FORM  -->
 
-            <form class="crear-cuenta" action="perfil_cliente.html" onsubmit= "">
+            <form class="crear-cuenta">
 
-                <input type="text" id="nombre" placeholder="CANTÓN" class="inputs"> <br><br/>
+                <input type="text" id="canton" placeholder="CANTÓN" class="inputs"> <br><br/>
                 
-                <input type="text" id="apellidos" placeholder="COSTO DE ENVÍO" class="inputs"> <br><br/>
+                <input type="text" id="costo" placeholder="COSTO DE ENVÍO" class="inputs"> <br><br/>
     
-                <button class="button-crear">AGREGAR CANTÓN</button>
+                <button onclick="insertarCosto()" class="button-crear">AGREGAR CANTÓN</button>
+            </form>
+        </div>
+
+        <!-- EDITAR COSTO -->
+
+        <div id="editar-costo" class=" oculto nuevo-libro">
+            <!-- Título -->
+            <div class="titulo2">
+                <h1>EDITAR CANTÓN</h1>
+            </div>
+
+            <!-- FORM -->
+
+            <form class="crear-cuenta">
+
+                <input type="text" id="_id" placeholder="ID" class="inputs"> <br><br/>
+
+                <input type="text" id="canton2" placeholder="CANTÓN" class="inputs"> <br><br/>
+                
+                <input type="text" id="costo2" placeholder="COSTO DE ENVÍO" class="inputs"> <br><br/>
+    
+                <button onclick="actualizarCosto()" class="button-crear">ACTUALIZAR CANTÓN</button>
             </form>
         </div>
 
@@ -102,6 +118,67 @@
               var textoOculto = document.getElementById("nuevo-costo");
               textoOculto.classList.remove("oculto");
             }
+
+            function muestra2() {
+              // Código ejecutado al hacer click sobre el botón
+              var textoOculto = document.getElementById("editar-costo");
+              textoOculto.classList.remove("oculto");
+            }
+
+            function cargarTabla() {
+            fetch("http://localhost:5000/costos/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].canton+"</td><td>"+json[cont].costo+"</td><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
+                            document.getElementById("costosAgregados").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+
+            function insertarCosto() {
+                var datos = {
+                canton: document.getElementById("canton").value,
+                costo: document.getElementById("costo").value
+                }
+                
+                fetch("http://localhost:5000/costos/insertar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: {'Content-Type': 'application/json'}
+                })
+                .then(
+                    function(response){
+                    return response.json();
+                    }
+                )
+            }
+
+            function actualizarCosto() {
+            var datos = {
+                _id: document.getElementById("_id").value,
+                canton: document.getElementById("canton2").value,
+                costo: document.getElementById("costo2").value,
+            }
+
+            fetch("http://localhost:5000/costos/actualizar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+        }
+
         </script>
 
     </body>

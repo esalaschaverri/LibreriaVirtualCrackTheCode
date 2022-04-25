@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="cargarTabla()">
     <!-- Logo y Menu -->
     <div class="contenedor">
         <div class="logo-menu" >
@@ -27,14 +27,17 @@
         </div>
     </div>
 
-    <div class="flex-completo text-morado">
-        <h1>PUNTOS POR COMPRA</h1>
+    <!-- PERFIL -->
+    
+    <div class="button">
+        <a class="button2" href="perfil_admin.html"><i class="fa-solid fa-user"></i></a>
     </div>
 
 
-    <!-- Mi perfil -->
+    <!-- Puntos -->
 
     <div class="crear-cuenta">
+        <h1 class="text-morado">PUNTOS POR COMPRA</h1>
 
         <div class="flex-completo text-morado">
           <center>
@@ -68,35 +71,43 @@
         </div>
 
         <div>
-            <button class="buttons-Form">AGREGAR NUEVO MONTO</button>
+            <button onclick="muestra()" class="buttons-Form">AGREGAR NUEVO MONTO</button>
         </div>
 
 
     </div>
 
 
-    <div class="crear-cuenta">
+    <div id="nuevo-monto" class="oculto crear-cuenta">
 
         <div class="flex-completo text-morado">
             <h1>NUEVO MONTO</h1>
-            <input class="inputs" id="text" type="text" placeholder="MONTO DE COMPRA" ><br>
-            <input class="inputs" id="text" type="text" placeholder="PUNTOS" ><br>
+            <input class="inputs" id="monto" type="text" placeholder="MONTO DE COMPRA" ><br>
+            <input class="inputs" id="puntos" type="text" placeholder="PUNTOS" ><br>
         </div>
 
         <div>
             <button class="buttons-Form">AGREGAR</button>
         </div>
-
-
     </div>
 
 
-    <div class="flex-completo text-morado">
-        <h1>VALOR DE CADA PUNTO</h1>
+    <div id="editar-monto" class="oculto crear-cuenta">
+
+        <div class="flex-completo text-morado">
+            <h1>EDITAR MONTO</h1>
+            <input class="inputs" id="_id" type="text" placeholder="ID" ><br>
+            <input class="inputs" id="monto2" type="text" placeholder="MONTO DE COMPRA" ><br>
+            <input class="inputs" id="puntos2" type="text" placeholder="PUNTOS" ><br>
+        </div>
+
+        <div>
+            <button class="buttons-Form">AGREGAR</button>
+        </div>
     </div>
 
     <div class="crear-cuenta">
-
+        <h1  class="text-morado">VALOR DE CADA PUNTO</h1>
         <div class="flex-completo text-morado">
           <center>
             <table>
@@ -131,6 +142,14 @@
         <h4>+506 7777-8888</h4>
         <p class="derechos">DERECHOS RESERVADOS</p>
     </div>
+
+    <script>
+        function muestra() {
+              // Código ejecutado al hacer click sobre el botón
+              var textoOculto = document.getElementById("nuevo-monto");
+              textoOculto.classList.remove("oculto");
+            }
+    </script>
 
 </body>
 </html>

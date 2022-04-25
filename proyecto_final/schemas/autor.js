@@ -9,8 +9,9 @@ var autorSchema = mongoose.Schema({
     genero : String,
     librosPublicados : String,
     premios : String,
-    nobelFecha : Date,
+    nobelFecha : Number,
     imagen : String,
+    resena : String,
 });
 
 module.exports = mongoose.model("Autor", autorSchema, "Autores");

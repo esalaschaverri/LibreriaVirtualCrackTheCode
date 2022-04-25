@@ -4,13 +4,13 @@ var libroSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     titulo : String,
     autor : String,
-    genero : String,
-    imagen : String,
-    precio : Number,
     editorial : String,
-    identificacion : String,
+    genero : String,
     premios : String,
+    identificacion : String,
+    precio : Number,
     sinopsis : String,
+    imagen : String,
 });
 
 module.exports = mongoose.model("Libro", libroSchema, "Libros");
