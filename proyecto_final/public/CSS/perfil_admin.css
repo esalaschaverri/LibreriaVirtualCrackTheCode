@@ -1,0 +1,240 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1A181B;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #36008D;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 180px;
+    padding-left: 20px;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 35px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+
+.background-amarillo{
+    background-color: #1CCAD8;
+    padding-top: 5px;    
+    padding-bottom: 5px;  
+    color: #1A181B; 
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.admin{
+    text-align: center;
+    color: #36008D;
+}
+
+.admin img{
+    width: 130px;
+}
+
+.titulo{
+    flex-basis: 56%;
+    margin-top: 30px;
+}
+.titulos{
+    text-align: center;
+    color: #36008D;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon{
+    flex-basis: 43%;
+    text-align: right;
+    margin-right: 1%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.icons{
+    color: #36008D;
+}
+
+.menu-catalogo{
+    text-align: center;
+    color: #1A181B;
+    border: 2px #1A181B solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.menu-catalogo a {
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-catalogo a:nth-child(n+0):nth-child(-n+4){
+    border-right: 2px #1A181B solid;
+    padding-right: 1%;
+}
+
+.menu-catalogo a:hover{
+    color: #1CCAD8;
+}
+
+.menu-pedidos{
+    text-align: center;
+    color: #1A181B;
+    border: 2px #1A181B solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.menu-pedidos a {
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-pedidos a:hover{
+    color: #1CCAD8;
+}
+
+.menu-reportes{
+    text-align: center;
+    color: #1A181B;
+    border: 2px #1A181B solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.menu-reportes a {
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-reportes a:nth-child(n+0):nth-child(-n+3){
+    border-right: 2px #1A181B solid;
+    padding-right: 1%;
+}
+
+.menu-reportes a:hover{
+    color: #1CCAD8;
+}
+
+.menu-clientes{
+    text-align: center;
+    color: #1A181B;
+    border: 2px #1A181B solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.menu-clientes a {
+    color: #1A181B;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-clientes a:nth-child(n+0):nth-child(-n+1){
+    border-right: 2px #1A181B solid;
+    padding-right: 1%;
+}
+
+.menu-clientes a:hover{
+    color: #1CCAD8;
+}
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.derechos{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #1A181B;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px;
+}
+
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}

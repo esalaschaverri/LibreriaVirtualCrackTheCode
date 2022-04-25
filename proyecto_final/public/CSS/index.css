@@ -1,0 +1,226 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1A181B;
+}
+
+h1 {
+    font-family: 'Bebas Neue';}
+
+h2 {
+    font-family: 'Bebas Neue';
+    color: #36008D;
+}
+
+h3{
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    color: #36008D;
+    text-align: left;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 75%;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 3%;
+    padding-right: 3%;
+    text-align: right;
+}
+
+.menu-top a:nth-child(n+0):nth-child(-n+6){
+    border-right: 2px #1CCAD8 solid;
+    padding-right: 1%;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    padding-left: 1%;
+    font-size: 20px;
+}
+
+.menu-top a:hover{
+    color: #1CCAD8;
+}
+
+.buttonDiv{
+    flex-basis: 90%;
+    text-align: right;
+}
+
+.button-search{
+    border: 2px solid #36008D;
+    color: #36008D;
+    border-radius: 5px;
+    background: #E2E0E5 ;
+    font-size: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Bebas Neue';
+    width: 15%;
+}
+
+.search{
+    background-color: white;
+    border: none;
+    color: #36008D;
+}
+
+.button{
+    flex-basis: 8.5%;
+    text-align: left;
+    color: #36008D;
+    margin-left: 0.5%;
+}
+
+.button2{
+    background-color: #36008D;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+    color: #F0E100;
+}
+
+.button3{
+    background-color: #F0E100;
+    padding: 10px;
+    border: 2px solid #36008D;
+    border-radius: 7px;
+}
+
+.button2:hover, .button3:hover {
+    transform: scale(1.1);
+}
+
+.banner{
+    background-image: url("../img/banner-home-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 10%;
+    padding-bottom: 6%; 
+    margin-top: 30px;
+}
+
+.libros-descuentos{
+    flex-basis: 50%;
+    text-align: center;
+    color: #36008D;
+    margin-top: 50px;
+}
+
+.libros-descuentos img{
+    width: 120px;
+}
+
+.libros-descuentos:hover {
+    transform: scale(1.1);
+}
+
+.mapa{
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.social{
+    text-align: center;
+    color: #36008D;
+}
+
+.social img{
+    width: 120px;
+    padding: 20px;
+}
+
+.linea{
+    border-bottom: 2px #36008D solid;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.socios{
+    text-align: center;
+    margin-top: 50px;
+    color: #36008D;
+}
+
+.banner-2{
+    background-image: url("../img/banner-home-5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 15%;
+    padding-bottom: 15%; 
+    margin-top: 50px;
+}
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.footer h4{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #36008D;
+    text-align: center;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.derechos{
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #1A181B;
+    text-align: center;
+    font-size: 10px;
+    margin: 15px;
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: #1CCAD8;
+}
+
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social-1{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}
+
+

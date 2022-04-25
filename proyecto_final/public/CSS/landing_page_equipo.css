@@ -1,0 +1,169 @@
+div{
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #1A181B;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-menu{
+    flex-basis: 20%;
+}
+
+.logo{
+    width: 180px;
+    padding-left: 20px;
+}
+
+.menu-top{
+    flex-basis: 80%;
+    padding-top: 35px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+.menu-top a {
+    color: #36008D;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    padding-right: 10px;
+    font-size: 20px;
+    border-right: 2px #1CCAD8 solid;
+}
+
+.menu-top a:hover{
+    color: #1CCAD8;
+}
+
+.nombre{
+    text-align: center;
+    color: #36008D;
+    font-size: 25px;
+}
+
+.img-laptop{
+    background-image: url("img/laptop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 25%;
+    padding-bottom: 25%;
+}
+
+.mision{
+    background-color: #36008D;
+    padding-top: 5px;    
+    padding-bottom: 5px;  
+    color: white;  
+}
+.mision-flex{
+    flex-basis: 20%;
+    text-align: right;
+    font-size: 35px;
+}
+
+.mision-flex2{
+    flex-basis: 70%;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 50px;
+    margin-right: 10%;
+}
+
+.vision{
+    background-color: #1CCAD8;
+    padding-top: 5px;    
+    padding-bottom: 5px;  
+    color: white;  
+}
+.vision-flex{
+    flex-basis: 20%;
+    text-align: right;
+    font-size: 35px;
+}
+
+.vision-flex2{
+    flex-basis: 70%;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 50px;
+    margin-right: 10%;
+}
+
+.valores{
+    color: #F0E100;
+    text-align: center;
+    font-size: 35px;
+}
+
+.valores-texto{
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.valores-texto img{
+    width: 40px;
+}
+
+.equipo-flex{
+    flex-basis: 33.33%;
+}
+
+.equipo{
+    text-align: center;
+}
+
+.equipo img{
+    width: 120px;
+}
+
+.equipo-flex:hover {
+    transform: scale(1.1);
+}
+
+.footer{
+    background-color: #F2F2F2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.button{
+    border: 3px solid #36008D;
+    color: #36008D;
+    border-radius: 10px;
+    background: #F0E100 ;
+    padding: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.button:hover {
+    border: 3px solid #F0E100;
+    color: #F0E100;
+    border-radius: 10px;
+    background: #36008D ;
+    padding: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+}
