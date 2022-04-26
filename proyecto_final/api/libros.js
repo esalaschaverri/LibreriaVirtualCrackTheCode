@@ -21,6 +21,7 @@ router.post('/buscar', function (req, res) {
         res.json(result);
       }
     );
+    
 });
 
 router.post('/insertar', function (req, res) {

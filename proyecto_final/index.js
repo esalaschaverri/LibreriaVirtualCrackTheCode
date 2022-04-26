@@ -19,6 +19,8 @@ app.use("/tarjetas", require("./api/tarjetas.js"));
 app.use("/usuarios", require("./api/usuarios.js"));
 app.use("/costos", require("./api/costos.js"));
 app.use("/descuentos", require("./api/descuentos.js"));
+app.use("/frecuentes", require("./api/frecuentes.js"));
+app.use("/contactos", require("./api/contactos.js"));
 
 
 app.listen(5000, function(){

@@ -35,7 +35,7 @@
         <div class="buttonDiv">
             <form onsubmit="">
                 <input id="titulo" class="button-search" type="search" placeholder="BUSCAR LIBRO O AUTOR">
-                <button onclick="buscarLibro()" class="search"> <i class="fa-solid fa-magnifying-glass fa-xl"></i> </button>
+                <button onsubmit="buscarLibro()" class="search"> <i class="fa-solid fa-magnifying-glass fa-xl"></i> </button>
             </form>
         </div>
         <div class="button">
@@ -115,6 +115,9 @@
                     function (response) {
                         return response.json();
                     }
+                )
+                .then(
+                    location.href = "http://localhost:5000/libros"
                 )
         }
     </script>
