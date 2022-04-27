@@ -86,9 +86,10 @@ div{
 }
 
 .envio{
-    flex-basis: 50%;    
+    flex-basis: 45%;    
     text-align: left;
     font-family: 'Roboto', sans-serif;
+    margin-left: 5%;
 }
 
 .resumen{
