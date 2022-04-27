@@ -57,6 +57,9 @@ h3{
     font-size: 20px;
 }
 
+.menu-top a:hover{
+    color: #1CCAD8;
+}
 
 .background-amarillo{
     background-color: #1CCAD8;
@@ -142,6 +145,11 @@ h3{
     font-family: 'Bebas Neue', cursive;
     padding-left: 1%;
     font-size: 20px;
+}
+
+.menu-pedidos a:nth-child(n+0):nth-child(-n+1){
+    border-right: 2px #1A181B solid;
+    padding-right: 1%;
 }
 
 .menu-pedidos a:hover{
