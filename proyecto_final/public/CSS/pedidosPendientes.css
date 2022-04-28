@@ -84,10 +84,8 @@ h3{
 }
 
 .button{
-    flex-basis: 8.5%;
-    text-align: left;
-    color: #36008D;
-    margin-left: 0.5%;
+    text-align: right;
+    margin-right: 3%;
 }
 
 .button2{
@@ -96,6 +94,7 @@ h3{
     border: 2px solid #36008D;
     border-radius: 7px;
     color: #F0E100;
+    text-align: right;
 }
 
 .button3{
@@ -109,94 +108,37 @@ h3{
     transform: scale(1.1);
 }
 
-.button-carrito{
-    border: 2px solid #36008D;
-    color: #36008D;
-    border-radius: 5px;
-    background: #F0E100 ;
-    font-size: 15px;
-    width: 90%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Bebas Neue';
-}
-
-.button-perfil{
-    border: 2px solid #36008D;
-    color: #F0E100;
-    border-radius: 5px;
-    background: #36008D ;
-    font-size: 15px;
-    width: 90%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Bebas Neue';
-}
-
-.button-carrito:hover, .button-perfil:hover {
-    transform: scale(1.1);
-}
-
 .iniciar-sesion{
     text-align: center;
     border: 3px #36008D solid;
     border-radius: 8px;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 50px;
     padding-bottom: 20px;
 }
 
-.inputs{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 75%;
-    background-color: #E2E0E5;
-    border: 0px;
-    text-align: center;
+.tabla-titulos{
+    font-family: 'Bebas Neue';
     color: #36008D;
-    margin-top: 10px;
+    font-size: 20px;
 }
 
-.button-sesion{
-    border: 3px solid #36008D;
-    color: #F0E100;
-    border-radius: 5px;
-    background: #36008D ;
-    font-size: 15px;
+table{
+    border: #36008D 2px solid;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+td {
+    font-family: 'Roboto', sans-serif;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Bebas Neue', cursive;
-    margin-top: 10px;
-}
-
-.align-left{
-    text-align: left;
-    padding-left: 10%;
-}
-
-.align-right{
-    text-align: right;
-    font-size: small;
-}
-
-.align-center{
-    text-align: center;
-}
-
-.iniciar-sesion a {
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: #36008D;
-    text-align: right;
-}
-
-
-.iniciar-sesion a:hover{
-    color: #1CCAD8;
+    border-bottom: #36008D 2px solid;
+    border-right:#36008D 2px solid;;
 }
 
 h4{
@@ -224,7 +166,7 @@ h4{
     padding-top: 15px;
     padding-bottom: 5px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .footer h4{

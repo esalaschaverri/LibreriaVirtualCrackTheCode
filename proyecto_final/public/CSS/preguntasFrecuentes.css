@@ -8,11 +8,13 @@ p {
 }
 
 h1 {
-    font-family: 'Bebas Neue', cursive;}
+    font-family: 'Bebas Neue', cursive;
+    color: #36008D;
+}
 
 h2 {
     font-family: 'Bebas Neue', cursive;
-    color: #505255;
+    color: #1A181B;
 }
 
 h3{
@@ -91,7 +93,7 @@ a{
     margin-left: 0.5%;
 }
 
-.button2{
+.button{
     background-color: #36008D;
     padding: 10px;
     border: 2px solid #36008D;
@@ -133,14 +135,7 @@ a{
     padding-top: 25px;
 }
 
-.imagen-final{
-    background-image: url("img/footerPoliticas.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
+
 
 .logos-social{
     width: 35px;
@@ -158,7 +153,7 @@ a{
     padding-top: 15px;
     padding-bottom: 5px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .footer h4{

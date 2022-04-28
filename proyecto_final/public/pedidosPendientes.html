@@ -9,7 +9,7 @@
         <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
     </head>
 
-    <body onload='document.form1.text1.focus()'>
+    <body onload="cargarTabla()">
 
         <!-- Logo y Menu -->
         <div class="contenedor">
@@ -28,74 +28,30 @@
             </div>
         </div>
 
-        <!-- Busqueda, Perfil y Carrito -->
+        <!-- Perfil -->
 
-        <div class="contenedor">
-
-            <div class="buttonDiv">
-                <input class="button-search" type="text" placeholder="BUSCAR LIBRO O AUTOR">
-            </div>
-            <div class="button">
-                <a href="perfil_cliente.html"><i class="fa-solid fa-user button2"></i></a>
-                <i class="fa-solid fa-cart-shopping button3"></i>
-            </div>
+        <div class="button">
+            <a class="button2" href="perfil_admin.html"><i class="fa-solid fa-user"></i></a>
         </div>
 
-        <!-- Iniciar Sesion -->
+        <!-- Ordenes -->
 
         <div class="iniciar-sesion">
-            <h1>PEDIDOS NUEVOS<h1>
-
-            <center>
-            <table>
-            <table border="solid">
-                <tr class="tabla">
-                    <td>Código ISBN</td>
-                    <td>Nombre</td>
-                    <td>Cantidad</td>
-                    <td>Propietario</td>
-                </tr>
-
-                <tr>
-                    <td>978-3-16-14-84</td>
-                    <td>Ana Frank</td>
-                    <td>5</td>
-                    <td>Fabiola Bustamante</td>
-                </tr>
-
-                <tr>
-                    <td>978-3-16-14-84</td>
-                    <td>El encanto</td>
-                    <td>1</td>
-                    <td>Carmen Cascante</td>
-                </tr>
-
-                <tr>
-                    <td>978-3-16-14-84</td>
-                    <td>La Sombra</td>
-                    <td>3</td>
-                    <td>Javier López</td>
-                </tr>
-
-                <td>978-3-16-14-84</td>
-                <td>The King</td>
-                <td>12</td>
-                <td>Seidy Pérez</td>
-            </tr>
-
-            <td>978-3-16-14-84</td>
-            <td>Harry Potter</td>
-            <td>4</td>
-            <td>Ingrid Carmona</td>
-        </tr>
-
-        <td>978-3-16-14-84</td>
-        <td>Cocorí</td>
-        <td>22</td>
-        <td>Julio Chavarría</td>
-    </tr>
-
-            </table> </table> </center>
+            <h1>ORDENES DE COMPRA NUEVAS<h1/>
+            
+            <div>
+                <table class="center" id="ordenesAgregados">
+                    <tr>
+                      <td class="tabla-titulos"># DE ORDEN</td>
+                      <td class="tabla-titulos">FECHA</td>
+                      <td class="tabla-titulos">ID</td>
+                      <td class="tabla-titulos">NOMBRE</td>
+                      <td class="tabla-titulos">LIBROS</td>
+                      <td class="tabla-titulos">TOTAL</td>
+                    </tr>
+                  </table>
+            </div>
+            
         </div>
 
         <!-- Social media -->
@@ -111,7 +67,24 @@
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>
 
-        <script src="iniciar_sesion.js"></script>
+        <script>
+            function cargarTabla() {
+            fetch("http://localhost:5000/ordenes/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<tr><td>"+json[cont].numeroOrden+"</td><td>"+json[cont].fecha+"</td><td>"+json[cont].id_Usuario+"</td><td>"+json[cont].nombre+"</td><td>"+json[cont].libros+"</td><td>"+json[cont].total+"</td></tr>";
+                            document.getElementById("ordenesAgregados").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+        </script>
 
     </body>
 </html>

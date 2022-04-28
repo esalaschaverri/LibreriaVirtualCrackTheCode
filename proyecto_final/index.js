@@ -21,6 +21,7 @@ app.use("/costos", require("./api/costos.js"));
 app.use("/descuentos", require("./api/descuentos.js"));
 app.use("/frecuentes", require("./api/frecuentes.js"));
 app.use("/contactos", require("./api/contactos.js"));
+app.use("/ordenes", require("./api/ordenes.js"));
 
 
 app.listen(5000, function(){

@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body onload="cargarTabla()">
         <!-- Logo y Menu -->
         <div class="contenedor">
             <div class="logo-menu" >
@@ -46,35 +46,27 @@
                 <img src="img/libro-1.jpg"/>
             </div>
 
-            <div class="info">
-                <h2>HARRY POTTER AND THE HALF BLOOD PRINCE</h2>
-                <a href="autores.html"><p class="texto">Autor:   J.K. Rowling</p></a>
-                <p class="texto">Editorial:  SCHOLASTIC</p>
-                <p class="texto">Género:  FICCIÓN</p>
-                <p class="texto">Premios Ganados:  xxxx</p>
-                <p class="texto">ISBN 11111111</p>
-                <p class="texto">Precio:  ₡12000</p>
-                <p class="texto">Estado:  disponible</p>
-                <p class="texto1">Sinopsis</p>
-                <p class="texto2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sagittis sem id arcu ullamcorper vulputate. <br>Pellentesque lorem enim, faucibus eu mauris sit amet, cursus cursus odio. Integer vehicula euismod<br> nisi vel hendrerit. Cras eu nisi orciPellentesque lorem enim, faucibus eu mauris sit amet.</p>
-                <button class="button">AÑADIR AL CARRITO</button><br>
-                <form>
-                    <p>Califica este libro</p>
-                    <p class="clasificacion">   
-                       <input id="radio1" type="radio" name="estrellas" value="5">
-                       <label for="radio1">★</label>
-                       <input id="radio2" type="radio" name="estrellas" value="4">
-                       <label for="radio2">★</label>
-                       <input id="radio3" type="radio" name="estrellas" value="3">
-                       <label for="radio3">★</label>
-                       <input id="radio4" type="radio" name="estrellas" value="2">
-                       <label for="radio4">★</label>
-                       <input id="radio5" type="radio" name="estrellas" value="1">
-                       <label for="radio5">★</label>
-                   </p>
-                </form>
+            <div id="info-libro" class=" contenedor info">
+
             </div>
         </div>
+
+        <form>
+            <p>Califica este libro</p>
+            <p class="clasificacion">   
+               <input id="radio1" type="radio" name="estrellas" value="5">
+               <label for="radio1">★</label>
+               <input id="radio2" type="radio" name="estrellas" value="4">
+               <label for="radio2">★</label>
+               <input id="radio3" type="radio" name="estrellas" value="3">
+               <label for="radio3">★</label>
+               <input id="radio4" type="radio" name="estrellas" value="2">
+               <label for="radio4">★</label>
+               <input id="radio5" type="radio" name="estrellas" value="1">
+               <label for="radio5">★</label>
+           </p>
+        </form>
+            
 
         <!-- Footer -->
 
@@ -89,5 +81,36 @@
             <p class="derechos">DERECHOS RESERVADOS</p>
         </div>
 
+        <script>
+            function cargarTabla() {
+                var variablesGet = window.location.search;
+                var variables = new URLSearchParams(variablesGet);
+                var id = variables.get("id");
+                console.log(id);
+
+                var datos = {
+                    idUsuario: id
+                }
+
+                fetch("http://localhost:5000/libros/buscar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' }
+            })
+                    .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                    .then(
+                        function (json) {
+                            var linea = "<div class='contenedor info'><div class='flex-completo'><h2>"+json.titulo+"</h2></div><div class='flex-titulo'><p class='texto'>Autor:</p></div><div class='flex-info'><p class='texto2'>"+json.autor+"</p></div><div class='flex-titulo'><p class='texto'>Editorial:</p></div><div class='flex-info'><p class='texto2'>"+json.editorial+"</p></div><div class='flex-titulo'><p class='texto'>Género:</p></div><div class='flex-info'><p class='texto2'>"+json.genero+"</p></div><div class='flex-titulo'><p class='texto'>Premios:</p></div><div class='flex-info'><p class='texto2'>"+json.premios+"</p></div><div class='flex-titulo'><p class='texto'>ISBN:</p></div><div class='flex-info'><p class='texto2'>"+json.identificacion+"</p></div><div class='flex-titulo'><p class='texto'>Precio:</p></div><div class='flex-info'><p class='texto2'>"+json.precio+"</p></div><div class='flex-titulo'><p class='texto'>Sinopsis:</p></div><div class='flex-info'><p class='texto2'>"+json.sinopsis+"</p></div><div class='flex-completo'><button class='button'>AÑADIR AL CARRITO</button><br></div></div>";
+                            document.getElementById("info-libro").insertAdjacentHTML("beforeend", linea);
+                        }
+                )
+            }
+        </script>
     </body>
 </html>
+
+

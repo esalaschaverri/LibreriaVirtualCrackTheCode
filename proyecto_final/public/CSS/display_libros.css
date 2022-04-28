@@ -80,6 +80,12 @@ blockquote{
     width: 15%;
 }
 
+.search{
+    background-color: white;
+    border: none;
+    color: #36008D;
+}
+
 .button{
     flex-basis: 8.5%;
     text-align: left;
@@ -142,7 +148,7 @@ blockquote{
     margin-top: 30px;
 }
 
-.agregar{
+button{
     border: 3px solid #36008D;
     color: #F0E100;
     border-radius: 5px;
@@ -155,6 +161,7 @@ blockquote{
     font-family: 'Bebas Neue', cursive;
     margin-bottom: 10px;
 }
+
 .muestra p:hover{
     color: #1CCAD8;
 }

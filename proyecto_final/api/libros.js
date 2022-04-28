@@ -13,9 +13,20 @@ router.get('/', function (req, res) {
     );
 });
 
-router.post('/buscar', function (req, res) {
+router.post('/buscarlibro', function (req, res) {
   var titulo = req.body.titulo;
   Libro.find({titulo:titulo}).exec()
+    .then(
+      function (result) {
+        res.json(result);
+      }
+    );
+    
+});
+
+router.post('/buscar', function (req, res) {
+  var idUsuario = req.body.idUsuario;
+  Libro.findById(idUsuario).exec()
     .then(
       function (result) {
         res.json(result);
