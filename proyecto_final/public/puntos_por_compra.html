@@ -84,10 +84,12 @@
             <h1>NUEVO MONTO</h1>
             <input class="inputs" id="monto" type="text" placeholder="MONTO DE COMPRA" ><br>
             <input class="inputs" id="puntos" type="text" placeholder="PUNTOS" ><br>
+
+            <button onclick="insertarPunto()" class="button-crear">AGREGAR</button> <!-- Nuevo Código -->
         </div>
 
         <div>
-            <button class="buttons-Form">AGREGAR</button>
+            <!-- <button class="buttons-Form">AGREGAR</button> --> <!-- Nuevo Código -->
         </div>
     </div>
 
@@ -99,10 +101,12 @@
             <input class="inputs" id="_id" type="text" placeholder="ID" ><br>
             <input class="inputs" id="monto2" type="text" placeholder="MONTO DE COMPRA" ><br>
             <input class="inputs" id="puntos2" type="text" placeholder="PUNTOS" ><br>
+
+            <button onclick="actualizarPunto()" class="button-crear">AGREGAR</button> <!-- Nuevo Código -->
         </div>
 
         <div>
-            <button class="buttons-Form">AGREGAR</button>
+            <!-- <button class="buttons-Form">AGREGAR</button> --> <!-- Nuevo Código -->
         </div>
     </div>
 
@@ -149,6 +153,45 @@
               var textoOculto = document.getElementById("nuevo-monto");
               textoOculto.classList.remove("oculto");
             }
+
+        // Nuevo Código //
+
+        function insertarPunto() {
+                var datos = {
+                monto: document.getElementById("monto").value,
+                puntos: document.getElementById("puntos").value
+                }
+                
+                fetch("http://localhost:5000/generos/insertar", { // ¿? //
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: {'Content-Type': 'application/json'}
+                })
+                .then(
+                    function(response){
+                    return response.json();
+                    }
+                )
+            }
+
+            function actualizarPunto() {
+            var datos = {
+                monto2: document.getElementById("nombre2").value,
+                puntos2: document.getElementById("codigo2").value,
+            }
+
+            fetch("http://localhost:5000/generos/actualizar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' } // ¿? //
+            })
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+            }
+
     </script>
 
 </body>
