@@ -56,7 +56,6 @@
             <button onclick="muestra()" class="buttons-Form">AGREGAR NUEVO MONTO</button>
         </div>
 
-
     </div>
 
 
@@ -67,7 +66,7 @@
             <input class="inputs" id="monto" type="text" placeholder="MONTO DE COMPRA" ><br>
             <input class="inputs" id="puntos" type="text" placeholder="PUNTOS" ><br>
 
-            <button onclick="insertarPunto()" class="button-crear">AGREGAR</button> <!-- Nuevo Código -->
+            <button onclick="insertarPunto()" class="button-crear buttons-Form">AGREGAR</button> <!-- Nuevo Código -->
         </div>
 
         <div>
@@ -107,7 +106,7 @@
                   <tr>
                     <td>1</td>
                     <td>50</td>
-                    <td><button class="buttons-Form">EDITAR</button></td>
+                    <td><button onclick="actualizarPunto()" class="buttons-Form">EDITAR</button></td>
                     
                   </tr>
 
@@ -136,6 +135,12 @@
               textoOculto.classList.remove("oculto");
             }
 
+        function muestra2() {
+            // Código ejecutado al hacer click sobre el botón
+              var textoOculto = document.getElementById("editar-monto");
+              textoOculto.classList.remove("oculto");
+            }
+
         // Nuevo Código //
 
         function cargarTabla() {
@@ -155,9 +160,7 @@
                 )
         }
 
-
-
-        function insertarPunto() {
+            function insertarPunto() {
                 var datos = {
                 monto: document.getElementById("monto").value,
                 puntos: document.getElementById("puntos").value
