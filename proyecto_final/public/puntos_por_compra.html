@@ -42,32 +42,14 @@
         <div class="flex-completo text-morado">
           <center>
             <table>
-            <table border="solid" class="tabla">
+            <table id="puntosAgregados" border="solid" class="tabla">
                 <tr class="tabla texto-negro">
+                    <th>ID</th>
                     <th>MONTO DE COMPRA</th>
                     <th>PUNTOS</th>
-                    <th></th>
+                    <th>EDITAR</th>
                   </tr>
-                
-                  <tr>
-                    <td>10000</td>
-                    <td>10</td>
-                    <td><button class="buttons-Form">EDITAR</button></td>
-                    
-                  </tr>
-                  <tr>
-                    <td>20000</td>
-                    <td>20</td>
-                    <td><button class="buttons-Form">EDITAR</button></td>
-                  </tr>
-                  <tr>
-                    <td>50000</td>
-                    <td>50</td>
-                    <td><button class="buttons-Form">EDITAR</button></td>
-                  </tr>
-
-              
-                </table> </table> </center>
+            </table>
         </div>
 
         <div>
@@ -156,13 +138,32 @@
 
         // Nuevo Código //
 
+        function cargarTabla() {
+            fetch("http://localhost:5000/montos/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<tr><th>"+json[cont]._id+"</th><td>"+json[cont].monto+"</td><th>"+json[cont].punto+"</th><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
+                            document.getElementById("puntosAgregados").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+
+
+
         function insertarPunto() {
                 var datos = {
                 monto: document.getElementById("monto").value,
                 puntos: document.getElementById("puntos").value
                 }
                 
-                fetch("http://localhost:5000/generos/insertar", { // ¿? //
+                fetch("http://localhost:5000/montos/insertar", {
                 method: 'POST',
                 body: JSON.stringify(datos),
                 headers: {'Content-Type': 'application/json'}
@@ -176,14 +177,14 @@
 
             function actualizarPunto() {
             var datos = {
-                monto2: document.getElementById("nombre2").value,
-                puntos2: document.getElementById("codigo2").value,
+                monto: document.getElementById("nombre2").value,
+                puntos: document.getElementById("codigo2").value,
             }
 
-            fetch("http://localhost:5000/generos/actualizar", {
+            fetch("http://localhost:5000/montos/actualizar", {
                 method: 'POST',
                 body: JSON.stringify(datos),
-                headers: { 'Content-Type': 'application/json' } // ¿? //
+                headers: { 'Content-Type': 'application/json' }
             })
                 .then(
                     function (response) {
