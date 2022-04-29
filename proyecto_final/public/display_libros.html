@@ -86,7 +86,7 @@
                 .then(
                     function (json) {
                         for (var cont = 0; json.length > cont; cont++) {
-                            var linea = "<div class='muestra'><div><a href='muestra_libros.html?id="+json[cont]._id+"'><img src="+json[cont].imagen+"/></a><a  href='muestra_libros.html?id="+json[cont]._id+"'><h2>"+json[cont].titulo+"</h2></a><a href='autores.html'><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button onclick='agregar()'>AÑADIR AL CARRITO</button></div></div>";
+                            var linea = "<div class='muestra'><div><a href='muestra_libros.html?id="+json[cont]._id+"'><img src='img/"+json[cont].imagen+"'/></a><a  href='muestra_libros.html?id="+json[cont]._id+"'><h2>"+json[cont].titulo+"</h2></a><a href='autores.html'><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button onclick='agregar()'>AÑADIR AL CARRITO</button></div></div>";
                             document.getElementById("librosMuestra").insertAdjacentHTML("beforeend", linea);
                         }
                     }
@@ -116,7 +116,7 @@
                         document.getElementById("librosMuestra").innerHTML=""
 
                         for (var cont = 0; json.length > cont; cont++) {
-                            var linea = "<div class='muestra'><div><a href='muestra_libros.html'><img src="+json[cont].imagen+"/></a><a  href='muestra_libros.html?id="+json[cont]._id+"'><h2>"+json[cont].titulo+"</h2></a><a href='autores.html'><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button>AÑADIR AL CARRITO</button></div></div>";
+                            var linea = "<div class='muestra'><div><a href='muestra_libros.html'><img src='img/"+json[cont].imagen+"'/></a><a  href='muestra_libros.html?id="+json[cont]._id+"'><h2>"+json[cont].titulo+"</h2></a><a href='autores.html'><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button>AÑADIR AL CARRITO</button></div></div>";
                             document.getElementById("librosMuestra").insertAdjacentHTML("beforeend", linea);
                         }
                     }
