@@ -34,7 +34,7 @@
             <div class="buttonDiv">
                 <form onsubmit="">
                     <input id="titulo" class="button-search" type="text" placeholder="BUSCAR LIBRO O AUTOR">
-                    <button onsubmit="buscarLibro()" class="search"> <i class=" fa-solid fa-magnifying-glass fa-xl"></i> </button>
+                    <button type="button" onclick="buscarLibro()" class="search"> <i class=" fa-solid fa-magnifying-glass fa-xl"></i> </button>
                 </form>
             </div>
             <div class="button">
@@ -86,7 +86,7 @@
                 .then(
                     function (json) {
                         for (var cont = 0; json.length > cont; cont++) {
-                            var linea = "<div class='muestra'><div><a href='muestra_libros.html'><img src="+json[cont].imagen+"/></a><a  href='muestra_libros.html?id="+json[cont]._id+"'><h2>"+json[cont].titulo+"</h2></a><a href='autores.html'><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button>AÑADIR AL CARRITO</button></div></div>";
+                            var linea = "<div class='muestra'><div><a href='muestra_libros.html?id="+json[cont]._id+"'><img src="+json[cont].imagen+"/></a><a  href='muestra_libros.html?id="+json[cont]._id+"'><h2>"+json[cont].titulo+"</h2></a><a href='autores.html'><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button onclick='agregar()'>AÑADIR AL CARRITO</button></div></div>";
                             document.getElementById("librosMuestra").insertAdjacentHTML("beforeend", linea);
                         }
                     }
@@ -108,15 +108,23 @@
                         return response.json();
                     }
                 )
+
+                
                 
                 .then(
                     function (json) {
+                        document.getElementById("librosMuestra").innerHTML=""
+
                         for (var cont = 0; json.length > cont; cont++) {
                             var linea = "<div class='muestra'><div><a href='muestra_libros.html'><img src="+json[cont].imagen+"/></a><a  href='muestra_libros.html?id="+json[cont]._id+"'><h2>"+json[cont].titulo+"</h2></a><a href='autores.html'><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button>AÑADIR AL CARRITO</button></div></div>";
                             document.getElementById("librosMuestra").insertAdjacentHTML("beforeend", linea);
                         }
                     }
                 )
+
+        function agregar() {
+
+        }
         }
         </script>
 
