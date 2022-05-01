@@ -1,8 +1,11 @@
 var express =require("express");
 var router=express.Router();
 var mongoose = require("mongoose");
+var formidable = require('formidable');
+const path = require('path');
 
 var Usuario = require("../schemas/usuario.js");
+const fs = require("fs");
 
 router.get('/', function(req, res) {
     Usuario.find().exec()
@@ -67,9 +70,28 @@ router.post('/actualizar', function (req, res) {
   var fotoPerfil = req.body.fotoPerfil;
   var correo = req.body.correo;
   var contrasena = req.body.contrasena;
-  // findOneAndUpdate - Filtro - Valores - Opciones - Función anónima
+  // findOneAndUpdate - Filtro - Valores - Opciones - Funciï¿½n anï¿½nima
   Usuario.findOneAndUpdate({ _id: _id }, { $set: { nombre: nombre, apellidos: apellidos, genero: genero, numeroCedula: numeroCedula, tipoCedula: tipoCedula, provincia: provincia, canton: canton, distrito: distrito, direccion: direccion, latitud: latitud, longitud: longitud,fotoPerfil: fotoPerfil,correo: correo,contrasena: contrasena } }, { useFindAndModify: false, new: true }, function (err, doc) {
     res.json(doc);
+  });
+});
+
+router.post('/crear', function (req, res) {
+  var form = new formidable.IncomingForm();
+
+  form.parse(req, function (err, fields, files) {
+    var oldpath = files.upload.filepath;
+    var newpath = __dirname + '/img/' + files.upload.newFilename;
+
+    fs.rename(oldpath, newpath, function (err) {
+      if (err) throw err;
+      res.write('File uploaded and moved!');
+      res.end();
+    });
+  });
+
+  return res.status(200).json({
+    result: 'Upload Success'
   });
 });
 
