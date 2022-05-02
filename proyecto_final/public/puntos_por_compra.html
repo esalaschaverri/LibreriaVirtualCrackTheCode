@@ -94,27 +94,54 @@
     <div class="crear-cuenta">
         <h1  class="text-morado">VALOR DE CADA PUNTO</h1>
         <div class="flex-completo text-morado">
-          <center>
-            <table>
-            <table border="solid" class="tabla">
+            <center>
+            <table id="valorPuntos" border="solid" class="tabla">
                 <tr class="tabla texto-negro">
                     <th>PUNTOS</th>
                     <th>VALOR EN COLONES</th>
-                    <th></th>
-                  </tr>
-                
-                  <tr>
-                    <td>1</td>
-                    <td>50</td>
-                    <td><button onclick="actualizarPunto()" class="buttons-Form">EDITAR</button></td>
-                    
-                  </tr>
+                    <th>EDITAR</th>
+                </tr>
+                </table>
+                <div>
+                    <button onclick="muestra()" class="buttons-Form">EDITAR PUNTOS</button>
+                </div>
+                </table>
+            </center>
+        </div>
+    </div>
 
-              
-                </table> </table> </center>
+    <!-- Nuevo Código -->
+
+    <div id="nuevo-punto" class="oculto crear-cuenta">
+
+        <div class="flex-completo text-morado">
+            <h1>NUEVO PUNTO</h1>
+            <input class="inputs" id="puntos" type="text" placeholder="MONTO DE COMPRA" ><br>
+            <input class="inputs" id="valor" type="text" placeholder="PUNTOS" ><br>
+
+            <button onclick="insertarPunto1()" class="button-crear buttons-Form">AGREGAR</button> <!-- Nuevo Código -->
         </div>
 
+        <div>
+            <!-- <button class="buttons-Form">AGREGAR</button> --> <!-- Nuevo Código -->
+        </div>
+    </div>
 
+
+    <div id="editar-monto" class="oculto crear-cuenta">
+
+        <div class="flex-completo text-morado">
+            <h1>EDITAR PUNTO</h1>
+            <!-- <input class="inputs" id="_id" type="text" placeholder="ID" ><br> -->
+            <input class="inputs" id="puntos2" type="text" placeholder="MONTO DE COMPRA" ><br>
+            <input class="inputs" id="valor2" type="text" placeholder="PUNTOS" ><br>
+
+            <button onclick="actualizarPunto1()" class="button-crear">AGREGAR</button> <!-- Nuevo Código -->
+        </div>
+
+        <div>
+            <!-- <button class="buttons-Form">AGREGAR</button> --> <!-- Nuevo Código -->
+        </div>
     </div>
 
     <div class="footer">
@@ -141,7 +168,7 @@
               textoOculto.classList.remove("oculto");
             }
 
-        // Nuevo Código //
+        // Nuevo Código - Primera Tabla //
 
         function cargarTabla() {
             fetch("http://localhost:5000/montos/")
@@ -182,6 +209,61 @@
             var datos = {
                 monto: document.getElementById("nombre2").value,
                 puntos: document.getElementById("codigo2").value,
+            }
+
+            fetch("http://localhost:5000/montos/actualizar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+            }
+
+        // Nuevo Código - Segunda Tabla //
+
+        function cargarTabla() {
+            fetch("http://localhost:5000/montos/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<tr><th>"+json[cont].puntos+"</th><td>"+json[cont].monto+"</th><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
+                            document.getElementById("valorPuntos").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+
+        function insertarPunto1() {
+                var datos = {
+                monto: document.getElementById("puntos").value,
+                puntos: document.getElementById("valor").value
+                }
+                
+                fetch("http://localhost:5000/montos/insertar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: {'Content-Type': 'application/json'}
+                })
+                .then(
+                    function(response){
+                    return response.json();
+                    }
+                )
+            }
+
+            function actualizarPunto1() {
+            var datos = {
+                monto: document.getElementById("puntos2").value,
+                puntos: document.getElementById("valor2").value,
             }
 
             fetch("http://localhost:5000/montos/actualizar", {
