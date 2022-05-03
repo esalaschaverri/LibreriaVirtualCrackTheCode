@@ -173,6 +173,36 @@ h3{
     padding-right: 100px;
 }
 
+.logo-socio-comercial-1{
+    display: block;
+    margin: auto;
+    width: 40%;
+    padding-top: 60px;
+}
+
+.logo-socio-comercial-2{
+    display: block;
+    margin: auto;
+    width: 60%;
+    padding-top: 120px;
+    padding-left: 175px;
+}
+
+.logo-socio-comercial-3{
+    display: block;
+    margin: auto;
+    width: 70%;
+    padding-top: 40px;
+}
+
+.logo-socio-comercial-4{
+    display: block;
+    margin: auto;
+    width: 40%;
+    padding-top: 70px;
+    padding-left: 100px;
+}
+
 .h1-titulo-2{
     font-family: 'Bebas Neue', cursive;
     font-size: 40;
