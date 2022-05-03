@@ -1,11 +1,11 @@
+const path = require('path');
 var express =require("express");
 var router=express.Router();
 var mongoose = require("mongoose");
 var formidable = require('formidable');
-const path = require('path');
+const fs = require("fs");
 
 var Usuario = require("../schemas/usuario.js");
-const fs = require("fs");
 
 router.get('/', function(req, res) {
     Usuario.find().exec()
@@ -80,19 +80,37 @@ router.post('/crear', function (req, res) {
   var form = new formidable.IncomingForm();
 
   form.parse(req, function (err, fields, files) {
+
+    var usuarioNuevo = new Usuario({
+      _id: new mongoose.Types.ObjectId(),
+      nombre: fields.nombre,
+      apellidos: fields.apellidos,
+      genero: fields.genero,
+      numeroCedula: fields.cedula,
+      tipoCedula: fields.tipoCedula,
+      provincia: fields.provincia,
+      canton: fields.canton,
+      distrito: fields.distrito,
+      direccion: fields.direccion,
+      //latitud: document.getElementById("direccion").value,
+      //longitud: document.getElementById("direccion").value,
+      latitud: 88,
+      longitud: 10,
+      fotoPerfil: files.upload.newFilename,
+      correo: fields.email,
+      contrasena: fields.password
+    })
+
+    usuarioNuevo.save()
+
     var oldpath = files.upload.filepath;
     var newpath = __dirname + '/img/' + files.upload.newFilename;
 
     fs.rename(oldpath, newpath, function (err) {
       if (err) throw err;
-      res.write('File uploaded and moved!');
-      res.end();
     });
   });
-
-  return res.status(200).json({
-    result: 'Upload Success'
-  });
+  return res.redirect('../iniciar_sesion.html');
 });
 
 module.exports = router;
