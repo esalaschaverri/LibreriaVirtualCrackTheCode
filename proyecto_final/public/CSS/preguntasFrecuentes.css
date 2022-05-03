@@ -87,18 +87,18 @@ a{
 }
 
 .button{
-    flex-basis: 8.5%;
-    text-align: left;
+    text-align: right;
     color: #36008D;
-    margin-left: 0.5%;
+    margin-right: 3%;
 }
 
-.button{
+.button2{
     background-color: #36008D;
     padding: 10px;
     border: 2px solid #36008D;
     border-radius: 7px;
     color: #F0E100;
+    margin-right: 1%;
 }
 
 .button3{
