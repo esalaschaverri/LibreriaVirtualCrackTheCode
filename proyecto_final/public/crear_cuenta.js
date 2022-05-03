@@ -1,4 +1,39 @@
 
+function insertarCuenta() {
+
+
+    var datos = {
+        nombre: document.getElementById("nombre").value,
+        apellidos: document.getElementById("apellidos").value,
+        genero: document.getElementById("genero").value,
+        numeroCedula: document.getElementById("cedula").value,
+        tipoCedula: document.getElementById("tipoCedula").value,
+        provincia: document.getElementById("provincia").value,
+        canton: document.getElementById("canton").value,
+        distrito: document.getElementById("distrito").value,
+        direccion: document.getElementById("direccion").value,
+        //latitud: document.getElementById("direccion").value,
+        //longitud: document.getElementById("direccion").value,
+        //fotoPerfil: document.getElementById("email").value,
+        latitud: 88,
+        longitud: 10,
+        fotoPerfil: '',
+        correo: document.getElementById("email").value,
+        contrasena: document.getElementById("password").value
+    }
+
+    fetch("http://localhost:5000/usuarios/insertar", {
+        method: 'POST',
+        body: JSON.stringify(datos),
+        headers: {'Content-Type': 'application/json'}
+    })
+        .then(
+            function(response){
+                return response.json();
+            }
+        )
+}
+
 function validar() {
 
     var mail = document.getElementById("email").value;
