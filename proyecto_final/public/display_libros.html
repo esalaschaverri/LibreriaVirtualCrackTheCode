@@ -1,82 +1,79 @@
 <html>
-    <head>
-        <title>Libros</title>
-        <link rel="stylesheet" type="text/css" href="CSS/display_libros.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
-    </head>
 
-    <body onload="cargarTabla()">
-        
-        <!-- Logo y Menu -->
-        <div class="contenedor">
-            <div class="logo-menu" >
-                <a href="index.html"><img class="logo" src="img/logo.png"/></a>
-            </div>
+<head>
+    <title>Libros</title>
+    <link rel="stylesheet" type="text/css" href="CSS/display_libros.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
+</head>
 
-            <div class="menu-top">
-                <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
-                <a href="display_libros.html">LIBROS</a>
-                <a href="socios_comerciales.html">SOCIOS COMERCIALES</a>
-                <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
-                <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
-                <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
-                <a href="contacto.html">CONTACTO</a>
-            </div>
+<body onload="cargarTabla()">
+
+    <!-- Logo y Menu -->
+    <div class="contenedor">
+        <div class="logo-menu">
+            <a href="index.html"><img class="logo" src="img/logo.png" /></a>
         </div>
 
-        <!-- Busqueda, Perfil y Carrito -->
-
-        <div class="contenedor">
-
-            <div class="buttonDiv">
-                <form onsubmit="">
-                    <input id="titulo" class="button-search" type="text" placeholder="BUSCAR LIBRO O AUTOR">
-                    <button type="button" onclick="buscarLibro()" class="search"> <i class=" fa-solid fa-magnifying-glass fa-xl"></i> </button>
-                </form>
-            </div>
-            <div class="button">
-                <a href="perfil_cliente.html"><i class="fa-solid fa-user button2"></i></a>
-                <a href="carrito.html"><i class="fa-solid fa-cart-shopping button3"></i></a>
-            </div>
+        <div class="menu-top">
+            <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+            <a href="display_libros.html">LIBROS</a>
+            <a href="socios_comerciales.html">SOCIOS COMERCIALES</a>
+            <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+            <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+            <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+            <a href="contacto.html">CONTACTO</a>
         </div>
-        
-        <!-- display libros -->
+    </div>
 
-        <div class="categorias">
-            <a href="">Arte</a>
-            <a href="">Ciencia</a>
-            <a href="">Diseño</a>
-            <a href="">Fantasía</a>
-            <a href="">Filosofía</a>
-            <a href="">Gastronomía</a>
-            <a href="">Niños</a>
-            <a href="">Novelas</a>
-            <a href="">Salud y Ejercicio</a>
-            <a href="">Viajes</a>
+    <!-- Perfil y Carrito -->
+
+    <div class="">
+        <div class="button">
+            <a href="perfil_cliente.html"><i class="fa-solid fa-user button2"></i></a>
+            <a href="carrito.html"><i class="fa-solid fa-cart-shopping button3"></i></a>
         </div>
-        
-        <div id="librosMuestra" class="contenedor">
+    </div>
+
+    <!-- Busqueda -->
+
+    <div class="contenedor top-search">
+        <div class="text-search">
+            <h1>Ingrese un título o nombre de autor y haga click en buscar:</h1>
         </div>
+    <div class="buttonDiv">
+        <form onsubmit="">
+            <input id="titulo" class="button-search" type="text" placeholder="">
+            <button type="button" onclick="buscarLibro()" class="search"> <i
+                    class=" fa-solid fa-magnifying-glass"></i> BUSCAR </button>
+        </form>
+    </div>
+    </div>
 
 
-        <!-- Footer -->
+    <div id="librosMuestra" class="contenedor">
+    </div>
 
-        <div class="footer">
-            <div class="social">
-                <a href="https://www.facebook.com/"><img class="logos-social" src="img/facebook.png"/></a>
-                <a href="https://www.instagram.com/"><img class="logos-social" src="img/instagram.png"/></a>
-                <a href="https://www.twitter.com/"><img class="logos-social" src="img/twitter.png"/></a> 
-            </div>
-            <h4>LIBRERIA@HOTMAIL.COM</h4>
-            <h4>+506 7777-8888</h4>
-            <p class="derechos">DERECHOS RESERVADOS</p>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/"><img class="logos-social" src="img/facebook.png" /></a>
+            <a href="https://www.instagram.com/"><img class="logos-social" src="img/instagram.png" /></a>
+            <a href="https://www.twitter.com/"><img class="logos-social" src="img/twitter.png" /></a>
         </div>
+        <h4>LIBRERIA@HOTMAIL.COM</h4>
+        <h4>+506 7777-8888</h4>
+        <p class="derechos">DERECHOS RESERVADOS</p>
+    </div>
 
-        <script>
-            function cargarTabla() {
+    <script>
+        function cargarTabla() {
             fetch("http://localhost:5000/libros/")
                 .then(
                     function (response) {
@@ -86,7 +83,7 @@
                 .then(
                     function (json) {
                         for (var cont = 0; json.length > cont; cont++) {
-                            var linea = "<div class='muestra'><div><a href='muestra_libros.html?id="+json[cont]._id+"'><img src='img/"+json[cont].imagen+"'/></a><a  href='muestra_libros.html?id="+json[cont]._id+"'><h2>"+json[cont].titulo+"</h2></a><a href='autores.html'><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button onclick='agregar()'>AÑADIR AL CARRITO</button></div></div>";
+                            var linea = "<div class='muestra'><div><a href='muestra_libros.html?id=" + json[cont]._id + "'><img src='img/" + json[cont].imagen + "'/></a><a  href='muestra_libros.html?id=" + json[cont]._id + "'><h2>" + json[cont].titulo + "</h2></a><a href='autores.html'><p>" + json[cont].autor + "</p></a><blockquote>" + json[cont].precio + "</blockquote><button onclick='agregar()'>AÑADIR AL CARRITO</button></div></div>";
                             document.getElementById("librosMuestra").insertAdjacentHTML("beforeend", linea);
                         }
                     }
@@ -109,26 +106,25 @@
                     }
                 )
 
-                
-                
+
+
                 .then(
                     function (json) {
-                        document.getElementById("librosMuestra").innerHTML=""
+                        document.getElementById("librosMuestra").innerHTML = ""
 
                         for (var cont = 0; json.length > cont; cont++) {
-                            var linea = "<div class='muestra'><div><a href='muestra_libros.html'><img src='img/"+json[cont].imagen+"'/></a><a  href='muestra_libros.html?id="+json[cont]._id+"'><h2>"+json[cont].titulo+"</h2></a><a href='autores.html'><p>"+json[cont].autor+"</p></a><blockquote>"+json[cont].precio+"</blockquote><button>AÑADIR AL CARRITO</button></div></div>";
+                            var linea = "<div class='muestra'><div><a href='muestra_libros.html'><img src='img/" + json[cont].imagen + "'/></a><a  href='muestra_libros.html?id=" + json[cont]._id + "'><h2>" + json[cont].titulo + "</h2></a><a href='autores.html'><p>" + json[cont].autor + "</p></a><blockquote>" + json[cont].precio + "</blockquote><button>AÑADIR AL CARRITO</button></div></div>";
                             document.getElementById("librosMuestra").insertAdjacentHTML("beforeend", linea);
                         }
                     }
                 )
 
-        function agregar() {
+            function agregar() {
 
+            }
         }
-        }
-        </script>
+    </script>
 
-    </body>
+</body>
+
 </html>
-
-

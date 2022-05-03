@@ -5,9 +5,17 @@ div{
     display: flex;
     flex-wrap: wrap;
 }
+
 p{
     font-family: 'Roboto', sans-serif;
     color: #505255;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+h1{
+    font-family: 'Bebas Neue';
+    color: #36008D;
     margin-top: 3px;
     margin-bottom: 3px;
 }
@@ -62,35 +70,47 @@ blockquote{
 }
 
 .buttonDiv{
-    flex-basis: 90%;
+    flex-basis: 36%;
+    text-align: left;
+}
+
+.text-search {
+    flex-basis: 63%;
     text-align: right;
+    margin-right: 1%;
+    margin-top: ;
 }
 
 .button-search{
-    border: 2px solid #36008D;
+    border: 3px solid #36008D;
     color: #36008D;
     border-radius: 5px;
     background: #E2E0E5 ;
-    font-size: 15px;
+    font-size: 20px;
     padding-right: 5px;
     padding-left: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-family: 'Bebas Neue';
-    width: 15%;
+    text-align: center;
+}
+
+.top-search {
+    margin-top: 30px;
 }
 
 .search{
-    background-color: white;
+    background-color: 36008D;
     border: none;
-    color: #36008D;
+    color: #F0E100;
+    padding-top: 12px;
+    padding-bottom: 8px;
 }
 
 .button{
-    flex-basis: 8.5%;
-    text-align: left;
+    text-align: right;
     color: #36008D;
-    margin-left: 0.5%;
+    margin-right: 3%;
 }
 
 .button2{
@@ -99,6 +119,7 @@ blockquote{
     border: 2px solid #36008D;
     border-radius: 7px;
     color: #F0E100;
+    margin-right: 1%;
 }
 
 .button3{
