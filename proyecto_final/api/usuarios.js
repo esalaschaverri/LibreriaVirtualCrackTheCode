@@ -1,6 +1,9 @@
+const path = require('path');
 var express =require("express");
 var router=express.Router();
 var mongoose = require("mongoose");
+var formidable = require('formidable');
+const fs = require("fs");
 
 var Usuario = require("../schemas/usuario.js");
 
@@ -67,10 +70,47 @@ router.post('/actualizar', function (req, res) {
   var fotoPerfil = req.body.fotoPerfil;
   var correo = req.body.correo;
   var contrasena = req.body.contrasena;
-  // findOneAndUpdate - Filtro - Valores - Opciones - Función anónima
+  // findOneAndUpdate - Filtro - Valores - Opciones - Funciï¿½n anï¿½nima
   Usuario.findOneAndUpdate({ _id: _id }, { $set: { nombre: nombre, apellidos: apellidos, genero: genero, numeroCedula: numeroCedula, tipoCedula: tipoCedula, provincia: provincia, canton: canton, distrito: distrito, direccion: direccion, latitud: latitud, longitud: longitud,fotoPerfil: fotoPerfil,correo: correo,contrasena: contrasena } }, { useFindAndModify: false, new: true }, function (err, doc) {
     res.json(doc);
   });
+});
+
+router.post('/crear', function (req, res) {
+  var form = new formidable.IncomingForm();
+
+  form.parse(req, function (err, fields, files) {
+
+    var usuarioNuevo = new Usuario({
+      _id: new mongoose.Types.ObjectId(),
+      nombre: fields.nombre,
+      apellidos: fields.apellidos,
+      genero: fields.genero,
+      numeroCedula: fields.cedula,
+      tipoCedula: fields.tipoCedula,
+      provincia: fields.provincia,
+      canton: fields.canton,
+      distrito: fields.distrito,
+      direccion: fields.direccion,
+      //latitud: document.getElementById("direccion").value,
+      //longitud: document.getElementById("direccion").value,
+      latitud: 88,
+      longitud: 10,
+      fotoPerfil: files.upload.newFilename,
+      correo: fields.email,
+      contrasena: fields.password
+    })
+
+    usuarioNuevo.save()
+
+    var oldpath = files.upload.filepath;
+    var newpath = __dirname + '/img/' + files.upload.newFilename;
+
+    fs.rename(oldpath, newpath, function (err) {
+      if (err) throw err;
+    });
+  });
+  return res.redirect('../iniciar_sesion.html');
 });
 
 module.exports = router;
