@@ -24,6 +24,8 @@ app.use("/contactos", require("./api/contactos.js"));
 app.use("/ordenes", require("./api/ordenes.js"));
 app.use("/montos", require("./api/montos.js"));
 
+app.use("/ejemplos", require("./api/ejemplos"))
+
 
 app.listen(5000, function(){
     console.log("Servidor Corriendo");
