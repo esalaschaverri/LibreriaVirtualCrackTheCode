@@ -1,116 +1,104 @@
 <html>
-    <head>
-        <title>Libro</title>
-        <link rel="stylesheet" type="text/css" href="CSS/muestra_libros.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
-    </head>
-    <body onload="cargarTabla()">
-        <!-- Logo y Menu -->
-        <div class="contenedor">
-            <div class="logo-menu" >
-                <a href="index.html"><img class="logo" src="img/logo.png"/></a>
-            </div>
 
-            <div class="menu-top">
-                <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
-                <a href="display_libros.html">LIBROS</a>
-                <a href="socios_comerciales.html">SOCIOS COMERCIALES</a>
-                <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
-                <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
-                <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
-                <a href="contacto.html">CONTACTO</a>
-            </div>
+<head>
+    <title>Libro</title>
+    <link rel="stylesheet" type="text/css" href="CSS/muestra_libros.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="cargarTabla()">
+    <!-- Logo y Menu -->
+    <div class="contenedor">
+        <div class="logo-menu">
+            <a href="index.html"><img class="logo" src="img/logo.png" /></a>
         </div>
 
-        <!-- Busqueda, Perfil y Carrito -->
+        <div class="menu-top">
+            <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+            <a href="display_libros.html">LIBROS</a>
+            <a href="socios_comerciales.html">SOCIOS COMERCIALES</a>
+            <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+            <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+            <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+            <a href="contacto.html">CONTACTO</a>
+        </div>
+    </div>
 
-        <div class="contenedor">
+    <!-- Perfil y Carrito -->
 
-            <div class="buttonDiv">
-                <input class="button-search" type="text" placeholder="BUSCAR LIBRO O AUTOR">
-            </div>
-            <div class="button1">
-                <a href="perfil_cliente.html"><i class="fa-solid fa-user button2"></i></a>
-                <a href="carrito.html"><i class="fa-solid fa-cart-shopping button3"></i></a>
-            </div>
+    <div class="">
+        <div class="button1">
+            <a href="perfil_cliente.html"><i class="fa-solid fa-user button2"></i></a>
+            <a href="carrito.html"><i class="fa-solid fa-cart-shopping button3"></i></a>
+        </div>
+    </div>
+
+    <!-- Muestra Libro -->
+
+    <div id="info-libro" class="contenedor">
+
+        <div class='imagen-libro'>
         </div>
 
-        <!-- Muestra Libro -->
-        
-        <div class="contenedor">
-            
-            <div class="imagen-libro">
-                <img src="img/libro-1.jpg"/>
-            </div>
+        <div class='contenedor info'></div>
+    </div>
 
-            <div id="info-libro" class=" contenedor info">
+    <!-- Footer -->
 
-            </div>
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/"><img class="logos-social" src="img/facebook.png" /></a>
+            <a href="https://www.instagram.com/"><img class="logos-social" src="img/instagram.png" /></a>
+            <a href="https://www.twitter.com/"><img class="logos-social" src="img/twitter.png" /></a>
         </div>
+        <h4>LIBRERIA@HOTMAIL.COM</h4>
+        <h4>+506 7777-8888</h4>
+        <p class="derechos">DERECHOS RESERVADOS</p>
+    </div>
 
-        <form>
-            <p>Califica este libro</p>
-            <p class="clasificacion">   
-               <input id="radio1" type="radio" name="estrellas" value="5">
-               <label for="radio1">★</label>
-               <input id="radio2" type="radio" name="estrellas" value="4">
-               <label for="radio2">★</label>
-               <input id="radio3" type="radio" name="estrellas" value="3">
-               <label for="radio3">★</label>
-               <input id="radio4" type="radio" name="estrellas" value="2">
-               <label for="radio4">★</label>
-               <input id="radio5" type="radio" name="estrellas" value="1">
-               <label for="radio5">★</label>
-           </p>
-        </form>
-            
+    <script>
+        function cargarTabla() {
+            var variablesGet = window.location.search;
+            var variables = new URLSearchParams(variablesGet);
+            var id = variables.get("id");
+            console.log(id);
 
-        <!-- Footer -->
+            var datos = {
+                idUsuario: id
+            }
 
-        <div class="footer">
-            <div class="social">
-                <a href="https://www.facebook.com/"><img class="logos-social" src="img/facebook.png"/></a>
-                <a href="https://www.instagram.com/"><img class="logos-social" src="img/instagram.png"/></a>
-                <a href="https://www.twitter.com/"><img class="logos-social" src="img/twitter.png"/></a> 
-            </div>
-            <h4>LIBRERIA@HOTMAIL.COM</h4>
-            <h4>+506 7777-8888</h4>
-            <p class="derechos">DERECHOS RESERVADOS</p>
-        </div>
-
-        <script>
-            function cargarTabla() {
-                var variablesGet = window.location.search;
-                var variables = new URLSearchParams(variablesGet);
-                var id = variables.get("id");
-                console.log(id);
-
-                var datos = {
-                    idUsuario: id
-                }
-
-                fetch("http://localhost:5000/libros/buscar", {
+            fetch("http://localhost:5000/libros/buscar", {
                 method: 'POST',
                 body: JSON.stringify(datos),
                 headers: { 'Content-Type': 'application/json' }
             })
-                    .then(
+                .then(
                     function (response) {
                         return response.json();
                     }
                 )
-                    .then(
-                        function (json) {
-                            var linea = "<div class='contenedor info'><div class='flex-completo'><h2>"+json.titulo+"</h2></div><div class='flex-titulo'><p class='texto'>Autor:</p></div><div class='flex-info'><p class='texto2'>"+json.autor+"</p></div><div class='flex-titulo'><p class='texto'>Editorial:</p></div><div class='flex-info'><p class='texto2'>"+json.editorial+"</p></div><div class='flex-titulo'><p class='texto'>Género:</p></div><div class='flex-info'><p class='texto2'>"+json.genero+"</p></div><div class='flex-titulo'><p class='texto'>Premios:</p></div><div class='flex-info'><p class='texto2'>"+json.premios+"</p></div><div class='flex-titulo'><p class='texto'>ISBN:</p></div><div class='flex-info'><p class='texto2'>"+json.identificacion+"</p></div><div class='flex-titulo'><p class='texto'>Precio:</p></div><div class='flex-info'><p class='texto2'>"+json.precio+"</p></div><div class='flex-titulo'><p class='texto'>Sinopsis:</p></div><div class='flex-info'><p class='texto2'>"+json.sinopsis+"</p></div><div class='flex-completo'><button class='button'>AÑADIR AL CARRITO</button><br></div></div>";
-                            document.getElementById("info-libro").insertAdjacentHTML("beforeend", linea);
-                        }
+                .then(
+                    function (json) { 
+                        var linea = " <div class='imagen-libro'><img src='img/"+ json.imagen+"'/></div> <div class='contenedor info'><div class='flex-completo'><h2>" + json.titulo + "</h2></div><div class='flex-titulo'><p class='texto'>Autor:</p></div><div class='flex-info'><p class='texto2'>" + json.autor + "</p></div><div class='flex-titulo'><p class='texto'>Editorial:</p></div><div class='flex-info'><p class='texto2'>" + json.editorial + "</p></div><div class='flex-titulo'><p class='texto'>Género:</p></div><div class='flex-info'><p class='texto2'>" + json.genero + "</p></div><div class='flex-titulo'><p class='texto'>Premios:</p></div><div class='flex-info'><p class='texto2'>" + json.premios + "</p></div><div class='flex-titulo'><p class='texto'>ISBN:</p></div><div class='flex-info'><p class='texto2'>" + json.identificacion + "</p></div><div class='flex-titulo'><p class='texto'>Precio:</p></div><div class='flex-info'><p class='texto2'>" + json.precio + "</p></div><div class='flex-titulo'><p class='texto'>Sinopsis:</p></div><div class='flex-info'><p class='texto2'>" + json.sinopsis + "</p></div><div class='flex-completo'><button class='button'>AÑADIR AL CARRITO</button><br></div> <form><p>Califica este libro</p><p class='clasificacion'><input id='radio1' type='radio' name='estrellas' value='5'><label for='radio1'>★</label><input id='radio2' type='radio' name='estrellas' value='4'><label for='radio2'>★</label><input id='radio3' type='radio' name='estrellas' value='3'><label for='radio3'>★</label><input id='radio4' type='radio' name='estrellas' value='2'><label for='radio4'>★</label><input id='radio5' type='radio' name='estrellas' value='1'><label for='radio5'>★</label></p></form> </div>";
+                        
+                        document.getElementById("info-libro").insertAdjacentHTML("beforeend", linea);
+                    }
                 )
-            }
-        </script>
-    </body>
+
+                .then(
+                    function (json) {
+                        var linea = "<div class='imagen-libro'><img src='img/"+ json.imagen+"'/></div> ";
+                        
+                        document.getElementById("imagenes").insertAdjacentHTML("beforeend", linea);
+                    }
+                )
+        }
+    </script>
+</body>
+
 </html>
-
-
