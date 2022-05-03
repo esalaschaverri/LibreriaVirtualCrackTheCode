@@ -208,35 +208,6 @@ button{
     color: #36008D;
 }
 
-.flecha1{
-    flex-basis: 50%;
-    border: 3px solid #36008D;
-    color: #F0E100;
-    border-radius: 5px;
-    background: #36008D;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    margin-left: 600px;
-}
-.flecha2{
-    flex-basis: 50%;
-    border: 3px solid #36008D;
-    color: #F0E100;
-    border-radius: 5px;
-    background: #36008D;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 60px;
-    margin-left: 60px;
-    margin-bottom: 20px;
-} 
-
 .footer{
     background-color: #F2F2F2;
     padding-top: 15px;
