@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="cargarUsuario()">
     <!-- Logo y Menu -->
     <div class="contenedor">
         <div class="logo-menu" >
@@ -42,7 +42,7 @@
 
     <!-- Mi perfil -->
 
-    <div class=" crear-cuenta">
+    <div class=" crear-cuenta" id="info-perfil">
         <div class="flex-completo text-morado">
             <h1>MI PERFIL</h1>
         </div>
@@ -109,6 +109,80 @@
         <h4>+506 7777-8888</h4>
         <p class="derechos">DERECHOS RESERVADOS</p>
     </div>
+    <script>
+        function cargarUsuario() {
+            var variablesGet = window.location.search;
+            var variables = new URLSearchParams(variablesGet);
+            var id = variables.get("id");
+            console.log(id);
 
+            var datos = {
+                idUsuario: id
+            }
+
+            fetch("http://localhost:5000/usuarios/buscar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        var linea = "<div class=\"flex-completo text-morado\">\n" +
+                            "            <h1>MI PERFIL</h1>\n" +
+                            "        </div>\n" +
+                            "        <div class=\"imagen-Perfil\">\n" +
+                            "        <img src=\"img/" +
+                            json.fotoPerfil +
+                            "\" alt=\"\">\n" +
+                            "        </div>\n" +
+                            "        <div>\n" +
+                            "            <h4 class=\"texto\">" +
+                            json.nombre + " "+ json.apellidos +
+                            "</h4>\n" +
+                            "            <h4 class=\"texto\">" +
+                            json.correo +
+                            "</h4>\n" +
+                            "        </div>\n" +
+                            "        <div class=\"texto-negro\">\n" +
+                            "            <h4>CÉDULA: " +
+                            json.numeroCedula +
+                            "</h4>\n" +
+                            "            <h4>DIRECCIÓN: " +
+                            json.direccion +
+                            "</h4>\n" +
+                            "            <h4>PROVINCIA: " +
+                            json.provincia +
+                            "</h4>\n" +
+                            "            <h4>CANTÓN: " +
+                            json.canton +
+                            "</h4>\n" +
+                            "            <h4>DISTRITO: " +
+                            json.distrito +
+                            "</h4>\n" +
+                            "        </div>\n" +
+                            "        <div>\n" +
+                            "            <button class=\"buttons-Form\">EDITAR PERFIL</button>\n" +
+                            "        </div>\n" +
+                            "        <div>\n" +
+                            "            <button class=\"buttons-Form\">CAMBIAR CONTRASEÑA</button>\n" +
+                            "        </div>\n" +
+                            "        <div class=\"texto-negro\">\n" +
+                            "            <h4>MÉTODO DE PAGO ACTUAL</h4>\n" +
+                            "            <h4>XXXX XXXX XXXX 3333</h4>\n" +
+                            "        </div>\n" +
+                            "        <div class=\"flex-completo\">\n" +
+                            "            <button class=\"buttons-Form\">CAMBIAR MÉTODO DE PAGO</button>\n" +
+                            "        </div>";
+                        document.getElementById("info-perfil").innerHTML = "";
+                        document.getElementById("info-perfil").insertAdjacentHTML("beforeend", linea);
+                    }
+                )
+        }
+    </script>
 </body>
 </html>
