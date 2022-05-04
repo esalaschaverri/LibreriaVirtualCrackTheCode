@@ -1,11 +1,24 @@
 var path = require("path"); // Incluyo Path
 var express = require("express"); // Incluyo Express
 var app = express(); // Inicializo Express
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 var mongoose = require('mongoose');
 
 mongoose.connect("mongodb+srv://crackthecode:Crack1234@crackthecode.6rl4z.mongodb.net/Proyecto?retryWrites=true&w=majority");
 
+
+app.use(express.urlencoded({extended: true}));
+app.use(cookieParser('mi secreto'));
+
+app.use(session({secret : 'mi secreto',
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public'))); // Asigno la carpeta definida a Express
 app.use("/libros", require("./api/libros.js"));

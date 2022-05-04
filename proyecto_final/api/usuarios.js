@@ -4,6 +4,9 @@ var router=express.Router();
 var mongoose = require("mongoose");
 var formidable = require('formidable');
 const fs = require("fs");
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 var Usuario = require("../schemas/usuario.js");
 
@@ -17,14 +20,50 @@ router.get('/', function(req, res) {
   });
 
 router.post('/buscar', function (req, res) {
-  var numeroCedula = req.body.numeroCedula;
-  Usuario.find({numeroCedula:numeroCedula}).exec()
+  var idUsuario = req.body.idUsuario;
+  Usuario.findById({_id:idUsuario}).exec()
     .then(
       function (result) {
         res.json(result);
       }
     );
     
+});
+
+
+// router.get('/login', function (req, res) {
+// // mostrar el formulario de login
+//   return res.redirect('../iniciar_sesion.html');
+// });
+
+
+router.post('/login', async function (req, res) {
+  var correo = req.body.correo;
+  var contrasena = req.body.clave;
+  var cliente = await Usuario.findOne({correo:correo}).exec()
+      .then(
+          function (result) {
+            //res.json(result);
+            return result;
+          }
+      );
+  var clienteId = cliente._id;
+  var clienteCorreo = cliente.correo;
+  var clienteContrasena = cliente.contrasena;
+
+  const validarContrasena = clienteContrasena == contrasena;
+
+  if (validarContrasena) {
+    req.session.isAuth = true;
+    req.session.username = clienteCorreo;
+    return res.redirect('../perfil_cliente.html?id=' + clienteId);
+  }
+  else {
+    req.session.error = "Invalid Credentials";
+    return res.redirect('../iniciar_sesion.html');
+  }
+
+
 });
 
 router.post('/insertar', function (req, res) {
@@ -78,11 +117,11 @@ router.post('/actualizar', function (req, res) {
 
 router.post('/crear', function (req, res) {
   var form = new formidable.IncomingForm();
-
+  var _id = new mongoose.Types.ObjectId();
   form.parse(req, function (err, fields, files) {
 
     var usuarioNuevo = new Usuario({
-      _id: new mongoose.Types.ObjectId(),
+      _id: _id,
       nombre: fields.nombre,
       apellidos: fields.apellidos,
       genero: fields.genero,
@@ -102,15 +141,15 @@ router.post('/crear', function (req, res) {
     })
 
     usuarioNuevo.save()
-
+    const path = require('path');
     var oldpath = files.upload.filepath;
-    var newpath = __dirname + '/img/' + files.upload.newFilename;
+    var newpath = require('path').join(__dirname, '../public','img', files.upload.newFilename);
 
     fs.rename(oldpath, newpath, function (err) {
       if (err) throw err;
     });
   });
-  return res.redirect('../iniciar_sesion.html');
+  return res.redirect('../perfil_cliente.html?id=' + _id);
 });
 
 module.exports = router;

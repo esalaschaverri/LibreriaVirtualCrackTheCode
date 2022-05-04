@@ -41,11 +41,12 @@
             <h1>INICIAR SESIÓN</h1>
             <p>Si ya tiene cuenta, por favor inicie sesión.</p>
 
-            <form action="perfil_cliente.html" onsubmit= "return validar()"> 
-                <input class="inputs" id="text" type="text" placeholder="CORREO ELECTRÓNICO" ><br>
+            <form action="/usuarios/login" onsubmit= "return validar()" method="POST">
+                <input class="inputs" id="text" type="email" name="correo" placeholder="CORREO ELECTRÓNICO" ><br>
                 <input class="inputs" id="password" type="password" name="clave" placeholder="CONTRASEÑA"><br><br/>
-                <a href="restablecer_Contraseña.html"><h4>¿Olvidó su contraseña?</h4></a> 
-                <button class="button-sesion">INICIAR SESIÓN</button> <br>
+                <a href="restablecer_Contraseña.html"><h4>¿Olvidó su contraseña?</h4></a>
+                <input class="button-sesion" type="submit" value="INICIAR SESIÓN"><br><br/>
+
             </form>
             <h4>¿No tiene cuenta?</h4>
             <button class="button-sesion" onclick="document.location='crear_cuenta.html'" >CREAR CUENTA</button>
