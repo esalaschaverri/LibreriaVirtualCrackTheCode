@@ -47,6 +47,7 @@ router.post('/insertar', function (req, res) {
     precio: req.body.precio,
     sinopsis: req.body.sinopsis,
     imagen: req.body.imagen,
+    id_autor: req.body.id_autor,
   });
 
   libroNuevo.save()
@@ -68,6 +69,7 @@ router.post('/actualizar', function (req, res) {
   var precio = req.body.precio;
   var sinopsis = req.body.sinopsis;
   var imagen = req.body.imagen;
+  id_autor: req.body.id_autor;
   // findOneAndUpdate - Filtro - Valores - Opciones - Función anónima
   Libro.findOneAndUpdate({ _id: _id }, { $set: { titulo: titulo, autor: autor, editorial: editorial, genero: genero, premios: premios, identificacion: identificacion, precio: precio, sinopsis: sinopsis, imagen: imagen } }, { useFindAndModify: false, new: true }, function (err, doc) {
     res.json(doc);

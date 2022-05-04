@@ -11,6 +11,7 @@ var libroSchema = mongoose.Schema({
     precio : Number,
     sinopsis : String,
     imagen : String,
+    id_autor : String,
 });
 
 module.exports = mongoose.model("Libro", libroSchema, "Libros");

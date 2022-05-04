@@ -13,6 +13,17 @@ router.get('/', function(req, res) {
       );
   });
 
+  router.post('/buscar', function (req, res) {
+    var idUsuario = req.body.idUsuario;
+    Autor.findById(idUsuario).exec()
+      .then(
+        function (result) {
+          res.json(result);
+        }
+      );
+      
+  });
+
   router.post('/insertar', function(req, res) {
     var autorNuevo = new Autor({
       _id: new mongoose.Types.ObjectId(),

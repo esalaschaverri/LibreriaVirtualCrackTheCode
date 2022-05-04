@@ -78,10 +78,9 @@ div{
 }
 
 .button{
-    flex-basis: 8.5%;
-    text-align: left;
+    text-align: right;
     color: #36008D;
-    margin-left: 0.5%;
+    margin-right: 3%;
 }
 
 .button2{
@@ -90,6 +89,7 @@ div{
     border: 2px solid #36008D;
     border-radius: 7px;
     color: #F0E100;
+    margin-right: 1%;
 }
 
 .button3{
@@ -147,19 +147,6 @@ h2{
 
 .texto2{
     font-family: 'Bebas Neue';
-}
-.button{
-    border: 3px solid #36008D;
-    color: #F0E100;
-    border-radius: 5px;
-    background: #36008D ;
-    font-size: 15px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Bebas Neue';
-    margin-top: 10px;
 }
 
 .clasificacion{
