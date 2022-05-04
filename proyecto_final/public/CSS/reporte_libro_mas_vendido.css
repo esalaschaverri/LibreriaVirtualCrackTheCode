@@ -79,17 +79,11 @@ h3{
     padding-bottom: 20px;
 }
 
-.tabla-genero-mas-vendido{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-
 tr td{
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .tr-estilo{
@@ -158,4 +152,22 @@ tr td{
     padding-bottom: 5px;
     font-family: 'Bebas Neue', sans-serif;
     margin-top: 10px;
+}
+
+/* ----- */
+
+.tabla{
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.texto-negro th {
+    font-family: 'Roboto', sans-serif;
+    background-color:  #F0E100;
+}
+
+.text-morado{
+    color: #36008D;
+    text-align: center;
 }

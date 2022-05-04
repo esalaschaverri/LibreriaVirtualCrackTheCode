@@ -5,7 +5,9 @@ var autorSchema = mongoose.Schema({
     numeroOrden : String,
     fecha : Date,
     item : String,
+    genero : String,
     cantidad : Number,
+    puntoRetiro : String,
 });
 
 module.exports = mongoose.model("Ejemplo", autorSchema, "Ejemplos");
