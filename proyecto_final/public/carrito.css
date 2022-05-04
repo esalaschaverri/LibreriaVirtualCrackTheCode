@@ -154,12 +154,25 @@ h4{
     text-decoration: none;
     font-family: 'Bebas Neue';
 }
+
+
+.logos-social{
+    width: 35px;
+    cursor: pointer;
+}
+
+.social{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #36008D;
+}
+
 .footer{
     background-color: #F2F2F2;
     padding-top: 15px;
     padding-bottom: 5px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .footer h4{
