@@ -62,7 +62,7 @@ h3{
 }
 
 .img-laptop{
-    background-image: url("img/laptop.png");
+    background-image: url("../img/laptop.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
