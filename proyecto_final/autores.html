@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>Libro</title>
+    <link rel="stylesheet" type="text/css" href="CSS/autores.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/655682710d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Logo y Menu -->
+    <div class="contenedor">
+        <div class="logo-menu" >
+            <a href="index.html"><img class="logo" src="img/logo.png"/></a>
+        </div>
+
+        <div class="menu-top">
+            <a href="sobreNosotros.html">SOBRE NOSOTROS</a>
+            <a href="display_libros.html">LIBROS</a>
+            <a href="socios_comerciales.html">SOCIOS COMERCIALES</a>
+            <a href="formulario_cliente_frecuente.html">CLIENTE FRECUENTE</a>
+            <a href="iniciar_sesion.html">INICIAR SESIÓN</a>
+            <a href="preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+            <a href="contacto.html">CONTACTO</a>
+        </div>
+    </div>
+
+    <!-- Busqueda, Perfil y Carrito -->
+
+    <div class="contenedor">
+
+        <div class="buttonDiv">
+            <form onsubmit="">
+                <input id="titulo" class="button-search" type="search" placeholder="BUSCAR LIBRO O AUTOR">
+                <button onsubmit="buscarLibro()" class="search"> <i class="fa-solid fa-magnifying-glass fa-xl"></i> </button>
+            </form>
+        </div>
+        <div class="">
+            <a href="perfil_cliente.html"><i class="fa-solid fa-user button2"></i></a>
+            <a href="carrito.html"><i class="fa-solid fa-cart-shopping button3"></i></a>
+        </div>
+    </div>
+
+    <!-- Muestra Autor -->
+        
+    <div class="contenedor">
+            
+        <div class="imagen-libro">
+            <img src="img/libro-1.jpg"/>
+        </div>
+
+        <div id="autor-libro" class=" contenedor info">
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/"><img class="logos-social" src="img/facebook.png" /></a>
+            <a href="https://www.instagram.com/"><img class="logos-social" src="img/instagram.png" /></a>
+            <a href="https://www.twitter.com/"><img class="logos-social" src="img/twitter.png" /></a>
+        </div>
+        <h4>LIBRERIA@HOTMAIL.COM</h4>
+        <h4>+506 7777-8888</h4>
+        <p class="derechos">DERECHOS RESERVADOS</p>
+    </div>
+
+    <script>
+        function cargarTabla() {
+            var variablesGet = window.location.search;
+            var variables = new URLSearchParams (variablesGet);
+            var id = variables.get("id");
+            console.log(id);
+
+            var datos = {
+                idUsuario: id
+            }
+
+            fetch("http://localhost:5000/autores/buscar", {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(
+                function (response) {
+                    return response.json();
+                }
+            )
+
+            .then(
+                function (json) {
+                    var linea = "<div class='contenedor info'><div class='flex-completo'><h2>"+json.titulo+"</h2></div><div class='flex-titulo'><p class='texto'>Pais de Nacimiento:</p></div><div class='flex-info'><p class='texto2'>"+json.paisNacimiento+"</p></div><div class='flex-titulo'><p class='texto'>Fecha Nacimiento:</p></div><div class='flex-info'><p class='texto2'>"+json.fechaNacimiento+"</p></div><div class='flex-titulo'><p class='texto'>Fecha Defunción:</p></div><div class='flex-info'><p class='texto2'>"+json.fechaDefuncion+"</p></div><div class='flex-titulo'><p class='texto'>Género:</p></div><div class='flex-info'><p class='texto2'>"+json.genero+"</p></div><div class='flex-titulo'><p class='texto'>Libros Publicados:</p></div><div class='flex-info'><p class='texto2'>"+json.librosPublicados+"</p></div><div class='flex-titulo'><p class='texto'>Premios:</p></div><div class='flex-info'><p class='texto2'>"+json.premios+"</p></div><div class='flex-titulo'><p class='texto'>Fecha de Premio Nobel:</p></div><div class='flex-info'><p class='texto2'>"+json.nobelFecha+"</p></div><div class='flex-titulo'><p class='texto'>Reseña:</p></div><div class='flex-info'><p class='texto2'>"+json.resena+"</p></div>";
+                    document.getElementById("autor-libro").insertAdjacentHTML("beforeend", linea);
+                }
+            )
+        }
+    </script>
+
+</body>
+
+</html>
