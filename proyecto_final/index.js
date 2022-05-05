@@ -36,6 +36,7 @@ app.use("/frecuentes", require("./api/frecuentes.js"));
 app.use("/contactos", require("./api/contactos.js"));
 app.use("/ordenes", require("./api/ordenes.js"));
 app.use("/montos", require("./api/montos.js"));
+app.use("/puntos", require("./api/puntos.js"));
 
 app.use("/ejemplos", require("./api/ejemplos"))
 

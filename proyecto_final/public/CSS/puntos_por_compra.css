@@ -9,7 +9,10 @@ p {
 }
 
 h1 {
-    font-family: 'Bebas Neue';}
+    font-family: 'Bebas Neue';
+    color: #36008D;
+    text-align: center;
+}
 
 h2 {
     font-family: 'Bebas Neue';
@@ -74,25 +77,10 @@ h4{
     text-align: right;
 }
 
-.button-search{
-    border: 2px solid #36008D;
-    color: #36008D;
-    border-radius: 5px;
-    background: #E2E0E5 ;
-    font-size: 15px;
-    padding-right: 5px;
-    padding-left: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: 'Bebas Neue';
-    width: 15%;
-}
-
 .button{
-    flex-basis: 8.5%;
-    text-align: left;
+    text-align: right;
     color: #36008D;
-    margin-left: 0.5%;
+    margin-right: 3%;
 }
 
 .button2{
@@ -115,61 +103,56 @@ h4{
     transform: scale(1.1);
 }
 
-.button-carrito{
-    border: 2px solid #36008D;
-    color: #36008D;
-    border-radius: 5px;
-    background: #F0E100 ;
-    font-size: 15px;
-    width: 90%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Bebas Neue';
+.libros{
+    border: #36008D 3px solid;
+    border-radius: 10px;
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-.button-perfil{
+.tabla-titulos{
+    font-family: 'Bebas Neue';
+    color: #36008D;
+    font-size: 20px;
+}
+
+table{
+    border: #36008D 2px solid;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+td {
+    font-family: 'Roboto', sans-serif;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: #36008D 2px solid;
+    border-right:#36008D 2px solid;;
+}
+
+button{
     border: 2px solid #36008D;
     color: #F0E100;
     border-radius: 5px;
     background: #36008D ;
     font-size: 15px;
-    width: 90%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Bebas Neue';
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-family: 'Bebas Neue', sans-serif; 
 }
 
-.button-carrito:hover, .button-perfil:hover {
-    transform: scale(1.1);
-}
-
-.crear-cuenta{
+.agregar{
+    margin-top: 20px;
+    flex-basis: 100%;
     text-align: center;
-    border: 3px #36008D solid;
-    border-radius: 8px;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 50px;
-    padding-bottom: 20px;
-}
-
-.crear-cuenta img{
-    width: 170px;
-}
-
-.tabla{
-    
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.texto-negro th {
-    font-family: 'Roboto', sans-serif;
-    background-color:  #F0E100;
-}
-
-TD{
-    font-family: 'Roboto', sans-serif;
 }
 
 .texto-negro td {
@@ -180,6 +163,36 @@ TD{
     margin: 2px;
     font-size: 20px;
     color: #36008D;
+}
+
+.nuevo-libro{
+    border: #36008D 3px solid;
+    border-radius: 10px;
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.titulo2{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.crear-cuenta{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.inputs{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 75%;
+    background-color: #F2F2F2;
+    border: 0px;
+    color: #36008D;
+    text-align: center;
 }
 
 .text-morado{

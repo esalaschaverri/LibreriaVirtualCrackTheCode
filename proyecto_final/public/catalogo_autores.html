@@ -61,28 +61,29 @@
             </div>
         </div>
 
+        <!-- NUEVO AUTOR -->
         <div id="nuevo-autor" class="oculto nuevo-libro">
             <!-- Título -->
             <div class="titulo2">
                 <h1>NUEVO AUTOR</h1>
             </div>
 
-            <!--  -->
+            <!-- Form -->
 
-            <form class="crear-cuenta">
+            <form action="/autores/crear" method="post" enctype="multipart/form-data" class="crear-cuenta">
 
-                <input type="text" id="nombreCompleto" placeholder="NOMBRE COMPLETO" class="inputs"> <br><br/>
+                <input type="text" name="nombreCompleto" id="nombreCompleto" placeholder="NOMBRE COMPLETO" class="inputs"> <br><br/>
                 
-                <input type="text" id="paisNacimiento" placeholder="PAÍS DE NACIMIENTO" class="inputs"> <br><br/>
+                <input type="text" name="paisNacimiento" id="paisNacimiento" placeholder="PAÍS DE NACIMIENTO" class="inputs"> <br><br/>
                 
                 <label class="text-morado" for="fechaNacimiento">FECHA DE NACIMIENTO</label><br>
-                <input type="date" id="fechaNacimiento" class="inputs"> <br><br/>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" class="inputs"> <br><br/>
 
                 <label class="text-morado" for="fechaDefuncion">FECHA DE DEFUNCIÓN</label><br>
-                <input type="date" id="fechaDefuncion" class="inputs"> <br><br/>
+                <input type="date" name="fechaDefuncion" id="fechaDefuncion" class="inputs"> <br><br/>
 
                 <label class="text-morado" for="genero">GÉNERO</label><br>
-                <select class="select" id="genero">
+                <select class="select" name="genero" id="genero">
                     <option></option>
                     <option>ARTE</option>
                     <option>CIENCIA</option>
@@ -97,19 +98,19 @@
                 </select><br><br/>
     
                 <label class="text-morado" for="librosPublicados">LIBROS</label><br>
-                <textarea class="text-areas" id="librosPublicados"></textarea> <br>
+                <textarea class="text-areas" name="librosPublicados" id="librosPublicados"></textarea> <br>
                 
-                <input type="text" placeholder="PREMIOS" class="inputs" id="premios"> <br><br/>
+                <input type="text" placeholder="PREMIOS" class="inputs" name="premios" id="premios"> <br><br/>
 
-                <input type="text" placeholder="AÑO PREMIO NOBEL" class="inputs" id="nobelFecha"> <br><br/>
+                <input type="text" placeholder="AÑO PREMIO NOBEL" class="inputs" name="nobelFecha" id="nobelFecha"> <br><br/>
 
                 <p class="text-morado">AGREGAR FOTO DE AUTOR</p>
-                <input class="button-foto" type="file" placeholder="IMAGEN" id="imagen"> <br><br/>
+                <input class="button-foto" type="file" placeholder="IMAGEN" name="upload" id="imagen" multiple> <br><br/>
 
                 <label class="text-morado" for="resena">RESEÑA</label><br>
-                <textarea class="text-areas" id="resena"></textarea> <br>
+                <textarea class="text-areas" name="resena" id="resena"></textarea> <br>
                     
-                <button onclick="insertarAutor()" class="button-crear">AGREGAR AUTOR</button>
+                <input type="submit" value="AGREGAR AUTOR">
             </form>
         </div>
 

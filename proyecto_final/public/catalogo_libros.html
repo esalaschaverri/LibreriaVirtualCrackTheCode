@@ -49,6 +49,7 @@
               <td class="tabla-titulos">ID</td>
               <td class="tabla-titulos">TÍTULO</td>
               <td class="tabla-titulos">AUTOR</td>
+              <td class="tabla-titulos">ID AUTOR</td>
               <td class="tabla-titulos">EDITORIAL</td>
               <td class="tabla-titulos">GÉNERO</td>
               <td class="tabla-titulos">PRECIO</td>
@@ -71,46 +72,37 @@
 
         <!--  -->
 
-        <form class="crear-cuenta">
+        <form action="/libros/crear" method="post" enctype="multipart/form-data" class="crear-cuenta">
 
-            <input type="text" id="titulo" placeholder="TÍTULO" class="inputs"> <br><br />
+            <input type="text" name="titulo" id="titulo" placeholder="TÍTULO" class="inputs"> <br><br />
 
-            <input type="text" id="autor" placeholder="AUTOR" class="inputs"> <br><br />
+            <input type="text" name="autor" id="autor" placeholder="AUTOR" class="inputs"> <br><br />
 
-            <input type="text" id="editorial" placeholder="EDITORIAL" class="inputs"> <br><br />
+            <label class="text-morado" for="idautor">ID AUTOR</label><br>
+            <select onclick="cargarAutor()" class="select" name="idautor" id="idautor">
+            </select><br><br />
+
+            <input type="text" name="editorial" id="editorial" placeholder="EDITORIAL" class="inputs"> <br><br />
 
             <label class="text-morado" for="genero">GÉNERO</label><br>
-            <select class="select" id="genero">
-                <option></option>
-                <option>ARTE</option>
-                <option>AVENTURA</option>
-                <option>BIOGRAFÍA</option>
-                <option>CIENCIA</option>
-                <option>DISEÑO</option>
-                <option>FANTASÍA</option>
-                <option>FILOSOFÍA</option>
-                <option>GASTRONOMÍA</option>
-                <option>NIÑOS</option>
-                <option>NOVELAS</option>
-                <option>SALUD Y EJERCICIO</option>
-                <option>TERROR</option>
-                <option>VIAJES</option>
+            <select onclick="cargarGenero()" class="select" name="genero" id="genero">
             </select><br><br />
 
             <label class="text-morado" for="premios">PREMIOS</label><br>
-            <textarea class="text-areas" id="premios"></textarea> <br>
+            <textarea class="text-areas" name="premios" id="premios"></textarea> <br>
 
-            <input type="text" placeholder="ISBN" class="inputs" id="identificacion"> <br><br />
+            <input type="text" placeholder="ISBN" class="inputs" name="identificacion" id="identificacion"> <br><br />
 
-            <input type="text" placeholder="PRECIO" class="inputs" id="precio"> <br><br />
+            <input type="text" placeholder="PRECIO" class="inputs" name="precio" id="precio"> <br><br />
 
             <label class="text-morado" for="premios">SINOPSIS</label><br>
-            <textarea class="text-areas" id="sinopsis"></textarea> <br>
+            <textarea class="text-areas" name="sinopsis" id="sinopsis"></textarea> <br>
 
             <p class="text-morado">AGREGAR FOTO DE PERFIL</p>
-            <input class="button-foto" type="file" placeholder="IMAGEN" id="imagen"> <br><br />
 
-            <button onclick="insertarLibro()" class="button-crear">AGREGAR LIBRO</button>
+            <input class="button-foto" type="file" name="upload" id="imagen" multiple> <br><br />
+
+            <input type="submit" value="AGREGAR LIBRO">
         </form>
     </div>
 
@@ -126,30 +118,20 @@
 
         <form class="crear-cuenta">
 
-            <input type="text" id="_id" placeholder="ID" class="inputs"> <br><br/>
+            <input type="text" name="_id" id="_id" placeholder="ID" class="inputs"> <br><br/>
 
             <input type="text" id="titulo2" placeholder="TÍTULO" class="inputs"> <br><br />
 
             <input type="text" id="autor2" placeholder="AUTOR" class="inputs"> <br><br />
 
+            <label class="text-morado" for="idautor2">ID AUTOR</label><br>
+            <select onclick="cargarAutor()" class="select" id="idautor2">
+            </select><br><br />
+
             <input type="text" id="editorial2" placeholder="EDITORIAL" class="inputs"> <br><br />
 
-            <label class="text-morado" for="genero">GÉNERO</label><br>
-            <select class="select" id="genero2">
-                <option></option>
-                <option>ARTE</option>
-                <option>AVENTURA</option>
-                <option>BIOGRAFÍA</option>
-                <option>CIENCIA</option>
-                <option>DISEÑO</option>
-                <option>FANTASÍA</option>
-                <option>FILOSOFÍA</option>
-                <option>GASTRONOMÍA</option>
-                <option>NIÑOS</option>
-                <option>NOVELAS</option>
-                <option>SALUD Y EJERCICIO</option>
-                <option>TERROR</option>
-                <option>VIAJES</option>
+            <label class="text-morado" for="genero2">GÉNERO</label><br>
+            <select onclick="cargarGenero()" class="select" id="genero2">
             </select><br><br />
 
             <label class="text-morado" for="premios">PREMIOS</label><br>
@@ -204,17 +186,52 @@
                 .then(
                     function (json) {
                         for (var cont = 0; json.length > cont; cont++) {
-                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].titulo+"</td><td>"+json[cont].autor+"</td><td>"+json[cont].editorial+"</td><td>"+json[cont].genero+"</td><td>"+json[cont].precio+"</td><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
+                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].titulo+"</td><td>"+json[cont].autor+"</td><td>"+json[cont].id_autor+"</td><td>"+json[cont].editorial+"</td><td>"+json[cont].genero+"</td><td>"+json[cont].precio+"</td><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
                             document.getElementById("librosAgregados").insertAdjacentHTML("beforeend", linea);
                         }
                     }
                 )
         }
 
+        function cargarGenero() {
+            fetch("http://localhost:5000/generos/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<select><option>"+json[cont].nombre+"</option></select><br><br/>";
+                            document.getElementById("genero").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+
+        function cargarAutor() {
+            fetch("http://localhost:5000/autores/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<select><option>"+json[cont]._id+"</option></select><br><br/>";
+                            document.getElementById("idautor").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+        
         function insertarLibro() {
             var datos = {
                 titulo: document.getElementById("titulo").value,
                 autor: document.getElementById("autor").value,
+                id_autor: document.getElementById("idautor").value,
                 editorial: document.getElementById("editorial").value,
                 genero: document.getElementById("genero").value,
                 premios: document.getElementById("premios").value,
@@ -241,6 +258,7 @@
                 _id: document.getElementById("_id").value,
                 titulo: document.getElementById("titulo2").value,
                 autor: document.getElementById("autor2").value,
+                id_autor: document.getElementById("idautor2").value,
                 editorial: document.getElementById("editorial2").value,
                 genero: document.getElementById("genero2").value,
                 premios: document.getElementById("premios2").value,

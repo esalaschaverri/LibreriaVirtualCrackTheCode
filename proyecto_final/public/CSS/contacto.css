@@ -102,7 +102,7 @@ h3{
     border-radius: 7px;
 }
 
-.button2:hover, .button3:hover {
+.button-sesion:hover, .button3:hover, .button2:hover {
     transform: scale(1.1);
 }
 

@@ -72,20 +72,6 @@ a{
     text-align: right;
 }
 
-.button-search{
-    border: 2px solid #36008D;
-    color: #36008D;
-    border-radius: 5px;
-    background: #E2E0E5 ;
-    font-size: 15px;
-    padding-right: 5px;
-    padding-left: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: 'Bebas Neue';
-    width: 15%;
-}
-
 .button{
     text-align: right;
     color: #36008D;
@@ -129,7 +115,7 @@ a{
 }
 
 .sPregunta{
-    background-color: #E2E0E5;
+    background-color: #F2F2F2;
     text-align: center;
     padding-bottom: 25px;
     padding-top: 25px;

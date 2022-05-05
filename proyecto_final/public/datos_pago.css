@@ -59,11 +59,10 @@ div{
     width: 15%;
 }
 
-.button1{
-    flex-basis: 8.5%;
-    text-align: left;
+.button{
+    text-align: right;
     color: #36008D;
-    margin-left: 0.5%;
+    margin-right: 3%;
 }
 
 .button2{
@@ -72,6 +71,7 @@ div{
     border: 2px solid #36008D;
     border-radius: 7px;
     color: #F0E100;
+    margin-right: 1%;
 }
 
 .button3{
@@ -242,6 +242,7 @@ h4{
     padding-top: 15px;
     padding-bottom: 5px;
     text-align: center;
+    margin-top: 40px;
 }
 
 .footer h4{

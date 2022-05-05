@@ -27,12 +27,17 @@ h2{
     margin-bottom: 3px;
 }
 
+.autores a{
+    font-family: 'Bebas Neue';
+    color: #36008D;
+}
+
 blockquote{
     font-family: 'Bebas Neue';
     color:black;
     text-align: center;
     margin-top: 3px;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 
 .logo-menu{
@@ -169,7 +174,7 @@ blockquote{
     margin-top: 30px;
 }
 
-button{
+.carritoadd{
     border: 3px solid #36008D;
     color: #F0E100;
     border-radius: 5px;

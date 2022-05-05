@@ -1,6 +1,11 @@
 var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
+var formidable = require('formidable');
+const fs = require("fs");
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 var Libro = require("../schemas/libro.js");
 
@@ -34,6 +39,7 @@ router.post('/buscar', function (req, res) {
     );
     
 });
+
 
 router.post('/insertar', function (req, res) {
   var libroNuevo = new Libro({
@@ -76,4 +82,37 @@ router.post('/actualizar', function (req, res) {
   });
 });
 
+router.post('/crear', function (req, res) {
+  var form = new formidable.IncomingForm();
+  var _id = new mongoose.Types.ObjectId();
+  form.parse(req, function (err, fields, files) {
+
+    var libroNuevo = new Libro({
+      _id: _id,
+      titulo: fields.titulo,
+      autor: fields.autor,
+      id_autor: fields.idautor,
+      editorial: fields.editorial,
+      genero: fields.genero,
+      premios: fields.premios,
+      identificacion: fields.identificacion,
+      precio: fields.precio,
+      sinopsis: fields.sinopsis,
+      imagen: files.upload.newFilename,
+    })
+
+    libroNuevo.save()
+    const path = require('path');
+    var oldpath = files.upload.filepath;
+    var newpath = require('path').join(__dirname, '../public','img', files.upload.newFilename);
+
+    fs.rename(oldpath, newpath, function (err) {
+      if (err) throw err;
+    });
+  });
+  return res.redirect('../catalogo_libros.html');
+});
+
 module.exports = router;
+
+

@@ -132,7 +132,7 @@ h3{
     font-family: 'Bebas Neue';
 }
 
-.button-carrito:hover, .button-perfil:hover {
+.button-sesion:hover {
     transform: scale(1.1);
 }
 
@@ -218,7 +218,7 @@ h4{
     padding-top: 15px;
     padding-bottom: 5px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .footer h4{

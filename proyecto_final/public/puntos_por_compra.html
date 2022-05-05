@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/31355f9613.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload="cargarTabla()">
+<body onload="cargarTabla(), cargarTabla2()">
     <!-- Logo y Menu -->
     <div class="contenedor">
         <div class="logo-menu" >
@@ -34,114 +34,85 @@
     </div>
 
 
-    <!-- Puntos -->
-
-    <div class="crear-cuenta">
-        <h1 class="text-morado">PUNTOS POR COMPRA</h1>
-
-        <div class="flex-completo text-morado">
-          <center>
-            <table>
-            <table id="puntosAgregados" border="solid" class="tabla">
-                <tr class="tabla texto-negro">
-                    <th>ID</th>
-                    <th>MONTO DE COMPRA</th>
-                    <th>PUNTOS</th>
-                    <th>EDITAR</th>
-                  </tr>
-            </table>
-        </div>
-
+    <!-- MONTOS agregados -->
+    <div class="libros">
+        <h1>MONTOS AGREGADOS</h1>
         <div>
-            <button onclick="muestra()" class="buttons-Form">AGREGAR NUEVO MONTO</button>
-        </div>
-
-    </div>
-
-
-    <div id="nuevo-monto" class="oculto crear-cuenta">
-
-        <div class="flex-completo text-morado">
-            <h1>NUEVO MONTO</h1>
-            <input class="inputs" id="monto" type="text" placeholder="MONTO DE COMPRA" ><br>
-            <input class="inputs" id="puntos" type="text" placeholder="PUNTOS" ><br>
-
-            <button onclick="insertarPunto()" class="button-crear buttons-Form">AGREGAR</button> <!-- Nuevo Código -->
-        </div>
-
-        <div>
-            <!-- <button class="buttons-Form">AGREGAR</button> --> <!-- Nuevo Código -->
-        </div>
-    </div>
-
-
-    <div id="editar-monto" class="oculto crear-cuenta">
-
-        <div class="flex-completo text-morado">
-            <h1>EDITAR MONTO</h1>
-            <input class="inputs" id="_id" type="text" placeholder="ID" ><br>
-            <input class="inputs" id="monto2" type="text" placeholder="MONTO DE COMPRA" ><br>
-            <input class="inputs" id="puntos2" type="text" placeholder="PUNTOS" ><br>
-
-            <button onclick="actualizarPunto()" class="button-crear">AGREGAR</button> <!-- Nuevo Código -->
-        </div>
-
-        <div>
-            <!-- <button class="buttons-Form">AGREGAR</button> --> <!-- Nuevo Código -->
-        </div>
-    </div>
-
-    <div class="crear-cuenta">
-        <h1  class="text-morado">VALOR DE CADA PUNTO</h1>
-        <div class="flex-completo text-morado">
-            <center>
-            <table id="valorPuntos" border="solid" class="tabla">
-                <tr class="tabla texto-negro">
-                    <th>PUNTOS</th>
-                    <th>VALOR EN COLONES</th>
-                    <th>EDITAR</th>
+            <table class="center" id="puntosAgregados">
+                <tr>
+                  <td class="tabla-titulos">ID</td>
+                  <td class="tabla-titulos">MONTO</td>
+                  <td class="tabla-titulos">PUNTOS</td>
                 </tr>
-                </table>
-                <div>
-                    <button onclick="muestra()" class="buttons-Form">EDITAR PUNTOS</button>
-                </div>
-                </table>
-            </center>
-        </div>
-    </div>
-
-    <!-- Nuevo Código -->
-
-    <div id="nuevo-punto" class="oculto crear-cuenta">
-
-        <div class="flex-completo text-morado">
-            <h1>NUEVO PUNTO</h1>
-            <input class="inputs" id="puntos" type="text" placeholder="MONTO DE COMPRA" ><br>
-            <input class="inputs" id="valor" type="text" placeholder="PUNTOS" ><br>
-
-            <button onclick="insertarPunto1()" class="button-crear buttons-Form">AGREGAR</button> <!-- Nuevo Código -->
+              </table>
         </div>
 
-        <div>
-            <!-- <button class="buttons-Form">AGREGAR</button> --> <!-- Nuevo Código -->
+        <!-- Boton -->
+
+        <div class="agregar">
+            <button onclick="muestra()" class="button-sesion">AGREGAR NUEVO MONTO</button>
         </div>
     </div>
 
 
-    <div id="editar-monto" class="oculto crear-cuenta">
+    <!-- NUEVO MONTO -->
 
-        <div class="flex-completo text-morado">
-            <h1>EDITAR PUNTO</h1>
-            <!-- <input class="inputs" id="_id" type="text" placeholder="ID" ><br> -->
-            <input class="inputs" id="puntos2" type="text" placeholder="MONTO DE COMPRA" ><br>
-            <input class="inputs" id="valor2" type="text" placeholder="PUNTOS" ><br>
-
-            <button onclick="actualizarPunto1()" class="button-crear">AGREGAR</button> <!-- Nuevo Código -->
+    <div id="nuevo-monto" class=" oculto nuevo-libro">
+        <!-- Título -->
+        <div class="titulo2">
+            <h1>NUEVO MONTO</h1>
         </div>
 
+        <!--FORM  -->
+
+        <form class="crear-cuenta">
+
+            <input type="text" id="monto" placeholder="MONTO" class="inputs"> <br><br/>
+            
+            <input type="text" id="puntos" placeholder="PUNTOS" class="inputs"> <br><br/>
+
+            <button onclick="insertarMonto()" class="button-crear">AGREGAR MONTO</button>
+        </form>
+    </div>
+
+    <!-- Valor agregado -->
+    <div class="libros">
+        <h1>VALOR DE CADA PUNTO</h1>
         <div>
-            <!-- <button class="buttons-Form">AGREGAR</button> --> <!-- Nuevo Código -->
+            <table class="center" id="valoresAgregados">
+                <tr>
+                  <td class="tabla-titulos">ID</td>
+                  <td class="tabla-titulos">PUNTO</td>
+                  <td class="tabla-titulos">VALOR EN COLONES</td>
+                </tr>
+              </table>
         </div>
+
+        <!-- Boton -->
+
+        <div class="agregar">
+            <button onclick="muestra2()" class="button-sesion">AGREGAR NUEVO VALOR</button>
+        </div>
+    </div>
+
+    <!-- NUEVO VALOR -->
+
+    <div id="nuevo-valor" class=" oculto nuevo-libro">
+        <!-- Título -->
+        <div class="titulo2">
+            <h1>NUEVO VALOR</h1>
+        </div>
+
+        <!--FORM  -->
+
+        <form class="crear-cuenta">
+
+            <input type="text" id="punto" placeholder="PUNTO" class="inputs"> <br><br/>
+            
+            <input type="text" id="valor" placeholder="VALOR EN COLONES" class="inputs"> <br><br/>
+
+            <button onclick="insertarValor()" class="button-crear">AGREGAR VALOR</button>
+        </form>
     </div>
 
     <div class="footer">
@@ -164,7 +135,7 @@
 
         function muestra2() {
             // Código ejecutado al hacer click sobre el botón
-              var textoOculto = document.getElementById("editar-monto");
+              var textoOculto = document.getElementById("nuevo-valor");
               textoOculto.classList.remove("oculto");
             }
 
@@ -180,14 +151,31 @@
                 .then(
                     function (json) {
                         for (var cont = 0; json.length > cont; cont++) {
-                            var linea = "<tr><th>"+json[cont]._id+"</th><td>"+json[cont].monto+"</td><th>"+json[cont].punto+"</th><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
+                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].monto+"</td><td>"+json[cont].puntos+"</td></tr>";
                             document.getElementById("puntosAgregados").insertAdjacentHTML("beforeend", linea);
                         }
                     }
                 )
         }
 
-            function insertarPunto() {
+        function cargarTabla2() {
+            fetch("http://localhost:5000/puntos/")
+                .then(
+                    function (response) {
+                        return response.json();
+                    }
+                )
+                .then(
+                    function (json) {
+                        for (var cont = 0; json.length > cont; cont++) {
+                            var linea = "<tr><td>"+json[cont]._id+"</td><td>"+json[cont].punto+"</td><td>"+json[cont].valor+"</td></tr>";
+                            document.getElementById("valoresAgregados").insertAdjacentHTML("beforeend", linea);
+                        }
+                    }
+                )
+        }
+
+        function insertarMonto() {
                 var datos = {
                 monto: document.getElementById("monto").value,
                 puntos: document.getElementById("puntos").value
@@ -205,50 +193,13 @@
                 )
             }
 
-            function actualizarPunto() {
-            var datos = {
-                monto: document.getElementById("nombre2").value,
-                puntos: document.getElementById("codigo2").value,
-            }
-
-            fetch("http://localhost:5000/montos/actualizar", {
-                method: 'POST',
-                body: JSON.stringify(datos),
-                headers: { 'Content-Type': 'application/json' }
-            })
-                .then(
-                    function (response) {
-                        return response.json();
-                    }
-                )
-            }
-
-        // Nuevo Código - Segunda Tabla //
-
-        function cargarTabla() {
-            fetch("http://localhost:5000/montos/")
-                .then(
-                    function (response) {
-                        return response.json();
-                    }
-                )
-                .then(
-                    function (json) {
-                        for (var cont = 0; json.length > cont; cont++) {
-                            var linea = "<tr><th>"+json[cont].puntos+"</th><td>"+json[cont].monto+"</th><td><button onclick='muestra2()'>EDITAR</button></td></tr>";
-                            document.getElementById("valorPuntos").insertAdjacentHTML("beforeend", linea);
-                        }
-                    }
-                )
-        }
-
-        function insertarPunto1() {
+            function insertarValor() {
                 var datos = {
-                monto: document.getElementById("puntos").value,
-                puntos: document.getElementById("valor").value
+                punto: document.getElementById("punto").value,
+                valor: document.getElementById("valor").value
                 }
                 
-                fetch("http://localhost:5000/montos/insertar", {
+                fetch("http://localhost:5000/puntos/insertar", {
                 method: 'POST',
                 body: JSON.stringify(datos),
                 headers: {'Content-Type': 'application/json'}
@@ -256,24 +207,6 @@
                 .then(
                     function(response){
                     return response.json();
-                    }
-                )
-            }
-
-            function actualizarPunto1() {
-            var datos = {
-                monto: document.getElementById("puntos2").value,
-                puntos: document.getElementById("valor2").value,
-            }
-
-            fetch("http://localhost:5000/montos/actualizar", {
-                method: 'POST',
-                body: JSON.stringify(datos),
-                headers: { 'Content-Type': 'application/json' }
-            })
-                .then(
-                    function (response) {
-                        return response.json();
                     }
                 )
             }
